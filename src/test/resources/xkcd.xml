@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>xkcd.com</title>
+        <link>https://xkcd.com/</link>
+        <description>xkcd.com: A webcomic of romance and math humor.</description>
+        <language>en</language>
+        <item>
+            <title>Scientific Paper Graph Quality</title>
+            <link>https://xkcd.com/1945/</link>
+            <description>&lt;img src="https://imgs.xkcd.com/comics/scientific_paper_graph_quality.png" title="The worst are graphs with qualitative, vaguely-labeled axes and very little actual data." alt="The worst are graphs with qualitative, vaguely-labeled axes and very little actual data." /&gt;</description>
+            <pubDate>Mon, 22 Jan 2018 05:00:00 -0000</pubDate>
+            <guid>https://xkcd.com/1945/</guid>
+        </item>
+        <item>
+            <title>The End of the Rainbow</title>
+            <link>https://xkcd.com/1944/</link>
+            <description>&lt;img src="https://imgs.xkcd.com/comics/the_end_of_the_rainbow.png" title="The retina is the exposed surface of the brain, so if you think about a pot of gold while looking at a rainbow, then there's one at BOTH ends." alt="The retina is the exposed surface of the brain, so if you think about a pot of gold while looking at a rainbow, then there's one at BOTH ends." /&gt;</description>
+            <pubDate>Fri, 19 Jan 2018 05:00:00 -0000</pubDate>
+            <guid>https://xkcd.com/1944/</guid>
+        </item>
+        <item>
+            <title>Universal Dreams</title>
+            <link>https://xkcd.com/1943/</link>
+            <description>&lt;img src="https://imgs.xkcd.com/comics/universal_dreams.png" title="&amp;quot;That's ... unsettling.&amp;quot; &amp;quot;Yeah, those definitely don't sound like the normal drea– ＬＡＴＩＴＵＤＥ ＴＨＲＥＥ ＦＩＶＥ ＰＯＩＮＴ...&amp;quot; " alt="&amp;quot;That's ... unsettling.&amp;quot; &amp;quot;Yeah, those definitely don't sound like the normal drea– ＬＡＴＩＴＵＤＥ ＴＨＲＥＥ ＦＩＶＥ ＰＯＩＮＴ...&amp;quot; " /&gt;</description>
+            <pubDate>Wed, 17 Jan 2018 05:00:00 -0000</pubDate>
+            <guid>https://xkcd.com/1943/</guid>
+        </item>
+        <item>
+            <title>Memorable Quotes</title>
+            <link>https://xkcd.com/1942/</link>
+            <description>&lt;img src="https://imgs.xkcd.com/comics/memorable_quotes.png" title="&amp;quot;Since there's no ending quote mark, everything after this is part of my quote. —Randall Munroe" alt="&amp;quot;Since there's no ending quote mark, everything after this is part of my quote. —Randall Munroe" /&gt;</description>
+            <pubDate>Mon, 15 Jan 2018 05:00:00 -0000</pubDate>
+            <guid>https://xkcd.com/1942/</guid>
+        </item>
+    </channel>
+</rss>

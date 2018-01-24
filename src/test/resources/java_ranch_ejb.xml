@@ -1,0 +1,1489 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title><![CDATA[JavaRanch: "EJB and other Java EE Technologies"]]></title>
+        <link>https://coderanch.com/f/11/EJB-JEE</link>
+        <description><![CDATA[The newest discussed topics in the forum "EJB and other Java EE Technologies"]]></description>
+        <generator>JForum - http://www.jforum.net</generator>
+        <item>
+            <title>Named CDI Bean with Interceptor - Memory Leak</title>
+            <description><![CDATA[In my project (JEE 6, JBoss 7.1, JDK 1.7), I have several @Named CDI, all inheriting from a common @ConversationScoped abstract class.
+<br /> 
+<br /> I've noticed that if I define an interceptor and I apply this interceptor to the same abstract (thus, applying it by inheritance to all the CDI beans mentioned before), it happens that:
+<br /> 
+<br /> the method this.getClass() called on an instance returns the proxy class and no more the class itself;
+<br /> the performance of the application is dramatically getting worse, both during the initial startup both during the normal activity; it seems that the amount of memory used by the application has increased a lot, simply adding this interceptor.
+<br /> I'm a little confused, because it looks like applying the interceptor makes the beans "managed", whereas they all should be seen as "managed" also without the interceptor, since they already were "named".
+<br /> 
+<br /> What am i missing? Did anyone have the same problem about performance? Is there something I can check?
+<br /> 
+<br /> Thanks in advance for your help.]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/689854/3238025</guid>
+            <link>https://coderanch.com/forums/posts/preList/689854/3238025</link>
+            <pubDate><![CDATA[Tue, Jan 23 2018 02:54:55 MST]]></pubDate>
+            <author><![CDATA[Roberto Surdich]]></author>
+        </item>
+        <item>
+            <title>Injecting POJOs in EJB Environment</title>
+            <description><![CDATA[I am working with TomEE and OpenEJB.&nbsp; I am able to inject a POJO using using <b><tt>@Inject</tt></b>, and have the object's own DI injected as well (in my example <b><tt>@PersistenceContext(unitName = "rcma") private EntityManager em;</tt></b>).
+<br /> 
+<br /> However, I want to be able initialize the injected POJO based on some provided information (in my example the value of <b><tt>TestMode</tt></b>).&nbsp; I have this working by using <b><tt>@Produces</tt></b> and providing a <b><tt>@Qualifier</tt></b>, and the instances being injected do have the value for <b><tt>TestMode</tt></b> set according to the <b><tt>@TestModeSelector</tt></b> annotation, but I am finding that the injected POJOs own injections are not being done (fails the last assertion in the test case).&nbsp; I also don't like thatt I need to have two methods in my producer - one for <b><tt>QA</tt></b> and one for <b><tt>PROD</tt></b>.
+<br /> 
+<br /> <strike>Two</strike> Three questions:
+<br /> &nbsp;-&nbsp;&nbsp;&nbsp;How I can get the POJO's injected make when injecting using <b><tt>@Produces</tt></b>?
+<br /> &nbsp;-&nbsp;&nbsp;&nbsp;How can I just have a single method in my producer?
+<br /> &nbsp;-&nbsp;&nbsp;&nbsp;Is there a better way to do this?
+<br /> 
+<br /> 
+<br /> 
+<br /> <b>Example class</b><pre>import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+public class Example {
+	private TestMode mode;
+
+	@PersistenceContext(unitName = "rcma")
+	private EntityManager em;
+
+	public Example() {
+	}
+
+	public Example(TestMode mode) {
+		this.mode = mode;
+	}
+
+	public String getModeAsString() {
+		return (mode == null) ? "NULL" : mode.toString();
+	}
+
+	public boolean isEntityManagerNull() {
+		return em == null;
+	}
+}</pre><b>OtherExample class</b><pre>import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+public class OtherExample {
+	private TestMode mode;
+
+	@PersistenceContext(unitName = "rcma")
+	private EntityManager em;
+
+	public OtherExample() {
+	}
+
+	public OtherExample(TestMode mode) {
+		this.mode = mode;
+	}
+
+	public String getModeAsString() {
+		return (mode == null) ? "NULL" : mode.toString();
+	}
+
+	public boolean isEntityManagerNull() {
+		return em == null;
+	}
+}</pre><b>TestMode enum</b><pre>public enum TestMode {
+	QA, PROD;
+}</pre><b>@TestMode qualifier annotation</b><pre>import static java.lang.annotation.ElementType.FIELD;
+import static java.lang.annotation.ElementType.METHOD;
+import static java.lang.annotation.RetentionPolicy.RUNTIME;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.Target;
+
+import javax.inject.Qualifier;
+
+@Qualifier
+@Retention(RUNTIME)
+@Target({ FIELD, METHOD })
+public @interface TestModeSelector {
+	TestMode value();
+}</pre><b>ExampleProducer producer class</b><pre>import javax.enterprise.inject.Produces;
+import javax.enterprise.inject.spi.InjectionPoint;
+
+public class ExampleProducer {
+	@Produces
+	@TestModeSelector(TestMode.QA)
+	public Example createQaTest(InjectionPoint ip) {
+		TestMode tm = ip.getAnnotated().getAnnotation(TestModeSelector.class).value();
+		return new Example(tm);
+	}
+
+	@Produces
+	@TestModeSelector(TestMode.PROD)
+	public Example createProdTest(InjectionPoint ip) {
+		TestMode tm = ip.getAnnotated().getAnnotation(TestModeSelector.class).value();
+		return new Example(tm);
+	}
+}</pre><b>ExampleTest Junit test</b><pre>import static org.junit.Assert.assertNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.fail;
+
+import javax.annotation.Resource;
+import javax.ejb.embeddable.EJBContainer;
+import javax.inject.Inject;
+import javax.naming.NamingException;
+import javax.transaction.HeuristicMixedException;
+import javax.transaction.HeuristicRollbackException;
+import javax.transaction.NotSupportedException;
+import javax.transaction.RollbackException;
+import javax.transaction.SystemException;
+import javax.transaction.UserTransaction;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+class ExampleTest {
+	private static EJBContainer container;
+
+	@Inject
+	@TestModeSelector(TestMode.QA)
+	Example qaExample;
+
+	@Inject
+	@TestModeSelector(TestMode.PROD)
+	Example prodExample;
+
+	@Inject
+	OtherExample otherExample;
+
+	@Resource
+	private UserTransaction ut;
+
+	@BeforeAll
+	private static void start() {
+		container = EJBContainer.createEJBContainer();
+	}
+
+	@AfterAll
+	protected static void stop() {
+		container.close();
+	}
+
+	@BeforeEach
+	private void setup() throws NamingException {
+		container.getContext().bind("inject", this);
+
+		try {
+			ut.begin();
+		} catch (NotSupportedException | SystemException e) {
+			fail("Exception thrown: " + e.getClass().getSimpleName(), e);
+		} finally {
+		}
+	}
+
+	@AfterEach
+	private void reset() throws NamingException {
+		try {
+			ut.commit();
+		} catch (IllegalStateException | SecurityException | HeuristicMixedException | HeuristicRollbackException
+				| RollbackException | SystemException e) {
+			fail("Exception thrown: " + e.getClass().getSimpleName(), e);
+		} finally {
+		}
+
+		container.getContext().unbind("inject");
+	}
+
+	@Test
+	void Test() {
+		assertFalse(otherExample.isEntityManagerNull(), "Entity Manager was null");
+		assertNull(otherExample.getModeAsString());
+
+		assertEquals("QA", qaExample.getModeAsString());
+		assertEquals("PROD", prodExample.getModeAsString());
+		assertFalse(qaExample.isEntityManagerNull(), "Entity Manager was null");
+	}
+
+}</pre>
+<br /> ]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/689793/3237728</guid>
+            <link>https://coderanch.com/forums/posts/preList/689793/3237728</link>
+            <pubDate><![CDATA[Sun, Jan 21 2018 18:06:53 MST]]></pubDate>
+            <author><![CDATA[Ron McLeod]]></author>
+        </item>
+        <item>
+            <title>IP does not work but hostname works in the URL from browser</title>
+            <description><![CDATA[Hi,
+<br /> 
+<br /> I have a jboss application server running on a server having a certain dns name say abc.com. From some external machine, when I ping abc.com, it resolves to a certain IP address. 
+<br /> Now, when I hit a URL from a web browser from the external machine with abc.com, the url works (i.e. the application runs and return the response). However, when I use the IP address(to which abc.com resolves when a ping command is issued) instead of abc.com, the application does not respond. Why is it that when a ping is issued on abc.com, the IP address that it resolves to, when it is used it does not work, however it works only with abc.com?
+<br /> 
+<br /> Can anybody explain me how does this DNS and IP address resolution work internally at network side?
+<br /> 
+<br /> Regards,
+<br /> Pankaj]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/689542/3236162</guid>
+            <link>https://coderanch.com/forums/posts/preList/689542/3236162</link>
+            <pubDate><![CDATA[Sat, Jan 13 2018 15:24:35 MST]]></pubDate>
+            <author><![CDATA[Pankaj Poshirkar]]></author>
+        </item>
+        <item>
+            <title>OpenJPA to JavaDB configuration (TomEE)</title>
+            <description><![CDATA[Hi,
+<br /> 
+<br /> I just don't get the connection I suppose... I have the TomEE, and try to inject a persistency context / entity manager. Now this is my persistence.xml:
+<br /> 
+<br /> <pre>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence"
+&nbsp;&nbsp;&nbsp; xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+&nbsp;&nbsp;&nbsp; xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"&gt;
+&nbsp; &lt;persistence-unit name="pu2" transaction-type="RESOURCE_LOCAL"&gt;
+&nbsp;&nbsp;&nbsp; &lt;provider&gt;org.apache.openjpa.persistence.PersistenceProviderImpl&lt;/provider&gt;
+&nbsp;&nbsp;&nbsp; &lt;jta-data-source&gt;samples&lt;/jta-data-source&gt;
+&nbsp;&nbsp;&nbsp; &lt;class&gt;com.mahendra.models.Contact&lt;/class&gt;
+&nbsp;&nbsp;&nbsp; &lt;properties&gt;
+		&lt;property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver" /&gt;
+		&lt;property name="javax.persistence.jdbc.url" value="jdbc:derby:/localhost:1527/samples" /&gt;
+		&lt;property name="javax.persistence.jdbc.user" value="APP"/&gt;
+		&lt;property name="javax.persistence.jdbc.password" value="APP"/&gt;
+&nbsp;&nbsp;&nbsp; &lt;/properties&gt;
+&nbsp; &lt;/persistence-unit&gt;
+&lt;/persistence&gt;</pre>
+<br /> 
+<br /> And this is a fraction of the exception I receive. I can surely post more if that helps...
+<br /> 
+<br /> <pre>
+java.lang.RuntimeException: There were errors initializing your configuration: &lt;openjpa-2.4.2-r422266:1777108 fatal user error&gt; org.apache.openjpa.util.UserException: A connection could not be obtained for driver class "org.apache.derby.jdbc.ClientDriver" and URL "jdbc:derby:/localhost:1527/samples".&nbsp; You may have specified an invalid URL.
+	at org.apache.openjpa.jdbc.schema.DataSourceFactory.newConnectException(DataSourceFactory.java:272)
+	at org.apache.openjpa.jdbc.schema.DataSourceFactory.newDataSource(DataSourceFactory.java:122)
+	at org.apache.openjpa.jdbc.conf.JDBCConfigurationImpl.createConnectionFactory(JDBCConfigurationImpl.java:850)
+	at org.apache.openjpa.jdbc.conf.JDBCConfigurationImpl.getConnectionFactory(JDBCConfigurationImpl.java:733)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.openjpa.lib.conf.ConfigurationImpl.instantiateAll(ConfigurationImpl.java:316)
+	at org.apache.openjpa.conf.OpenJPAConfigurationImpl.instantiateAll(OpenJPAConfigurationImpl.java:1676)
+	at org.apache.openjpa.kernel.AbstractBrokerFactory.makeReadOnly(AbstractBrokerFactory.java:650)
+	at org.apache.openjpa.kernel.AbstractBrokerFactory.newBroker(AbstractBrokerFactory.java:202)
+	at org.apache.openjpa.kernel.DelegatingBrokerFactory.newBroker(DelegatingBrokerFactory.java:154)
+	at org.apache.openjpa.persistence.EntityManagerFactoryImpl.createEntityManager(EntityManagerFactoryImpl.java:226)
+	at org.apache.openjpa.persistence.EntityManagerFactoryImpl.createEntityManager(EntityManagerFactoryImpl.java:153)
+	at org.apache.openjpa.persistence.EntityManagerFactoryImpl.createEntityManager(EntityManagerFactoryImpl.java:59)
+	at com.mahendra.services.ContactService.&lt;init&gt;(ContactService.java:50)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+</pre>
+<br /> 
+<br /> From what I see I think it's clear, I just don't find a working combination of all.
+<br /> 
+<br /> Does maybe someone has a running system of JavaDB (Network Server 10.11.1.2) and OpenJPA (2.4.2), maybe running on TomEE (7.0.3) and get push me to the right direction? That would be great!
+<br /> 
+<br /> Thanks,
+<br /> Stephan
+<br /> ]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/689441/3235663</guid>
+            <link>https://coderanch.com/forums/posts/preList/689441/3235663</link>
+            <pubDate><![CDATA[Wed, Jan 10 2018 10:09:11 MST]]></pubDate>
+            <author><![CDATA[Stephan Wöbbeking]]></author>
+        </item>
+        <item>
+            <title>Reason for a servlet to go down in a web application. </title>
+            <description><![CDATA[Hi All,
+<br /> 
+<br /> I have a web application which calls multiple servlets under it. The application is running fine, however, on of the servlets under the application has all of a sudden stopped running. This was noticed as there were no logs in that servlet log file. What might be the reason of it? And is there any way to identify whether any such servlet goes down in a web application?
+<br /> 
+<br /> Regards,
+<br /> Pankaj ]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/689426/3235607</guid>
+            <link>https://coderanch.com/forums/posts/preList/689426/3235607</link>
+            <pubDate><![CDATA[Wed, Jan 10 2018 06:06:31 MST]]></pubDate>
+            <author><![CDATA[Pankaj Poshirkar]]></author>
+        </item>
+        <item>
+            <title>* Winners: Architecting Modern Java EE Applications</title>
+            <description><![CDATA[First, a big thanks to Sebastian Daschner for being here to promote the book <a class="snap_shots" href="https://www.packtpub.com/application-development/architecting-modern-java-ee-applications" target="_new" >Architecting Modern Java EE Applications</a>.
+<br /> 
+<br /> The winners are:
+<br /> 
+<br /> Ravi Desigan
+<br /> Tim Holloway
+<br /> Charles O'Leary
+<br /> Esteban Suarez
+<br /> 
+<br /> Please send your snail mail address to bookpromotion AT javaranch DOT com. To ensure the quickest response, please provide the following:
+<br /> 
+<br /> <b> Your name (first and last - if your CodeRanch name is different, please include both your real name and Ranch name) 
+<br /> Email
+<br /> Country (needed even if requesting an e-book)
+<br /> Address
+<br /> Phone Number</b>
+<br /> 
+<br /> Also, please include the following as the subject of your Email.
+<br /> 
+<br /> <b>Book Promo Winner - Architecting Modern Java EE Applications - Tuesday, January 2nd, 2018</b>
+<br /> 
+<br /> <img src="https://images-na.ssl-images-amazon.com/images/I/51DlnqSbxkL._AC_US436_QL65_.jpg" border="0"  width="200" class="postimg">
+<br /> <span style="font-size: 10px; line-height: normal;">Image from unknown</span>
+<br /> 
+<br /> As noted in the <a class="snap_shots" href="http://www.coderanch.com/how-to/java/BookPromotions" target="_new" >Book Promotion Eligibility Requirements and Legal type stuff</a>, the winners have 8 days to submit their information. Within 3 days of receipt of your email, we will reply to let you know we got it. If you don't hear back, the goat might have eaten your email. Please let us know by posting in the <a class="snap_shots" href="http://www.coderanch.com/forums/f-10/Ranch-Office" target="_new" >Ranch Office</a> so we can check on it. Once you have received your copy please let us know by editing the <a class="snap_shots" href="http://www.coderanch.com/t/659681/Wiki/Book-Promotions-Winners-Page" target="_new" >Book Promotions Winners Page</a> and updating the 'Status' column to say you have it.
+<br /> 
+<br /> Thanks and congrats to all the winners.
+<br />  ]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/689163/3234670</guid>
+            <link>https://coderanch.com/forums/posts/preList/689163/3234670</link>
+            <pubDate><![CDATA[Fri, Jan 5 2018 21:49:01 MST]]></pubDate>
+            <author><![CDATA[Jeanne Boyarsky]]></author>
+        </item>
+        <item>
+            <title>Architecting modern Java EE Applications </title>
+            <description><![CDATA[Hallo Sebastian,
+<br /> 
+<br /> I like the description about the book I read. I'm wondering whether you explain the broader principles and patterns behind enterprise applications in general. 
+<br /> 
+<br /> Torsten ]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/689127/3234426</guid>
+            <link>https://coderanch.com/forums/posts/preList/689127/3234426</link>
+            <pubDate><![CDATA[Thu, Jan 4 2018 21:36:23 MST]]></pubDate>
+            <author><![CDATA[T Jung]]></author>
+        </item>
+        <item>
+            <title>Basic JMS question</title>
+            <description><![CDATA[I have a basic question on JMS architecture. 
+<br /> 
+<br /> On the receiving end, we look up for the connection factory by name, get a connection, procure a Queue session object, then look for the Queue by name, create a receiver providing this queue name to the session object and register a listener with the session. 
+<br /> 
+<br /> So this listener implements the message listener interface so that the onMessage() event is triggered automatically when a JMS message arrives at the specified queue.
+<br /> 
+<br /> But, in the receiver class (which does the above sequence of procuring a session object and registering a listener to the specified queue), I see this while loop coded:
+<br /> 
+<br /> while (true) 
+<br /> {
+<br /> 
+<br /> &nbsp;&nbsp;&nbsp; Thread.sleep(1000);
+<br /> }
+<br /> 
+<br /> My question is, what does this while(true) condition stand for? Next, what way the onMessage() of the listener is related to this Thread.sleep process? I'm not getting the actual sequence. Can someone please explain.
+<br /> 
+<br /> Thanks.]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/689109/3234324</guid>
+            <link>https://coderanch.com/forums/posts/preList/689109/3234324</link>
+            <pubDate><![CDATA[Thu, Jan 4 2018 09:40:22 MST]]></pubDate>
+            <author><![CDATA[Ravi Desigan]]></author>
+        </item>
+        <item>
+            <title>Openfire - java.net.URISyntaxException: Illegal character in path at index</title>
+            <description><![CDATA[Hi,
+<br /> 
+<br /> While creating users in openfire via my java based application, I am facing the issue.
+<br /> Few of the users are created but at one of the user it fails and throws this exception:
+<br /> 
+<br /> java.net.URISyntaxException: Illegal character in path at index
+<br /> 
+<br /> Anybody has any idea?
+<br /> 
+<br /> 
+<br /> Thanks
+<br /> Atul]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/689099/3234240</guid>
+            <link>https://coderanch.com/forums/posts/preList/689099/3234240</link>
+            <pubDate><![CDATA[Thu, Jan 4 2018 02:22:52 MST]]></pubDate>
+            <author><![CDATA[Atul More]]></author>
+        </item>
+        <item>
+            <title>Question to Sebastian Daschner</title>
+            <description><![CDATA[This is my question for the author of the new book: "Architecting Modern Java EE Applications".
+<br /> 
+<br /> Looks like hope for the future.&nbsp; My question to you: what motivated you to take the time to write on this particular topic?&nbsp; I have seen fewer organizations embrace this technology than in the past.&nbsp;&nbsp; It is far from moribund in my view.&nbsp; Are there certain developments in JavaEE 8 that really excite you and convince you this is an excellent approach to modern problem-solving? 
+<br /> 
+<br /> Thanks]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/689083/3234185</guid>
+            <link>https://coderanch.com/forums/posts/preList/689083/3234185</link>
+            <pubDate><![CDATA[Wed, Jan 3 2018 17:33:16 MST]]></pubDate>
+            <author><![CDATA[L Foster]]></author>
+        </item>
+        <item>
+            <title>Architecting Modern Java EE Applications </title>
+            <description><![CDATA[Hello Sebastian,
+<br /> 
+<br /> &nbsp; Can you please tell us what made you write this book?
+<br /> 
+<br /> Thanks.]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/689080/3234163</guid>
+            <link>https://coderanch.com/forums/posts/preList/689080/3234163</link>
+            <pubDate><![CDATA[Wed, Jan 3 2018 14:18:19 MST]]></pubDate>
+            <author><![CDATA[marc joseph]]></author>
+        </item>
+        <item>
+            <title>Help with Simple Java EE Facelets Composite Application </title>
+            <description><![CDATA[Howdy Ranchers,
+<br /> 
+<br /> I am trying to stay awake following the tutorial/documentation located here: <a class="snap_shots" href="https://javaee.github.io/tutorial/jsf-facelets005.html" target="_blank" >https://javaee.github.io/tutorial/jsf-facelets005.html</a> 
+<br /> 
+<br /> I created the Web project for this in NetBeans IDE 8.2. My directory structure can be seen here: <a class="snap_shots" href="https://imgur.com/a/w42P6" target="_blank" >https://imgur.com/a/w42P6</a>
+<br /> <img src="https://imgur.com/a/w42P6" border="0"  class="postimg">
+<br /> 
+<br /> The directory structure for the web application is as follows:
+<br /> 
+<br /> <b>FaceletsCompositeExample
+<br /> &nbsp; |
+<br /> &nbsp;&nbsp; - Web Pages
+<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - WEB-INF
+<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - resources
+<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .&nbsp;&nbsp;&nbsp; |
+<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . - emcomp
+<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .&nbsp;&nbsp;&nbsp;&nbsp; |- email.xhtml
+<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .&nbsp;&nbsp;&nbsp;&nbsp; |- emuserpage.xhtml
+<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . 
+<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . index.xhtml
+<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Source Packages
+<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Libraries
+<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Configuration Files&nbsp;&nbsp;&nbsp;&nbsp; </b>
+<br /> 
+<br /> 
+<br /> The source code for the email.xhtml file is as follows:
+<br /> <pre>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+--&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHMTL 1.0 Transitional//EN"
+&nbsp;&nbsp;&nbsp; "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; xmlns:composite="http://xmlns.jcp.org/jsf/composite"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; xmlns:h="http://xmlns.jcp.org/jsf/html"&gt;
+&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp; &lt;h:head&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;title&gt;This content will not be displayed&lt;/title&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;
+&nbsp;&nbsp;&nbsp; &lt;/h:head&gt;
+&nbsp;&nbsp;&nbsp; &lt;h:body&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;composite:interface&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;composite:attribute name="value" required="false"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/composite:interface&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;composite:implementation&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;h:outputLabel value="Email id: "&gt;&lt;/h:outputLabel&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;h:inputText value="#{cc.attrs.value}"&gt;&lt;/h:inputText&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/composite:implementation&gt;
+&nbsp;&nbsp;&nbsp; &lt;/h:body&gt;
+&lt;/html&gt;
+
+
+</pre>
+<br /> 
+<br /> 
+<br /> The source code for emuserpage.xhtml is as follows:
+<br /> 
+<br /> <pre>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+--&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+&nbsp;&nbsp;&nbsp; "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; xmlns:h="http://xmlns.jcp.org/jsf/html"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; xmlns:em="http://xmlns.jcp.org/jsf/composite/emcomp"&gt;
+&nbsp;&nbsp;&nbsp; &lt;h:head&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;title&gt;Using a sample composite component&lt;/title&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp; &lt;/h:head&gt;
+&nbsp;&nbsp;&nbsp; &lt;body&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;h:form&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;em:email value="Enter your email id" /&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/h:form&gt;
+&nbsp;&nbsp;&nbsp; &lt;/body&gt;
+&lt;/html&gt;
+
+
+
+</pre>
+<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<br /> There is also a default index.xhtml page that NetBeans creates. The code for this is as follows: 
+<br /> <pre>
+&lt;?xml version='1.0' encoding='UTF-8' ?&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; xmlns:h="http://xmlns.jcp.org/jsf/html"&gt;
+&nbsp;&nbsp;&nbsp; &lt;h:head&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;title&gt;Facelet Title&lt;/title&gt;
+&nbsp;&nbsp;&nbsp; &lt;/h:head&gt;
+&nbsp;&nbsp;&nbsp; &lt;h:body&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hello from Facelets
+&nbsp;&nbsp;&nbsp; &lt;/h:body&gt;
+&lt;/html&gt;
+
+
+</pre>
+<br /> 
+<br /> The index.xhtml page is the only thing that shows when deploying this application to glassfish. 
+<br /> 
+<br /> If I enter the URL suggested in the tutorial: <i>http://localhost:8080/application-name/emuserpage.xhtml</i> I receive a 404 error. 
+<br /> When I go to <i>http://localhost:8080/FaceletsCompositeExample/</i> I see the index.xhtml page. 
+<br /> 
+<br /> The web.xml, deployment descriptor, for this project is as follows:
+<br /> <pre>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"&gt;
+&nbsp;&nbsp;&nbsp; &lt;context-param&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;param-name&gt;javax.faces.PROJECT_STAGE&lt;/param-name&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;param-value&gt;Development&lt;/param-value&gt;
+&nbsp;&nbsp;&nbsp; &lt;/context-param&gt;
+&nbsp;&nbsp;&nbsp; &lt;servlet&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;servlet-name&gt;Faces Servlet&lt;/servlet-name&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;servlet-class&gt;javax.faces.webapp.FacesServlet&lt;/servlet-class&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+&nbsp;&nbsp;&nbsp; &lt;/servlet&gt;
+&nbsp;&nbsp;&nbsp; &lt;servlet-mapping&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;servlet-name&gt;Faces Servlet&lt;/servlet-name&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;url-pattern&gt;/faces/*&lt;/url-pattern&gt;
+&nbsp;&nbsp;&nbsp; &lt;/servlet-mapping&gt;
+&nbsp;&nbsp;&nbsp; &lt;session-config&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;session-timeout&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/session-timeout&gt;
+&nbsp;&nbsp;&nbsp; &lt;/session-config&gt;
+&nbsp;&nbsp;&nbsp; &lt;welcome-file-list&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;welcome-file&gt;faces/index.xhtml&lt;/welcome-file&gt;
+&nbsp;&nbsp;&nbsp; &lt;/welcome-file-list&gt;
+&lt;/web-app&gt;
+
+
+</pre>
+<br /> 
+<br /> Is there a problem with the &lt;servlet-mapping&gt; section of the deployment descriptor? From my understanding the current mapping says to display things that are in the "faces" directory or something. I am not sure how the index.xhtml file is in the "faces" directory because in the project structure this file is under "Web Pages". Maybe the <b>&lt;welcome-file&gt;faces/index.html&lt;/welcome-file&gt;</b> creates some imaginary (looking for a better word) directory structure and this is why the index.xhtml page shows up?
+<br /> 
+<br /> <b>Does anyone know where I went wrong with this example?</b>
+<br /> 
+<br /> Thank-you for reading this.
+<br /> 
+<br /> Regards,
+<br /> 
+<br /> Kim Gordon
+<br /> 
+<br /> ]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/689072/3234124</guid>
+            <link>https://coderanch.com/forums/posts/preList/689072/3234124</link>
+            <pubDate><![CDATA[Wed, Jan 3 2018 11:34:58 MST]]></pubDate>
+            <author><![CDATA[Kim Gordon]]></author>
+        </item>
+        <item>
+            <title>eclipse configuration Oxygen 64bits</title>
+            <description><![CDATA[Hello,
+<br /> &nbsp;&nbsp; I develop in full 64 bits : Debian 9.1, eclipse Oxygen 4.7, tomcat 9.0. and MariaDB.
+<br /> I think I have misstated my variables or my objects in Eclipse Oxygen (ver 4.70), what should you add so that all my projects are well declared?
+<br /> 
+<br /> all imports and JSPs below are incorrect:
+<br /> <blockquote class="uncited">
+			<p>mport javax.servlet.ServletException;
+<br /> import javax.servlet.annotation.WebServlet;
+<br /> import javax.servlet.http.HttpServlet;
+<br /> import javax.servlet.http.HttpServletRequest;
+<br /> import javax.servlet.http.HttpServletResponse;
+<br />  </p>
+		</blockquote>
+<br /> 
+<br /> I add tomcat9 in the eclipse preferences, to the classpath Variables exactely. but I feel that something is missing
+<br /> 
+<br /> Regards
+<br /> Philippe]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/689066/3234106</guid>
+            <link>https://coderanch.com/forums/posts/preList/689066/3234106</link>
+            <pubDate><![CDATA[Wed, Jan 3 2018 09:51:25 MST]]></pubDate>
+            <author><![CDATA[Philippe Ponceblanc]]></author>
+        </item>
+        <item>
+            <title>Architecting Modern Java EE Applications: Prerequisites</title>
+            <description><![CDATA[Hi Sebastian,
+<br /> 
+<br /> Is there any knowledge prerequisite before reading of this book?
+<br /> I mean if it is required or if you recommend to gain at least basic knowledge about Domain Driven Design, Continuous Delivery, DevOps, containers, ... etc. before reading of this book?
+<br /> Or is it enough for the reader to start with this book only with knowledge of "legacy" Java EE?
+<br /> 
+<br /> And if I can have another question - what is your opinion about moving of Java EE from Oracle to Eclipse Foundation? :-)
+<br /> 
+<br /> Thank you very much,
+<br /> Lukas]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/689056/3234048</guid>
+            <link>https://coderanch.com/forums/posts/preList/689056/3234048</link>
+            <pubDate><![CDATA[Wed, Jan 3 2018 05:41:06 MST]]></pubDate>
+            <author><![CDATA[Lukas Machacek]]></author>
+        </item>
+        <item>
+            <title>Architecting Modern Java EE Applications: Scaling</title>
+            <description><![CDATA[Hi,
+<br /> 
+<br /> How have the applications architecting and its implementation have been transformed by adopting the modern methods compared to the traditional one?]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/689046/3234018</guid>
+            <link>https://coderanch.com/forums/posts/preList/689046/3234018</link>
+            <pubDate><![CDATA[Wed, Jan 3 2018 03:24:24 MST]]></pubDate>
+            <author><![CDATA[Divya Shiv]]></author>
+        </item>
+        <item>
+            <title>Architecting Modern Java EE Applications</title>
+            <description><![CDATA[hello,
+<br /> 
+<br /> I've following question on this book:
+<br /> 
+<br /> Does this book talks about web technologies that can be used with Java EE?
+<br /> Position/Relevance of Java EE in todays market?
+<br /> Future of Java EE?]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/689025/3233955</guid>
+            <link>https://coderanch.com/forums/posts/preList/689025/3233955</link>
+            <pubDate><![CDATA[Tue, Jan 2 2018 16:54:51 MST]]></pubDate>
+            <author><![CDATA[Amandeep Singh]]></author>
+        </item>
+        <item>
+            <title>Architecting Modern Java EE Applications - Sebastian Daschner </title>
+            <description><![CDATA[Hello Sebastian,
+<br /> 
+<br /> This book looks useful for my boring job. Would this book help with both development and maintenance of legacy Java EE and current Java EE? Also, are there any working examples I can type out on my craptop and run without errors? ...strange errors that completely prevent me from saying "Hello World" for instance. 
+<br /> 
+<br /> Also, I read your "About the Author" section on Amazon. What type of "motorbike" do you ride to conferences? I was envisioning a Vespa. 
+<br /> <img src="https://i.pinimg.com/736x/f3/16/e4/f316e4a91c6cfc98b09e405dda523b95--basso-vintage-vespa.jpg" border="0"  class="postimg">
+<br /> 
+<br /> With this in mind did you try to cleverly tie in <u>Zen and the Art of Motorcycle Maintenance</u> to this book on JavaEE? This book would be amazing if it was an inner journey into the self as well as an outward journey into the technology of JavaEE. This could be sort of like watching <i>The Wizard of Oz</i> while listening to <i>Dark Side of the Moon</i>. 
+<br /> 
+<br /> Thank-you for reading this. 
+<br /> 
+<br /> Regards,
+<br /> 
+<br /> Kim Gordon
+<br /> ]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/689008/3233887</guid>
+            <link>https://coderanch.com/forums/posts/preList/689008/3233887</link>
+            <pubDate><![CDATA[Tue, Jan 2 2018 10:58:20 MST]]></pubDate>
+            <author><![CDATA[Kim Gordon]]></author>
+        </item>
+        <item>
+            <title>Architecting Modern Java EE Applications: Kafka</title>
+            <description><![CDATA[Hello,
+<br /> 
+<br /> Checking table of contents, I see Kafka as a queue implementation and (it's not being JEE exclusive). 
+<br /> Are you assuming some de-facto implementations in the book as a good practice ?
+<br /> (or only it is a simple example ?)
+<br /> 
+<br /> Regards,
+<br /> 
+<br /> Germán
+<br /> 
+<br /> ]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/689007/3233885</guid>
+            <link>https://coderanch.com/forums/posts/preList/689007/3233885</link>
+            <pubDate><![CDATA[Tue, Jan 2 2018 10:56:52 MST]]></pubDate>
+            <author><![CDATA[German Gonzalez-Morris]]></author>
+        </item>
+        <item>
+            <title>Architecting Modern JEE Applications</title>
+            <description><![CDATA[Hi,
+<br /> 
+<br /> My company started a project a year ago where they hired an Architect to redevelop an existing application .
+<br /> 
+<br /> His starting point was deciding the technologies he was going to use . For example he was convinced that he had to use&nbsp; Angular.
+<br /> Starting with the technology stack seemed kind of a stupid approach. This was before he knew anything about the application. 
+<br /> 
+<br /> I have since discovered he is really weak on Database knowledge. This also seems odd for someone who is a Software Architect.
+<br /> 
+<br /> Perhaps I'm wrong and it isn't that important on that level?
+<br /> 
+<br /> What are basic&nbsp; the steps you would take to re-architecting an existing web application ?
+<br /> 
+<br /> thanks,
+<br /> Paul 
+<br /> 
+<br /> ]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/689003/3233871</guid>
+            <link>https://coderanch.com/forums/posts/preList/689003/3233871</link>
+            <pubDate><![CDATA[Tue, Jan 2 2018 10:25:07 MST]]></pubDate>
+            <author><![CDATA[paul nisset]]></author>
+        </item>
+        <item>
+            <title>Did you choose any specific cloud platform to talk about?</title>
+            <description><![CDATA[Hello Sebastian, first of all, congratulations for making and releasing this very useful resosurce for Java EE Developers like me.
+<br />  
+<br /> I was&nbsp; reviewing&nbsp; your book's description and I got very interested about the topics, because I've been searching for a good resource in order to know how Java EE stack fits into the world of new container, cloud&nbsp; and continous delivery platforms and technologies. According to that, I'd like to&nbsp; ask you just one thing: In the chapter or chapters about the cloud, did you choose any specific cloud platform to talk about, like Oracle Cloud Services, or you are talking about Java EE on the Cloud in general?
+<br /> 
+<br /> Thanks for your answer
+<br /> 
+<br /> Regards
+<br /> Esteban Suárez]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/689005/3233867</guid>
+            <link>https://coderanch.com/forums/posts/preList/689005/3233867</link>
+            <pubDate><![CDATA[Tue, Jan 2 2018 10:10:21 MST]]></pubDate>
+            <author><![CDATA[Esteban Suarez]]></author>
+        </item>
+        <item>
+            <title>Architecting Modern Java EE Applications Question</title>
+            <description><![CDATA[I also want to congratulate you on the book.&nbsp; It's a much needed topic.&nbsp; 
+<br /> 
+<br /> It is what it is with our existing server.&nbsp; Unfortunately at this moment, could you give me some guidance (3rd party APIs, frameworks, server extensions, etc) on possibly "modernizing" our Java EE 5 (Red Hat JBoss EAP 5) apps so that they possibly function as if, or as nearly as possible as if, they were Modern Java EE 8 apps?&nbsp; By, the way if you could recommend any "in-place" RichFaces 3.X / JBoss EAP 5 "enhancements" it would also be greatly greatly appreciated!
+<br /> 
+<br />  
+<br /> Thanks in advance! ]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/688998/3233855</guid>
+            <link>https://coderanch.com/forums/posts/preList/688998/3233855</link>
+            <pubDate><![CDATA[Tue, Jan 2 2018 09:51:17 MST]]></pubDate>
+            <author><![CDATA[Charles O'Leary]]></author>
+        </item>
+        <item>
+            <title>Does the book covers JEE enterprise architecture in the context of cloud solutions? </title>
+            <description><![CDATA[Does the book covers JEE enterprise architecture in the context of cloud solutions?
+<br /> Does the book provides any insight into architecting integrations with hadoop?]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/689006/3233853</guid>
+            <link>https://coderanch.com/forums/posts/preList/689006/3233853</link>
+            <pubDate><![CDATA[Tue, Jan 2 2018 09:47:35 MST]]></pubDate>
+            <author><![CDATA[saurabh jee]]></author>
+        </item>
+        <item>
+            <title>Question on Architecting Modern JEE Applications</title>
+            <description><![CDATA[Hi Sebastian,
+<br /> 
+<br /> Does the book cover design patterns and architect certifications? Regarding certifications I want to know which certificate is widely accepted in the industry.]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/688993/3233831</guid>
+            <link>https://coderanch.com/forums/posts/preList/688993/3233831</link>
+            <pubDate><![CDATA[Tue, Jan 2 2018 08:55:54 MST]]></pubDate>
+            <author><![CDATA[Paras Jain]]></author>
+        </item>
+        <item>
+            <title>The book a starting point</title>
+            <description><![CDATA[I am a java developer certified by oracle. (JSE, JPA, EJB) 
+<br /> 
+<br /> It's your book a good starting point for me? I like to become a java architec. What do you recommend?
+<br /> 
+<br /> What java version is your book about? (JEE7 or JEE8)
+<br /> 
+<br /> Thank you.]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/688982/3233799</guid>
+            <link>https://coderanch.com/forums/posts/preList/688982/3233799</link>
+            <pubDate><![CDATA[Tue, Jan 2 2018 05:45:43 MST]]></pubDate>
+            <author><![CDATA[Carlos Solano]]></author>
+        </item>
+        <item>
+            <title>Architecing modern java ee applications : asking some considerations about the book</title>
+            <description><![CDATA[First of all , congratulations for the book, Sebastian . I consider it's a necessary topic to cover , and I'm looking forward to read it as soon as I can . 
+<br /> 
+<br /> I have read amazon description of the book, and I want to know how deep it covers topics included in JEE 8 like reactive architectures and http 2 . Does it treat them in a more abstract way (architecture) and how we can add them to our projects ? or it plays with this elements in a more programming way ? 
+<br /> 
+<br /> On the other hand, I like that it talks about interaction with containers .
+<br /> 
+<br /> My last question is , does the book include chapters about jigsaw modules and all their architectural elements ?&nbsp; 
+<br /> 
+<br /> Thanks in advance , and best regards . ]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/688973/3233768</guid>
+            <link>https://coderanch.com/forums/posts/preList/688973/3233768</link>
+            <pubDate><![CDATA[Tue, Jan 2 2018 03:45:50 MST]]></pubDate>
+            <author><![CDATA[Yago Segura]]></author>
+        </item>
+        <item>
+            <title>Modern Enterprise Architecture Using Java </title>
+            <description><![CDATA[Looking for suggestions on good read/guide on how to's of architecture design in cloud(public/pvt) using Java? Any suggestion on tools required to create a complete enterprise delivery pipeline for CI/CD, Devops, Quality Control, Automated testing, Service Virtualization? Any insight on usage of Microservice vs MicroProfiles? Any best practice(s) to follow while defining Business Capability Model? 
+<br /> 
+<br /> Thanks,
+<br /> Divs]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/688958/3233721</guid>
+            <link>https://coderanch.com/forums/posts/preList/688958/3233721</link>
+            <pubDate><![CDATA[Mon, Jan 1 2018 23:56:31 MST]]></pubDate>
+            <author><![CDATA[Divs Basu]]></author>
+        </item>
+        <item>
+            <title>* Welcome Sebastian Daschner</title>
+            <description><![CDATA[This week, we're delighted to have Sebastian Daschner helping to answer questions about the new book <a class="snap_shots" href="https://www.packtpub.com/application-development/architecting-modern-java-ee-applications" target="_new" >Architecting Modern Java EE Applications</a>.&nbsp; 
+<br /> 
+<br /> The promotion starts Tuesday, January 2nd, 2018 and will end on Friday, January 5th, 2018.
+<br /> 
+<br /> We'll be selecting four random posters in this forum to win a free copy of the book provided by the publisher, Packt.
+<br /> 
+<br /> <img src="https://images-na.ssl-images-amazon.com/images/I/51DlnqSbxkL._AC_US436_QL65_.jpg" border="0"  width="200" class="postimg">
+<br /> <span style="font-size: 10px; line-height: normal;">Image from unknown</span>
+<br /> 
+<br /> Please see the <a class="snap_shots" href="http://www.coderanch.com/how-to/java/BookPromotions" target="_new" >Book Promotion page</a> to ensure your best chances at winning!
+<br /> 
+<br /> <b>Posts in this welcome thread are not eligible for the drawing, and should be reserved for welcoming the author. Questions posted in this topic are subject to removal.</b>]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/688952/3233685</guid>
+            <link>https://coderanch.com/forums/posts/preList/688952/3233685</link>
+            <pubDate><![CDATA[Mon, Jan 1 2018 19:18:29 MST]]></pubDate>
+            <author><![CDATA[Jeanne Boyarsky]]></author>
+        </item>
+        <item>
+            <title>JavaEE 8 &quot;hello1&quot; Example Fail </title>
+            <description><![CDATA[
+<br /> I am following this tutorial: <a class="snap_shots" href="https://javaee.github.io/tutorial/webapp003.html" target="_blank" >https://javaee.github.io/tutorial/webapp003.html</a> and ran into problems with this step: <a class="snap_shots" href="https://javaee.github.io/tutorial/webapp003.html#to-build-and-package-the-hello1-web-module-using-netbeans-ide" target="_blank" >https://javaee.github.io/tutorial/webapp003.html#to-build-and-package-the-hello1-web-module-using-netbeans-ide</a>
+<br /> 
+<br /> The error in the NetBeans IDE console is: 
+<br /> <b><font color="red">Failed to execute goal org.codehaus.cargo:cargo-maven2-plugin:1.4.4:redeploy (deploy) 
+<br /> on project hello1: Execution deploy of goal org.codehaus.cargo:cargo-maven2-plugin:1.4.4:redeploy
+<br />  failed: Cannot create configuration. 
+<br />  
+<br />  There's no registered configuration for the parameters 
+<br />  (container [id = [glassfish5x], type = [installed]], configuration type [existing]). 
+<br />  Actually there are no valid types registered for this configuration. 
+<br />  Maybe you've made a mistake spelling it? -&gt; [Help 1]</font></b>
+<br /> 
+<br /> I think the error is related to a plugin in the parent pom.xml of this project in the JavaEE SDK 8 folder. I think the problem is with this section of the parent pom.xml located in glassfish5\java_ee_sdk-8\glassfish5\docs\javaee-tutorial\examples\pom.xml. The portion of the parent pom.xml throwing the error, I think, is as follows:
+<br /> 
+<br /> <pre>
+&lt;plugin&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;inherited&gt;true&lt;/inherited&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;executions&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;execution&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;id&gt;deploy&lt;/id&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;phase&gt;integration-test&lt;/phase&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;goals&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;goal&gt;redeploy&lt;/goal&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/goals&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/execution&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/executions&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;configuration&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;container&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;containerId&gt;${integration.container.id}&lt;/containerId&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;type&gt;installed&lt;/type&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;home&gt;${glassfish.home}&lt;/home&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/container&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;configuration&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;type&gt;existing&lt;/type&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;home&gt;${glassfish.home}/glassfish/domains&lt;/home&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;properties&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;cargo.glassfish.domain.name&gt;${glassfish.domain.name}&lt;/cargo.glassfish.domain.name&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;!--cargo.remote.username&gt;&lt;/cargo.remote.username--&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;cargo.remote.password /&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/properties&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/configuration&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/configuration&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/plugin&gt;
+
+
+
+</pre>
+<br /> 
+<br /> The example I am following is located here: C:\glassfish5\java_ee_sdk-8\glassfish5\docs\javaee-tutorial\examples\web\jsf\hello1 
+<br /> 
+<br /> I have tried using Maven also to install this but I receive the same error as when using the Netbeans IDE. 
+<br /> 
+<br /> Does anyone know where I went wrong? 
+<br /> 
+<br /> Regards,
+<br /> 
+<br /> Kim Gordon
+<br /> 
+<br /> ]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/688569/3231965</guid>
+            <link>https://coderanch.com/forums/posts/preList/688569/3231965</link>
+            <pubDate><![CDATA[Tue, Dec 19 2017 09:51:49 MST]]></pubDate>
+            <author><![CDATA[Kim Gordon]]></author>
+        </item>
+        <item>
+            <title>JPA seems to crash</title>
+            <description><![CDATA[
+<br /> Hi, I wasn't sure which forum to select, I hope this one fits?
+<br /> 
+<br /> I try to establish a database connection using JPA. My Bean's method looks like this:
+<br /> 
+<br /> <pre>
+public List&lt;Contact&gt; loadAll(){
+	List&lt;Contact&gt; list = null;
+	Query q = em.createQuery("select c from sa.Contact c");
+	list = q.getResultList();
+		
+	return list;
+}
+</pre>
+<br /> 
+<br /> Unfortunately it crashes somewhere in the code. I wasn't able to start TomEE in debug mode yet, so I can't step through it. Also I have no real logging yet, still trying to get all the foundation together. Anyone an idea what it could be? If I use only "Contact" instead of "sa.Contact" it doesn't make a difference...
+<br /> 
+<br /> My entity manager is injected:
+<br /> 
+<br /> <pre>
+	@PersistenceContext( unitName="pu2" )
+	private EntityManager em;
+</pre>
+<br /> 
+<br /> And the persistence.xml looks like this:
+<br /> 
+<br /> <pre>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence"
+&nbsp;&nbsp;&nbsp; xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+&nbsp;&nbsp;&nbsp; xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"&gt;
+&nbsp; &lt;persistence-unit name="pu2"&gt;
+&nbsp;&nbsp;&nbsp; &lt;jta-data-source&gt;samples&lt;/jta-data-source&gt;
+&nbsp;&nbsp;&nbsp; &lt;class&gt;com.mahendra.models.Contact&lt;/class&gt;
+&nbsp;&nbsp;&nbsp; &lt;properties&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;property name="javax.persistence.jdbc.user" value="sa"/&gt;
+&nbsp;&nbsp;&nbsp; &lt;/properties&gt;
+&nbsp; &lt;/persistence-unit&gt;
+&lt;/persistence&gt;
+</pre>
+<br /> 
+<br /> Any ideas for me?
+<br /> 
+<br /> Thanks a lot,
+<br /> Stephan
+<br /> ]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/688567/3231962</guid>
+            <link>https://coderanch.com/forums/posts/preList/688567/3231962</link>
+            <pubDate><![CDATA[Tue, Dec 19 2017 09:31:25 MST]]></pubDate>
+            <author><![CDATA[Stephan Wöbbeking]]></author>
+        </item>
+        <item>
+            <title>Which are the best books to learn Java EE technologies?</title>
+            <description><![CDATA[I want to learn the relevant Java EE technologies to land a job.
+<br /> Thanks]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/688443/3231468</guid>
+            <link>https://coderanch.com/forums/posts/preList/688443/3231468</link>
+            <pubDate><![CDATA[Fri, Dec 15 2017 12:43:29 MST]]></pubDate>
+            <author><![CDATA[John Ekstrom]]></author>
+        </item>
+        <item>
+            <title>is it possible to access EJB from another JVM (another application server ) through JNDI  ?</title>
+            <description><![CDATA[Hi All,
+<br /> 
+<br /> I have deployed an EJB as part of an EAR application in WAS 6.1 Server.&nbsp; I tried to access this EJB through another application hosted in the same server through below 
+<br /> code.&nbsp; It is working perfectly without issue. But When i try the same JNDI call from another app running in the same machine but different application Server (Glassfish) or different machine / different app server (Glassfish) , i am getting an error below.
+<br /> Is EJB JNDI call suppose to work only on apps hosted on the same server ? Before posting it here, I have googled a lot but found no relevant answer. 
+<br /> Please shed some light on this. EJB Jar XML also updated below for reference. EJB version is 2. 
+<br /> 
+<br /> <pre>String jndiName = "ejb/com/nac/app/lsb/vio/ejb/CrVIODailyInvoice";
+	
+	String providerURL="iiop://localhost:2844";
+	String contextFactory="com.sun.enterprise.naming.impl.SerialInitContextFactory";
+	java.util.Hashtable properties = new java.util.Hashtable();
+	properties.put(Context.INITIAL_CONTEXT_FACTORY, contextFactory);
+	properties.put(Context.PROVIDER_URL, providerURL);
+	
+	InitialContext initCtx = null;
+	CrVIODailyInvoice ecm = null;
+	
+	&nbsp;&nbsp;&nbsp; 
+		try {
+		&nbsp;&nbsp;&nbsp; initCtx = new InitialContext(properties);
+		
+		&nbsp;&nbsp;&nbsp; System.out.println("No Exception");
+	&nbsp;&nbsp;&nbsp; 
+	&nbsp;&nbsp;&nbsp; Object homeObject = initCtx.lookup(jndiName);
+	&nbsp;&nbsp;&nbsp; System.out.println("No Exception1");
+	&nbsp;&nbsp;&nbsp; CrVIODailyInvoice ecmHome = (CrVIODailyInvoice) PortableRemoteObject.narrow(homeObject, CrVIODailyInvoiceHome.class);
+	&nbsp;&nbsp;&nbsp; System.out.println("No Exception2");
+	&nbsp;&nbsp;&nbsp; ecm=((CrVIODailyInvoiceHome) ecmHome).create();
+	&nbsp;&nbsp;&nbsp; System.out.println("No Exception3");
+		}catch (NamingException e){
+		&nbsp;&nbsp;&nbsp; System.out.println(" Exception4");
+		&nbsp;&nbsp;&nbsp; e.printStackTrace();
+		}catch(RemoteException e){
+		&nbsp;&nbsp;&nbsp; System.out.println("Exception5");
+		&nbsp;&nbsp;&nbsp; e.printStackTrace();
+		}catch (CreateException e){
+		&nbsp;&nbsp;&nbsp; System.out.println("Exception6");
+		&nbsp;&nbsp;&nbsp; e.printStackTrace();
+		}catch (Exception e){
+		&nbsp;&nbsp;&nbsp; System.out.println("Exception6");
+		&nbsp;&nbsp;&nbsp; e.printStackTrace();
+		}</pre>
+<br /> 
+<br /> 
+<br /> 
+<br /> <blockquote class="uncited">
+			<p> Error Below </p>
+		</blockquote>
+<br /> 
+<br /> <pre>[#|2017-12-08T12:03:36.109-0600|SEVERE|oracle-glassfish3.1.2|javax.enterprise.system.std.com.sun.enterprise.server.logging|_ThreadID=24;_ThreadName=Thread-2;|javax.naming.NamingException: Lookup failed for 'ejb/com/nac/app/lsb/vio/ejb/CrVIODailyInvoice' in SerialContext[myEnv={java.naming.provider.url=iiop://localhost:2844, java.naming.factory.initial=com.sun.enterprise.naming.impl.SerialInitContextFactory, java.naming.factory.state=com.sun.corba.ee.impl.presentation.rmi.JNDIStateFactoryImpl, java.naming.factory.url.pkgs=com.sun.enterprise.naming} [Root exception is javax.naming.NameNotFoundException: com]
+	at com.sun.enterprise.naming.impl.SerialContext.lookup(SerialContext.java:518)
+	at com.sun.enterprise.naming.impl.SerialContext.lookup(SerialContext.java:455)
+	at javax.naming.InitialContext.lookup(InitialContext.java:392)</pre>
+<br /> 
+<br /> 
+<br /> <blockquote class="uncited">
+			<p> EJB XML File </p>
+		</blockquote>
+<br /> 
+<br /> <pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;ejb-jar id="ejb-jar_ID" version="2.1" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/ejb-jar_2_1.xsd"&gt;
+	&lt;display-name&gt;mrwvioEJB&lt;/display-name&gt;
+	&lt;enterprise-beans&gt;
+		&lt;session id="Session_1285241009153"&gt;
+			&lt;ejb-name&gt;CrVIOInvoice&lt;/ejb-name&gt;
+			&lt;home&gt;com.nac.app.lsb.vio.ejb.CrVIOInvoiceHome&lt;/home&gt;
+			&lt;remote&gt;com.nac.app.lsb.vio.ejb.CrVIOInvoice&lt;/remote&gt;
+			&lt;ejb-class&gt;com.nac.app.lsb.vio.ejb.CrVIOInvoiceBean&lt;/ejb-class&gt;
+			&lt;session-type&gt;Stateless&lt;/session-type&gt;
+			&lt;transaction-type&gt;Container&lt;/transaction-type&gt;
+			&lt;ejb-ref id="EjbRef_1391033114055"&gt;
+				&lt;description&gt;
+				&lt;/description&gt;
+				&lt;ejb-ref-name&gt;CRVioInvoice&lt;/ejb-ref-name&gt;
+				&lt;ejb-ref-type&gt;Session&lt;/ejb-ref-type&gt;
+				&lt;home&gt;com.nac.app.lsb.vio.ejb.CrVIOInvoiceHome&lt;/home&gt;
+				&lt;remote&gt;com.nac.app.lsb.vio.ejb.CrVIOInvoice&lt;/remote&gt;
+				&lt;ejb-link&gt;CrVIOInvoice&lt;/ejb-link&gt;
+			&lt;/ejb-ref&gt;
+		&lt;/session&gt;
+		&lt;session id="Session_1285240893466"&gt;
+			&lt;ejb-name&gt;CrAccountAbstracts&lt;/ejb-name&gt;
+			&lt;home&gt;com.nac.app.lsb.vio.ejb.CrAccountAbstractsHome&lt;/home&gt;
+			&lt;remote&gt;com.nac.app.lsb.vio.ejb.CrAccountAbstracts&lt;/remote&gt;
+			&lt;ejb-class&gt;com.nac.app.lsb.vio.ejb.CrAccountAbstractsBean&lt;/ejb-class&gt;
+			&lt;session-type&gt;Stateless&lt;/session-type&gt;
+			&lt;transaction-type&gt;Container&lt;/transaction-type&gt;
+		&lt;/session&gt;
+		&lt;session id="CrVIODailyInvoice"&gt;
+			&lt;ejb-name&gt;CrVIODailyInvoice&lt;/ejb-name&gt;
+			&lt;home&gt;com.nac.app.lsb.vio.ejb.CrVIODailyInvoiceHome&lt;/home&gt;
+			&lt;remote&gt;com.nac.app.lsb.vio.ejb.CrVIODailyInvoice&lt;/remote&gt;
+			&lt;local-home&gt;com.nac.app.lsb.vio.ejb.CrVIODailyInvoiceLocalHome&lt;/local-home&gt;
+			&lt;local&gt;com.nac.app.lsb.vio.ejb.CrVIODailyInvoiceLocal&lt;/local&gt;
+			&lt;ejb-class&gt;com.nac.app.lsb.vio.ejb.CrVIODailyInvoiceBean&lt;/ejb-class&gt;
+			&lt;session-type&gt;Stateless&lt;/session-type&gt;
+			&lt;transaction-type&gt;Container&lt;/transaction-type&gt;
+			&lt;ejb-ref id="EjbRef_1391446847028"&gt;
+				&lt;description&gt;
+				&lt;/description&gt;
+				&lt;ejb-ref-name&gt;ejb/CrVIODailyInvoice&lt;/ejb-ref-name&gt;
+				&lt;ejb-ref-type&gt;Session&lt;/ejb-ref-type&gt;
+				&lt;home&gt;com.nac.app.lsb.vio.ejb.CrVIODailyInvoiceHome&lt;/home&gt;
+				&lt;remote&gt;com.nac.app.lsb.vio.ejb.CrVIODailyInvoice&lt;/remote&gt;
+				&lt;ejb-link&gt;CrVIODailyInvoice&lt;/ejb-link&gt;
+			&lt;/ejb-ref&gt;
+		&lt;/session&gt;
+	&lt;/enterprise-beans&gt;
+	&lt;assembly-descriptor&gt;
+		&lt;container-transaction&gt;
+			&lt;method&gt;
+				&lt;ejb-name&gt;CrVIODailyInvoice&lt;/ejb-name&gt;
+				&lt;method-intf&gt;Remote&lt;/method-intf&gt;
+				&lt;method-name&gt;deleteTempPlanWorking&lt;/method-name&gt;
+				&lt;method-params&gt;
+				&lt;/method-params&gt;
+			&lt;/method&gt;
+			&lt;method&gt;
+				&lt;ejb-name&gt;CrVIODailyInvoice&lt;/ejb-name&gt;
+				&lt;method-intf&gt;Remote&lt;/method-intf&gt;
+				&lt;method-name&gt;generateCrfPdfs&lt;/method-name&gt;
+				&lt;method-params&gt;
+					&lt;method-param&gt;com.nac.app.lsb.vio.domain.CvInvoice&lt;/method-param&gt;
+				&lt;/method-params&gt;
+			&lt;/method&gt;
+			&lt;method&gt;
+				&lt;ejb-name&gt;CrVIODailyInvoice&lt;/ejb-name&gt;
+				&lt;method-intf&gt;Remote&lt;/method-intf&gt;
+				&lt;method-name&gt;generateNonInsPdf&lt;/method-name&gt;
+				&lt;method-params&gt;
+					&lt;method-param&gt;java.lang.String&lt;/method-param&gt;
+					&lt;method-param&gt;byte[]&lt;/method-param&gt;
+				&lt;/method-params&gt;
+			&lt;/method&gt;
+			&lt;method&gt;
+				&lt;ejb-name&gt;CrVIODailyInvoice&lt;/ejb-name&gt;
+				&lt;method-intf&gt;Remote&lt;/method-intf&gt;
+				&lt;method-name&gt;generatePdf&lt;/method-name&gt;
+				&lt;method-params&gt;
+					&lt;method-param&gt;org.w3c.dom.Document&lt;/method-param&gt;
+					&lt;method-param&gt;byte[]&lt;/method-param&gt;
+				&lt;/method-params&gt;
+			&lt;/method&gt;
+			&lt;method&gt;
+				&lt;ejb-name&gt;CrVIODailyInvoice&lt;/ejb-name&gt;
+				&lt;method-intf&gt;Remote&lt;/method-intf&gt;
+				&lt;method-name&gt;generateVioPdfs&lt;/method-name&gt;
+				&lt;method-params&gt;
+					&lt;method-param&gt;byte[]&lt;/method-param&gt;
+					&lt;method-param&gt;byte[]&lt;/method-param&gt;
+					&lt;method-param&gt;byte[]&lt;/method-param&gt;
+					&lt;method-param&gt;byte[]&lt;/method-param&gt;
+					&lt;method-param&gt;java.util.ArrayList&lt;/method-param&gt;
+				&lt;/method-params&gt;
+			&lt;/method&gt;
+			&lt;method&gt;
+				&lt;ejb-name&gt;CrVIODailyInvoice&lt;/ejb-name&gt;
+				&lt;method-intf&gt;Remote&lt;/method-intf&gt;
+				&lt;method-name&gt;insertFileNetUrl&lt;/method-name&gt;
+				&lt;method-params&gt;
+					&lt;method-param&gt;java.lang.String&lt;/method-param&gt;
+					&lt;method-param&gt;java.lang.String&lt;/method-param&gt;
+					&lt;method-param&gt;java.lang.String&lt;/method-param&gt;
+					&lt;method-param&gt;java.lang.String&lt;/method-param&gt;
+					&lt;method-param&gt;java.lang.String&lt;/method-param&gt;
+					&lt;method-param&gt;java.lang.String&lt;/method-param&gt;
+				&lt;/method-params&gt;
+			&lt;/method&gt;
+			&lt;method&gt;
+				&lt;ejb-name&gt;CrVIODailyInvoice&lt;/ejb-name&gt;
+				&lt;method-intf&gt;Remote&lt;/method-intf&gt;
+				&lt;method-name&gt;insertInvPlanDet&lt;/method-name&gt;
+				&lt;method-params&gt;
+					&lt;method-param&gt;java.lang.String&lt;/method-param&gt;
+				&lt;/method-params&gt;
+			&lt;/method&gt;
+			&lt;method&gt;
+				&lt;ejb-name&gt;CrVIODailyInvoice&lt;/ejb-name&gt;
+				&lt;method-intf&gt;Remote&lt;/method-intf&gt;
+				&lt;method-name&gt;insertInvPlanDet2&lt;/method-name&gt;
+				&lt;method-params&gt;
+					&lt;method-param&gt;java.lang.String&lt;/method-param&gt;
+				&lt;/method-params&gt;
+			&lt;/method&gt;
+			&lt;method&gt;
+				&lt;ejb-name&gt;CrVIODailyInvoice&lt;/ejb-name&gt;
+				&lt;method-intf&gt;Remote&lt;/method-intf&gt;
+				&lt;method-name&gt;insertInvPlanDet3&lt;/method-name&gt;
+				&lt;method-params&gt;
+					&lt;method-param&gt;java.lang.String&lt;/method-param&gt;
+				&lt;/method-params&gt;
+			&lt;/method&gt;
+			&lt;method&gt;
+				&lt;ejb-name&gt;CrVIODailyInvoice&lt;/ejb-name&gt;
+				&lt;method-intf&gt;Remote&lt;/method-intf&gt;
+				&lt;method-name&gt;insertInvPlanDet4&lt;/method-name&gt;
+				&lt;method-params&gt;
+					&lt;method-param&gt;java.lang.String&lt;/method-param&gt;
+				&lt;/method-params&gt;
+			&lt;/method&gt;
+			&lt;method&gt;
+				&lt;ejb-name&gt;CrVIODailyInvoice&lt;/ejb-name&gt;
+				&lt;method-intf&gt;Remote&lt;/method-intf&gt;
+				&lt;method-name&gt;insertInvPlanDet5&lt;/method-name&gt;
+				&lt;method-params&gt;
+					&lt;method-param&gt;java.lang.String&lt;/method-param&gt;
+				&lt;/method-params&gt;
+			&lt;/method&gt;
+			&lt;method&gt;
+				&lt;ejb-name&gt;CrVIODailyInvoice&lt;/ejb-name&gt;
+				&lt;method-intf&gt;Remote&lt;/method-intf&gt;
+				&lt;method-name&gt;insertInvPlans&lt;/method-name&gt;
+				&lt;method-params&gt;
+					&lt;method-param&gt;java.lang.String&lt;/method-param&gt;
+				&lt;/method-params&gt;
+			&lt;/method&gt;
+			&lt;method&gt;
+				&lt;ejb-name&gt;CrVIODailyInvoice&lt;/ejb-name&gt;
+				&lt;method-intf&gt;Remote&lt;/method-intf&gt;
+				&lt;method-name&gt;insertInvSummay&lt;/method-name&gt;
+				&lt;method-params&gt;
+					&lt;method-param&gt;java.lang.String&lt;/method-param&gt;
+				&lt;/method-params&gt;
+			&lt;/method&gt;
+			&lt;method&gt;
+				&lt;ejb-name&gt;CrVIODailyInvoice&lt;/ejb-name&gt;
+				&lt;method-intf&gt;Remote&lt;/method-intf&gt;
+				&lt;method-name&gt;insertTempPlanWorking&lt;/method-name&gt;
+				&lt;method-params&gt;
+					&lt;method-param&gt;java.lang.String&lt;/method-param&gt;
+				&lt;/method-params&gt;
+			&lt;/method&gt;
+			&lt;method&gt;
+				&lt;ejb-name&gt;CrVIODailyInvoice&lt;/ejb-name&gt;
+				&lt;method-intf&gt;Remote&lt;/method-intf&gt;
+				&lt;method-name&gt;insertTest&lt;/method-name&gt;
+				&lt;method-params&gt;
+				&lt;/method-params&gt;
+			&lt;/method&gt;
+			&lt;method&gt;
+				&lt;ejb-name&gt;CrVIODailyInvoice&lt;/ejb-name&gt;
+				&lt;method-intf&gt;Remote&lt;/method-intf&gt;
+				&lt;method-name&gt;insertTestJD&lt;/method-name&gt;
+				&lt;method-params&gt;
+				&lt;/method-params&gt;
+			&lt;/method&gt;
+			&lt;method&gt;
+				&lt;ejb-name&gt;CrVIODailyInvoice&lt;/ejb-name&gt;
+				&lt;method-intf&gt;Remote&lt;/method-intf&gt;
+				&lt;method-name&gt;updateInvPlans&lt;/method-name&gt;
+				&lt;method-params&gt;
+					&lt;method-param&gt;java.lang.String&lt;/method-param&gt;
+				&lt;/method-params&gt;
+			&lt;/method&gt;
+			&lt;method&gt;
+				&lt;ejb-name&gt;CrVIODailyInvoice&lt;/ejb-name&gt;
+				&lt;method-intf&gt;Remote&lt;/method-intf&gt;
+				&lt;method-name&gt;updateInvPlans2&lt;/method-name&gt;
+				&lt;method-params&gt;
+					&lt;method-param&gt;java.lang.String&lt;/method-param&gt;
+				&lt;/method-params&gt;
+			&lt;/method&gt;
+			&lt;method&gt;
+				&lt;ejb-name&gt;CrVIODailyInvoice&lt;/ejb-name&gt;
+				&lt;method-intf&gt;Remote&lt;/method-intf&gt;
+				&lt;method-name&gt;updateTempPlanWorking&lt;/method-name&gt;
+				&lt;method-params&gt;
+					&lt;method-param&gt;java.lang.String&lt;/method-param&gt;
+					&lt;method-param&gt;java.lang.String&lt;/method-param&gt;
+				&lt;/method-params&gt;
+			&lt;/method&gt;
+			&lt;trans-attribute&gt;Never&lt;/trans-attribute&gt;
+		&lt;/container-transaction&gt;
+	&lt;/assembly-descriptor&gt;
+&lt;/ejb-jar&gt;
+</pre>
+<br /> ]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/688187/3230207</guid>
+            <link>https://coderanch.com/forums/posts/preList/688187/3230207</link>
+            <pubDate><![CDATA[Fri, Dec 8 2017 11:24:36 MST]]></pubDate>
+            <author><![CDATA[murali jackson]]></author>
+        </item>
+        <item>
+            <title>javax.naming.NameNotFoundException: Name [...] is not bound in this Context. Unable to find [ejb:].</title>
+            <description><![CDATA[I have a struts project, which invokes EJB to carry out DAO. EJB's container is JBoss AS 7. But when program runs to List list = dao.getUserList(); will throw out an exception: javax.naming.NameNotFoundException: Name [ejb:/FileManagerEJB//UserDAOBean!edu.cqu.ejb3.UserDAO] is not bound in this Context. Unable to find [ejb:].
+<br /> 
+<br /> 	<pre>public static edu.cqu.ejb3.UserDAO EJBFactory() {
+		Hashtable&lt;String, String&gt; jndiProperties = new Hashtable&lt;String, String&gt;();
+		jndiProperties.put(Context.URL_PKG_PREFIXES, "org.jboss.ejb.client.naming");
+		try {
+			Context context = new InitialContext(jndiProperties);
+			final String appName = "";
+			final String moduleName = "FileManagerEJB";
+			final String distinctName = "";
+			Object obj = context.lookup("ejb:" + appName + "/" + moduleName + "/" + distinctName + "/UserDAOBean!edu.cqu.ejb3.UserDAO");
+			//Object obj = context.lookup("java:jboss/exported/FileManagerEJB/UserDAOBean!edu.cqu.ejb3.UserDAO");
+			return (edu.cqu.ejb3.UserDAO)obj;
+		} catch (NamingException e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+
+	public List getAllUsers() throws FileManagerException {
+		edu.cqu.ejb3.UserDAO dao = EJBFactory();
+		if (dao == null) {System.out.println("dao is null.");}
+		List list = dao.getUserList();&nbsp; //throw an exception
+	……
+	}</pre>
+<br /> 
+<br /> jboss-ejb-client.properties:
+<br /> remote.connectionprovider.create.options.org.xnio.Options.SSL_ENABLED=false
+<br /> remote.connections=default
+<br /> remote.connection.default.host=localhost
+<br /> remote.connection.default.port = 4447
+<br /> remote.connection.default.connect.options.org.xnio.Options.SASL_POLICY_NOANONYMOUS=false
+<br /> remote.connection.default.username=admin
+<br /> remote.connection.default.password=apassword
+<br /> 
+<br /> And I have a JavaSE client project to invoke EJB named UserDAOBean but it works.
+<br /> ]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/688153/3230025</guid>
+            <link>https://coderanch.com/forums/posts/preList/688153/3230025</link>
+            <pubDate><![CDATA[Thu, Dec 7 2017 21:02:19 MST]]></pubDate>
+            <author><![CDATA[Cyril Tang]]></author>
+        </item>
+        <item>
+            <title>New to Java Spring: Installation of JDK EE throws error</title>
+            <description><![CDATA[Hello folks,
+<br /> 
+<br /> I want to learn Microservices&nbsp; using Java.
+<br /> 
+<br /> For that, I have to learn Java Spring, Java Spring Boot. 
+<br /> 
+<br /> I have installed Java 9 version. I was told to install JDK EE . I downloaded it for windows 8 (64 bit version). When I double click on java_ee_sdk-6u4-windows.exe, I get (shown in attachement) , "The application needs 1.6 or higher of Java(TM) 2 Run time enviromnet. I don't know where Java(TM) is installed on my machine.
+<br /> 
+<br /> any suggestions are very helpful
+<br /> thanks
+<br /> basam]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/687583/3227775</guid>
+            <link>https://coderanch.com/forums/posts/preList/687583/3227775</link>
+            <pubDate><![CDATA[Sun, Nov 26 2017 20:26:19 MST]]></pubDate>
+            <author><![CDATA[narendra nath]]></author>
+        </item>
+        <item>
+            <title>Three-tier web application in JEE</title>
+            <description><![CDATA[I need to represent <b>logical</b> layers of my web application built with JEE specification. Is this three-tier architecture in the image below correct? 
+<br /> 
+<br /> My issue is about data layer. Usualy it is rapresented as Data Access Layer, but I don't use JPA, I access to persistence data (represented by a file and a DBMS) with EJB and I rapresent them with standard Java objects. Should I do in a different way? 
+<br /> Thank you for your answer.]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/687570/3227707</guid>
+            <link>https://coderanch.com/forums/posts/preList/687570/3227707</link>
+            <pubDate><![CDATA[Sun, Nov 26 2017 10:56:35 MST]]></pubDate>
+            <author><![CDATA[lorenzo zan]]></author>
+        </item>
+        <item>
+            <title>Transient list does not disappear when the entity is loaded from the database</title>
+            <description><![CDATA[Ok i have a Entity with a transient list like below,
+<br /> <pre>
+@Entity
+public class PedidoProduto extends Entidade implements Serializable {
+
+
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+@Id
+private long id;
+...
+private transient List&lt;Extra&gt; extras = new ArrayList&lt;&gt;();
+}
+</pre>
+<br /> 
+<br /> if the list is initialized like this when i load the entity from the database, the previous values from the transient list are still there, what is this? a bug? shoudn't all transient values disappear?
+<br /> 
+<br /> if the field is like this
+<br /> 
+<br /> private transient List&lt;Extra&gt; extras;
+<br /> 
+<br /> everything works fine.
+<br /> 
+<br /> i am using java 8 + eclipselink + jboss eap.
+<br /> 
+<br /> link for the test project .war in my onedrive: <a class="snap_shots" href="https://1drv.ms/u/s!AqN1TKPodnoGgtpxdiakKaprZYsxTA" target="_blank" rel="nofollow">https://1drv.ms/u/s!AqN1TKPodnoGgtpxdiakKaprZYsxTA</a>]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/687569/3227706</guid>
+            <link>https://coderanch.com/forums/posts/preList/687569/3227706</link>
+            <pubDate><![CDATA[Sun, Nov 26 2017 10:30:08 MST]]></pubDate>
+            <author><![CDATA[dante carvalho costa]]></author>
+        </item>
+        <item>
+            <title>Spring init-method</title>
+            <description><![CDATA[Hi,
+<br /> 
+<br /> I have confusion regrading init-method calling. As I have studied that when the bean is initialized then init-method is called. So is it like that when IOC container initializing bean or we say creating instance and storing properties in memory or at the time of getBean() method.]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/687526/3227442</guid>
+            <link>https://coderanch.com/forums/posts/preList/687526/3227442</link>
+            <pubDate><![CDATA[Fri, Nov 24 2017 03:58:12 MST]]></pubDate>
+            <author><![CDATA[Saurab Sharma]]></author>
+        </item>
+        <item>
+            <title>Spring Deployment on WebServers</title>
+            <description><![CDATA[Hi All,
+<br /> 
+<br /> As I have studied that spring framework applications can be deployed on Webserver. My questions are : 
+<br /> 
+<br /> 1. Why we use webservers for spring applications since any advantage if I deploy application on Application Server.
+<br /> 
+<br /> 2. As per my understanding spring supports JAVA EE specification framework like Hibernate(ORM), Web(Servlets) etc thus if we want to develop applications that supports JAVA EE specification then we go for application servers otherwise it is complex to deploy on application server rather than on web server. Since with this understanding we can say Spring is not a part of J2EE, it supports J2EE frameworks.
+<br /> 
+<br /> Can you please give me a brief on this doubt?]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/687409/3226910</guid>
+            <link>https://coderanch.com/forums/posts/preList/687409/3226910</link>
+            <pubDate><![CDATA[Mon, Nov 20 2017 06:39:20 MST]]></pubDate>
+            <author><![CDATA[Saurab Sharma]]></author>
+        </item>
+        <item>
+            <title>Help for the creation of a simple stateless EJB 3.1 and its client</title>
+            <description><![CDATA[Hi,
+<br /> I read a bit of theory about EJBs 3.1 but now that I'm trying to create one in practice I have some doubt, and I don't know how to proceed. 
+<br /> Is there anyone that can give me some help? 
+<br /> 
+<br /> Ok, I would like to create a<b> stateless EJB </b>with a single public method that perform some operation and returns an int. And I would like to access it<b> Locally, Remotely, via SOAP and via REST</b>.
+<br /> I also would like to <b>follow all the best practices and code/naming conventions.</b> 
+<br /> 
+<br /> This is the EJB that I created: (Please correct me if something is wrong or if I didn't follow some convention/best practice in naming, packaging, interfaces references, etc.)
+<br /> 
+<br /> <pre>
+package org.myproject.helloejbs;
+
+import javax.ejb.*;
+import javax.validation.constraints.NotNull;
+
+
+@Stateless
+@Local(ProcessorLocal.class)
+@Remote(ProcessorRemote.class)
+public class ProcessorBean {
+
+&nbsp; public ProcessorBean() {
+&nbsp; }
+
+&nbsp; @Override
+&nbsp; public int doProcess(@NotNull int[] values) {
+&nbsp;&nbsp;&nbsp; if (values.length == 0) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return 0;
+&nbsp;&nbsp;&nbsp; }
+&nbsp;&nbsp;&nbsp; int max = values[0];
+&nbsp;&nbsp;&nbsp; for (int i = 0; i&lt;values.length; i++){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(values[i] &gt;max) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; max = values[i];
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+&nbsp;&nbsp;&nbsp; }
+&nbsp;&nbsp;&nbsp; return max;
+&nbsp; }
+</pre>
+<br /> 
+<br /> And those are the local and remote interfaces that I created:
+<br /> <pre>
+package org.myproject.helloejbs;
+
+
+public interface ProcessorLocal {
+&nbsp;&nbsp;&nbsp; public int doProcess(int[] values);
+}
+</pre>
+<br /> 
+<br /> <pre>
+package org.myproject.helloejbs;
+
+
+public interface ProcessorRemote {
+&nbsp;&nbsp;&nbsp; public int doProcess(int[] values);
+}
+</pre>
+<br /> 
+<br /> And here "some" question:
+<br /> 1. How can I invoke the method doProcess from a remote client? Must the client make use of the remote interface or there is a way to make a call passing the method name as parameter? for ex.&nbsp;&nbsp; int result = lookup("..").call("doProcess", {1,3,5,7,9});
+<br /> 1.1 If the use of the bean interface in the client is mandatory this means that the EJB remote interface should be defined in an external project (otherwise the client must have a dependency to the whole EJB project to use the interface)?
+<br /> 
+<br /> 2. When I do the JUnit tests should I create the EJB instance using "ProcessorLocal instance = new ProcessorBean();" or using an annotation like "@EJB ProcessorLocal instance;" 
+<br /> 2.1 If the answer to the previous question is using the "new" keyword does the validator work in this case (being the EJB instance created outside the container that should provide the services)?
+<br /> 2.2 If otherwise the answer to the question 5 is using the "@EJB" annotation, this means that the JUnit test can be executed only running the EJB into the server to have CDI etc?
+<br /> 
+<br /> 3. The @NotNull validator is active by default or have I to update the bean.xml descriptor?
+<br /> 
+<br /> 4. How can I have the same EJB method available also through SOAP and REST? It is sufficient to create two new interfaces with the annotations relative to SOAP and REST?
+<br /> 
+<br /> Thanks in advance! 
+<br /> 
+<br /> ]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/687229/3225974</guid>
+            <link>https://coderanch.com/forums/posts/preList/687229/3225974</link>
+            <pubDate><![CDATA[Wed, Nov 15 2017 07:28:05 MST]]></pubDate>
+            <author><![CDATA[Goshfil Thomausen]]></author>
+        </item>
+        <item>
+            <title>What is the propertyNode of ConstraintValidatorContext?</title>
+            <description><![CDATA[Hello,
+<br /> 
+<br /> I have this code:
+<br /> <pre>
+context.buildConstraintViolationWithTemplate("{my.custom.message}")
+&nbsp;&nbsp;&nbsp; .addPropertyNode("something")
+&nbsp;&nbsp;&nbsp; .addConstraintViolation();
+</pre>
+<br /> 
+<br /> According to <a class="snap_shots" href="https://docs.oracle.com/javaee/7/api/javax/validation/ConstraintValidatorContext.ConstraintViolationBuilder.html#addParameterNode-int" target="_new" >the api</a> the addPropertyNode method “Adds a property node to the path the ConstraintViolation will be associated to.
+<br /> name describes a single property. In particular, dot (.) is not allowed.”
+<br /> 
+<br /> But whatever this value is, it still reads the my.custom.message from ViolationMessages.properties. So, what does this do? When should I use it? 
+<br /> 
+<br /> Thanks in advance.]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/686930/3224627</guid>
+            <link>https://coderanch.com/forums/posts/preList/686930/3224627</link>
+            <pubDate><![CDATA[Thu, Nov 9 2017 00:53:54 MST]]></pubDate>
+            <author><![CDATA[Christian Wansart]]></author>
+        </item>
+        <item>
+            <title>How to make possible ActiveMQ with SSL connection encryption ?</title>
+            <description><![CDATA[Hi Guys,
+<br /> 
+<br /> Currently my ActiveMQ is working fine with TCP connection. But i want to activate data encryption with SSL connection. 
+<br /> Got one trick on internet that by adding new &lt;transportConnector&gt; we can do. but after changing, got error and my tomcat server is also not getting started.
+<br /> 
+<br /> Kindly check my entry for SSL connection enable.
+<br /> 
+<br /> 
+<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <pre>&lt;transportConnector name="ssl" uri="ssl://0.0.0.0:61617?trace=true&amp;needClientAuth=false"/&gt;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;amq:sslContext&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;amq:sslContext 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; keyStore="file:${activemq.conf}/amq-server.ks" keyStorePassword="xxxx"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; trustStore="file:${activemq.conf}/amq-server.ts" trustStorePassword="xxxx"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/amq:sslContext&gt;</pre>
+<br /> 
+<br /> 
+<br /> After putting the above code, ActiveMQ is not working properly. Even my tomcat server is also not getting started. 
+<br /> Help please.
+<br /> 
+<br /> 
+<br /> ]]></description>
+            <guid isPermaLink="true">https://coderanch.com/forums/posts/preList/686899/3224485</guid>
+            <link>https://coderanch.com/forums/posts/preList/686899/3224485</link>
+            <pubDate><![CDATA[Wed, Nov 8 2017 04:00:08 MST]]></pubDate>
+            <author><![CDATA[SunilK Chauhan]]></author>
+        </item>
+    </channel>
+</rss>

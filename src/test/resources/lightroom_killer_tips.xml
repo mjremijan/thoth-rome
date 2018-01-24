@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Lightroom Killer Tips</title>
+	<atom:link href="https://lightroomkillertips.com/feed/" rel="self" type="application/rss+xml" />
+	<link>https://lightroomkillertips.com</link>
+	<description>Lightroom Presets, Videos, Tips and News</description>
+	<lastBuildDate>Wed, 24 Jan 2018 08:00:33 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.2</generator>
+	<item>
+		<title>Keeping Lightroom Classic&#8217;s Files in Check: Part 1</title>
+		<link>https://lightroomkillertips.com/keeping-lightroom-classics-files-check-part-1/</link>
+		<comments>https://lightroomkillertips.com/keeping-lightroom-classics-files-check-part-1/#comments</comments>
+		<pubDate>Wed, 24 Jan 2018 08:00:33 +0000</pubDate>
+		<dc:creator><![CDATA[Rob Sylvan]]></dc:creator>
+				<category><![CDATA[Featured]]></category>
+		<category><![CDATA[Lightroom Classic]]></category>
+		<category><![CDATA[Lightroom Tips]]></category>
+		<category><![CDATA[Catalog]]></category>
+
+		<guid isPermaLink="false">https://lightroomkillertips.com/?p=10392</guid>
+		<description><![CDATA[<p>As Lightroom Classic users we focus on the job it does with our photos, both in terms of managing them and processing them, but it is worth taking a moment to think about the footprint the Classic-related files leave on our computers, which when left unchecked only continues to grow over time. Disclaimer: Let&#8217;s just [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://lightroomkillertips.com/keeping-lightroom-classics-files-check-part-1/">Keeping Lightroom Classic&#8217;s Files in Check: Part 1</a> appeared first on <a rel="nofollow" href="https://lightroomkillertips.com">Lightroom Killer Tips</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>As Lightroom Classic users we focus on the job it does with our photos, both in terms of managing them and processing them, but it is worth taking a moment to think about the footprint the Classic-related files leave on our computers, which when left unchecked only continues to grow over time.</p>
+<p><em>Disclaimer: Let&#8217;s just acknowledge that in the grand scheme of things your photos and videos will require far more storage space than your Lightroom catalog and its related files ever will. However, because this is so obvious we all take steps to manage our disk space relating to our photo storage. The files related to running (and backing up) Lightroom tend to accumulate in the background, and it isn&#8217;t until we find ourselves running short on disk space that we start to wonder what is going on behind the scenes. My goal is to simply shed a little light on the subject so that you can make the decisions you need for your system. There is not a one-size-fits all answer here, and you shouldn&#8217;t just run out and make changes to your setup if you aren&#8217;t having any problems. I just want you to be more fully in the driver&#8217;s seat as you make decisions down the road. </em></p>
+<p>When you look under Lightroom&#8217;s hood you find that there are a number of files that work in concert to make Lightroom function, and all of these require some amount of hard disk space. By default, all of these files exist on your startup drive, and for many of us that drive is already chock-full of lot&#8217;s of other files too. Increasingly our startup drives are solid state drives for improved performance, which tend to be smaller in storage capacity. This combination of factors can leave some of us running low on free space, which becomes a performance drag of its own. Let&#8217;s take a closer look at what these files are, where they can be found, and what you might be able to do to manage them over time.</p>
+<h3>The Catalog</h3>
+<p>As the most important of all of the Lightroom-related files this is a great place to start. By default the catalog is created within a folder named Lightroom within your Pictures folder. If you are not sure where your catalog is located you can go to Lightroom &gt; Catalog Settings &gt; General (PC: Edit &gt; Catalog Settings) and find its name and location displayed along with other important information about the catalog itself. Click the Show button to open a new file browser window with that folder selected.</p>
+<p><a href="https://lightroomkillertips.com/wp-content/uploads/2018/01/filecheck_01.jpg" class="fancyboxgroup" rel="gallery-10392"><img class="aligncenter size-large wp-image-10400" src="https://lightroomkillertips.com/wp-content/uploads/2018/01/filecheck_01-1024x707.jpg" alt="" width="838" height="579" srcset="https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/filecheck_01-1024x707.jpg 1024w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/filecheck_01-300x207.jpg 300w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/filecheck_01-768x530.jpg 768w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/filecheck_01.jpg 1316w" sizes="(max-width: 838px) 100vw, 838px" /></a></p>
+<p>All of the work you do in Lightroom is automatically stored in that catalog file, and as a result the file size of the catalog grows over time. The size in bytes of that catalog file will depend on how many photos you have imported and how much work you have done on those photos. This catalog, managing about 30,000 images, is about 515 MB, which is not much of a disk space issue. My main catalog on my desktop is over 3GB and manages over 150,000 images.</p>
+<p>However, there&#8217;s a saying in backpacking that &#8220;every ounce counts,&#8221; so for some people shaving some megabytes off their catalog might be attractive, but what can you do? The easiest thing to do is to run the File &gt; Optimize Catalog function. Those with really large catalogs are the only ones likely to see any real difference in file size as a result, but those are also the people most likely to be interested in reducing its file size (and possibly improving performance). There is no harm in doing it, so give it a try.</p>
+<h3>Managing Catalog Backups</h3>
+<p>While Classic doesn&#8217;t have a function to back up your photos it does have an automated mechanism for creating backup copies of the catalog file on a regular basis. If you go back to Catalog Settings &gt; General you can configure Lightroom to periodically create an exact copy of the catalog file on a schedule of your choosing. The next time you exit Lightroom on that schedule you will be prompted to run the catalog backup process, and it is only on that dialog box that you can choose where you want the backup copy created (ideally you&#8217;d choose a different drive than the one used for your working catalog). Worth noting that as of Lightroom CC 2015/6 we have the ability to adjust that schedule from the Back Up Catalog dialog box too.</p>
+<p><a href="https://lightroomkillertips.com/wp-content/uploads/2018/01/filecheck_02.jpg" class="fancyboxgroup" rel="gallery-10392"><img class="aligncenter size-large wp-image-10398" src="https://lightroomkillertips.com/wp-content/uploads/2018/01/filecheck_02-1024x498.jpg" alt="" width="838" height="408" srcset="https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/filecheck_02-1024x498.jpg 1024w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/filecheck_02-300x146.jpg 300w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/filecheck_02-768x374.jpg 768w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/filecheck_02-578x280.jpg 578w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/filecheck_02.jpg 1048w" sizes="(max-width: 838px) 100vw, 838px" /></a></p>
+<p>Each time this process runs an exact copy of your catalog (the .lrcat file) at that moment in time is created in the backup location, and then (as of Lightroom CC 2015/6) the backup copy is compressed into a zip file as a way to reduce disk space (and to keep people from opening a backup copy of the catalog by mistake).</p>
+<p>Using this backup feature can help protect you against data loss through drive failure (if they are being saved to a different drive) or catalog corruption (which is rare, but can happen and is not always obvious at first), and I highly recommend using it, but even though the backup copies are now compressed, Lightroom will continue to keep creating them until the chosen destination drive is full. Each time the process runs a new (compressed) copy of the catalog is created and there it will remain until the user (you) removes them. This is easy to do, but I&#8217;ve encountered many people who have never given it a second thought and have every backup copy of the catalog ever created still sitting in that folder.</p>
+<p>I periodically go to the folder where they are created using my file browser and delete all but the most recent few. If you think about it, should you ever need to restore a backup catalog you would choose the most recent one right? But what if the data you were hoping to retrieve wasn&#8217;t in the most recent catalog copy, wouldn&#8217;t it be nice to have a few iterative versions on hand to go back through? Yes, this is more redundant redundancy, but I personally enjoy the peace of mind of having them around. The really important part is that you need to be in control and not let automated tasks run unchecked. You may just have gigabytes of drive space waiting to be reclaimed.</p>
+<p><strong>Important public service announcement</strong>, before you go deleting all of your old backup copies make sure you know where your working catalog is located first (this is shown on that Catalog Settings panel we saw earlier) and that it is not somehow located among your backups. You&#8217;d be surprised how many people I&#8217;ve encountered who only discovered their catalog was among their backups after they deleted it by mistake. How could this happen? The Default Catalog setting found in Preferences &gt; General is usually to blame. By default, it is set to Load most recent catalog, so all it takes is a curious user opening an old backup copy of a catalog, then closing Lightroom to set that old backup copy as the &#8220;most recent&#8221; and the next time that person launches Lightroom that backup copy opens. Please take a moment to change your Default Catalog preference to anything other than Load most recent!</p>
+<p><a href="https://lightroomkillertips.com/wp-content/uploads/2018/01/filecheck_03.jpg" class="fancyboxgroup" rel="gallery-10392"><img class="aligncenter size-large wp-image-10397" src="https://lightroomkillertips.com/wp-content/uploads/2018/01/filecheck_03-1024x826.jpg" alt="" width="838" height="676" srcset="https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/filecheck_03-1024x826.jpg 1024w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/filecheck_03-300x242.jpg 300w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/filecheck_03-768x619.jpg 768w" sizes="(max-width: 838px) 100vw, 838px" /></a></p>
+<p>I&#8217;ll wrap this up in next week&#8217;s post with a look at Classic&#8217;s preview caches. See you then!</p>
+<p>The post <a rel="nofollow" href="https://lightroomkillertips.com/keeping-lightroom-classics-files-check-part-1/">Keeping Lightroom Classic&#8217;s Files in Check: Part 1</a> appeared first on <a rel="nofollow" href="https://lightroomkillertips.com">Lightroom Killer Tips</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://lightroomkillertips.com/keeping-lightroom-classics-files-check-part-1/feed/</wfw:commentRss>
+		<slash:comments>5</slash:comments>
+		</item>
+		<item>
+		<title>Making Sure You Don&#8217;t Miss Any Dust Spots On Your Image</title>
+		<link>https://lightroomkillertips.com/making-sure-dont-miss-dust-spots-image/</link>
+		<comments>https://lightroomkillertips.com/making-sure-dont-miss-dust-spots-image/#comments</comments>
+		<pubDate>Tue, 23 Jan 2018 08:16:55 +0000</pubDate>
+		<dc:creator><![CDATA[Scott Kelby]]></dc:creator>
+				<category><![CDATA[Develop]]></category>
+		<category><![CDATA[Featured]]></category>
+		<category><![CDATA[Lightroom Coffee Break]]></category>
+		<category><![CDATA[Lightroom Videos]]></category>
+		<category><![CDATA[dust]]></category>
+		<category><![CDATA[remove]]></category>
+		<category><![CDATA[specs]]></category>
+		<category><![CDATA[Spots]]></category>
+		<category><![CDATA[Visualize]]></category>
+
+		<guid isPermaLink="false">https://lightroomkillertips.com/?p=10394</guid>
+		<description><![CDATA[<p>This is such a great tip &#8211; I used to show this one in the Photoshop World &#8220;Lightroom Killer Tips&#8221; live session. You can also use this in conjunction with the Visualize Spots feature &#8211; another super-helpful tip from Benjamin Warde. Pretty handy, right? Thanks to everybody who posted a comment here yesterday I read [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://lightroomkillertips.com/making-sure-dont-miss-dust-spots-image/">Making Sure You Don&#8217;t Miss Any Dust Spots On Your Image</a> appeared first on <a rel="nofollow" href="https://lightroomkillertips.com">Lightroom Killer Tips</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>This is such a great tip &#8211; I used to show this one in the Photoshop World &#8220;Lightroom Killer Tips&#8221; live session. You can also use this in conjunction with the Visualize Spots feature &#8211; another super-helpful tip from Benjamin Warde.</p>
+<p><iframe width="838" height="629" src="https://www.youtube.com/embed/jMOu5_RPnGE?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+<p>Pretty handy, right?</p>
+<p><strong>Thanks to everybody who posted a comment here yesterday</strong><br />
+I read every comment (always do). Anyway, thanks much for taking the time &#8211; it makes a difference. <img src="https://s.w.org/images/core/emoji/2.3/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>Have a great Tuesday everybody, and don&#8217;t forget to head over to my blog, ya know, in case anything fun happens today. <img src="https://s.w.org/images/core/emoji/2.3/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>Best,</p>
+<p><em><strong>-Scott</strong></em></p>
+<p>The post <a rel="nofollow" href="https://lightroomkillertips.com/making-sure-dont-miss-dust-spots-image/">Making Sure You Don&#8217;t Miss Any Dust Spots On Your Image</a> appeared first on <a rel="nofollow" href="https://lightroomkillertips.com">Lightroom Killer Tips</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://lightroomkillertips.com/making-sure-dont-miss-dust-spots-image/feed/</wfw:commentRss>
+		<slash:comments>9</slash:comments>
+		</item>
+		<item>
+		<title>Lightroom Adjustment Brush Trick For &#8220;Turning On The Lights&#8221;</title>
+		<link>https://lightroomkillertips.com/lightroom-adjustment-brush-trick-turning-lights/</link>
+		<comments>https://lightroomkillertips.com/lightroom-adjustment-brush-trick-turning-lights/#comments</comments>
+		<pubDate>Mon, 22 Jan 2018 08:16:40 +0000</pubDate>
+		<dc:creator><![CDATA[Scott Kelby]]></dc:creator>
+				<category><![CDATA[Adjustment Brushes]]></category>
+		<category><![CDATA[Featured]]></category>
+		<category><![CDATA[Painting White Balance]]></category>
+		<category><![CDATA[Turning Lights on]]></category>
+
+		<guid isPermaLink="false">https://lightroomkillertips.com/?p=10386</guid>
+		<description><![CDATA[<p>How to use the Adjustment Brush to turn lights on in your scene</p>
+<p>The post <a rel="nofollow" href="https://lightroomkillertips.com/lightroom-adjustment-brush-trick-turning-lights/">Lightroom Adjustment Brush Trick For &#8220;Turning On The Lights&#8221;</a> appeared first on <a rel="nofollow" href="https://lightroomkillertips.com">Lightroom Killer Tips</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Before we get to today&#8217;s tip, I have some terribly sad news to share. <strong>Winston Hendrickson,</strong> Adobe&#8217;s VP of Engineering for Lightroom and Photoshop passed away this weekend after a tough year-long battle with cancer. He was a dear friend, a reader of this blog, and he totally &#8220;got&#8221; Lightroom users because as a pro-sports photographer, he used it daily in his own work. I wrote a tribute to Winston on my daily blog — if you&#8217;ve got a sec, I think you&#8217;ll like learning more about this force for good in the Lightroom universe. <a href="https://scottkelby.com/industry-lost-hero-lost-dear-friend/">Here&#8217;s the link. </a></p>
+<p><strong>Note:</strong> after this, I have a small favor to ask, so please don&#8217;t miss it after the tutorial.</p>
+<p><strong>Lights on!</strong><br />
+This is a trick I&#8217;ve used over the years when I have a scenes that has visible lamps that are turned off. This trick simply turns them on to add more visual interest to the shot. Great for anything from street lamps to table lamps, and in this case, hanging lamps.</p>
+<p><img class="alignnone size-full wp-image-10387" src="https://lightroomkillertips.com/wp-content/uploads/2018/01/Lights1.jpg" alt="" width="750" height="445" srcset="https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/Lights1.jpg 750w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/Lights1-300x178.jpg 300w" sizes="(max-width: 750px) 100vw, 750px" /></p>
+<p><strong>STEP ONE:</strong> Here&#8217;s the original image, and I want to make it look like those hanging lamps are turned on. We do this with the Adjustment Brush, so click on the Adjustment Brush tool. Then increase the Exposure Amount (here I increased the Exposure to +1.27. Then drag the White Balance Temp slider the right over to 24 to add some yellow to the brush. Note: This was a JPEG image. If you&#8217;re doing this on a RAW image, just drag it over a bit until it&#8217;s a bit warm.</p>
+<p><img class="alignnone size-full wp-image-10388" src="https://lightroomkillertips.com/wp-content/uploads/2018/01/Lights2.jpg" alt="" width="750" height="445" srcset="https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/Lights2.jpg 750w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/Lights2-300x178.jpg 300w" sizes="(max-width: 750px) 100vw, 750px" /></p>
+<p><strong>STEP TWO:</strong> Zoom in, and make the brush a little smaller than the size of the lamp you want to &#8220;light.&#8221; Now just click the brush once inside the area where the light would appear, and voilá — it&#8217;s lit! (as seen here).</p>
+<p><img class="alignnone size-full wp-image-10389" src="https://lightroomkillertips.com/wp-content/uploads/2018/01/Lights3.jpg" alt="" width="750" height="445" srcset="https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/Lights3.jpg 750w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/Lights3-300x178.jpg 300w" sizes="(max-width: 750px) 100vw, 750px" /></p>
+<p><strong>Above:</strong> Here&#8217;s a Before/After so you can see what the lamp looks like when it&#8217;s lit (on the right).</p>
+<p><img class="alignnone size-full wp-image-10390" src="https://lightroomkillertips.com/wp-content/uploads/2018/01/Lights4.jpg" alt="" width="750" height="445" srcset="https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/Lights4.jpg 750w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/Lights4-300x178.jpg 300w" sizes="(max-width: 750px) 100vw, 750px" /></p>
+<p><strong>STEP THREE:</strong> In the case, the lamps gets smaller as they get farther away from the camera, so after you &#8220;lit&#8221; the two forward-most lights; shrink your brush size a couple of notches and then repeat the process for the next two farther away lights, and again with the next two, and so on  — shrinking your brush as you go. The final &#8220;lit&#8221; image is above.</p>
+<p>Hope you find that helpful.</p>
+<p><strong>Speaking of helpful…</strong><br />
+I have a favor to ask. On Friday, I posted an in-depth start-to-finish video tutorial. The video itself was 11-minutes and 34-seconds long, and I posted the original RAW file for you to download and follow along. So, how did it go? I only got one single comment about the tutorial, and it was from a guy who wanted to critique the final image. Nearly 3,000 people watched that video, but I get just one comment. You know what that says to me? Well, they don&#8217;t like these start-to-finish projects, so I won&#8217;t do that again. So, I&#8217;m done with that type of video. However, if you do see something you do actually like, would it kill you to post a simple comment. Anything. Just a simple Thanks, or I liked it, or I didn&#8217;t like it. Maybe Do more of these or don&#8217;t do these, or just something. Anything. On days when I really put my heart and soul into a cool tutorial that I feel like people are really going to like, and I get one or no comments, I actually want to hang it up.</p>
+<p>That&#8217;s the reason we stopped doing &#8220;The Lightroom Show.&#8221; The first couple of episodes we got lots of comments. Then as the season progressed, people still watched the shows, but the comments and feedback stopped, so without feedback or comments, we lost interest in continuing it. In short: if you guys stay involved, it will make me want to stay involved . If you go silent, I eventually will, too.</p>
+<p>Thanks for listening (for the few who made it down this far).</p>
+<p>Best,</p>
+<p><em><strong>-Scott</strong></em></p>
+<p>The post <a rel="nofollow" href="https://lightroomkillertips.com/lightroom-adjustment-brush-trick-turning-lights/">Lightroom Adjustment Brush Trick For &#8220;Turning On The Lights&#8221;</a> appeared first on <a rel="nofollow" href="https://lightroomkillertips.com">Lightroom Killer Tips</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://lightroomkillertips.com/lightroom-adjustment-brush-trick-turning-lights/feed/</wfw:commentRss>
+		<slash:comments>48</slash:comments>
+		</item>
+		<item>
+		<title>Lightroom &#8220;From Flat to Fabulous&#8221; Tutorial (with downloadable RAW practice file)</title>
+		<link>https://lightroomkillertips.com/from/</link>
+		<comments>https://lightroomkillertips.com/from/#comments</comments>
+		<pubDate>Fri, 19 Jan 2018 08:16:40 +0000</pubDate>
+		<dc:creator><![CDATA[Scott Kelby]]></dc:creator>
+				<category><![CDATA[Adjustment Brushes]]></category>
+		<category><![CDATA[Develop]]></category>
+		<category><![CDATA[Featured]]></category>
+		<category><![CDATA[Lightroom Classic]]></category>
+		<category><![CDATA[Lightroom Videos]]></category>
+		<category><![CDATA[Step-by-step]]></category>
+
+		<guid isPermaLink="false">https://lightroomkillertips.com/?p=10380</guid>
+		<description><![CDATA[<p>Download this RAW image and follow along as we go from the image straight out of the camera to the final image, learning every step of the way. :)</p>
+<p>The post <a rel="nofollow" href="https://lightroomkillertips.com/from/">Lightroom &#8220;From Flat to Fabulous&#8221; Tutorial (with downloadable RAW practice file)</a> appeared first on <a rel="nofollow" href="https://lightroomkillertips.com">Lightroom Killer Tips</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p><a href="https://lightroomkillertips.com/wp-content/uploads/2018/01/_DSC4285.NEF">Download this RAW image</a> and follow along as we go from the RAW image straight out of the camera to the final image, learning how it&#8217;s all done every step of the way (this is a perfect tutorial to do this weekend, or ya know, tonight).</p>
+<p><strong>But first…this:</strong><br />
+Head up: my full-day <strong>Lightroom seminar</strong> is about to kick off for 2018 in these cities:</p>
+<blockquote><p><strong>Houston</strong> (Feb. 26)<br />
+<strong>San Antonio</strong> (Feb. 22)<br />
+<strong>Atlanta</strong> (March 26)<br />
+<strong>Milwaukee</strong> (March 28)<br />
+<strong>Columbus</strong> (April 13)</p></blockquote>
+<p>Details and tickets <a href="http://kelbyonelive.com">at this link. </a>&#8211; hope you&#8217;ll come out and spend the day with me. <img src="https://s.w.org/images/core/emoji/2.3/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p><strong>OK, let&#8217;s get to the tutorial:</strong></p>
+<p><iframe width="838" height="629" src="https://www.youtube.com/embed/3mkZy5Ezr9s?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+<p>Hope you found that helpful. I have a WHOLE bunch more of these over at <a href="http://kelbyone.com">KelbyOne.com</a> and you can join now for as little as $9.99 a month. Don&#8217;t spend another year not being a Lightroom shark &#8211; come join our community!</p>
+<p>Have a great weekend everybody!</p>
+<p>Best,</p>
+<p><em><strong>-Scott</strong></em></p>
+<p>P.S. Go Jags and Go Vikings! <img src="https://s.w.org/images/core/emoji/2.3/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>The post <a rel="nofollow" href="https://lightroomkillertips.com/from/">Lightroom &#8220;From Flat to Fabulous&#8221; Tutorial (with downloadable RAW practice file)</a> appeared first on <a rel="nofollow" href="https://lightroomkillertips.com">Lightroom Killer Tips</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://lightroomkillertips.com/from/feed/</wfw:commentRss>
+		<slash:comments>36</slash:comments>
+		</item>
+		<item>
+		<title>Understanding the Lightroom Classic to Photoshop Workflow</title>
+		<link>https://lightroomkillertips.com/understanding-lightroom-classic-photoshop-workflow/</link>
+		<comments>https://lightroomkillertips.com/understanding-lightroom-classic-photoshop-workflow/#comments</comments>
+		<pubDate>Wed, 17 Jan 2018 08:00:10 +0000</pubDate>
+		<dc:creator><![CDATA[Rob Sylvan]]></dc:creator>
+				<category><![CDATA[Featured]]></category>
+		<category><![CDATA[Lightroom Classic]]></category>
+		<category><![CDATA[Photoshop]]></category>
+		<category><![CDATA[Preferences]]></category>
+		<category><![CDATA[External Editor]]></category>
+
+		<guid isPermaLink="false">https://lightroomkillertips.com/?p=10371</guid>
+		<description><![CDATA[<p>Understanding the basics of how to take your photos from Lightroom Classic (works the same in earlier versions of Lightroom Classic too) to Photoshop and back again (and possibly back and forth more than once) can reduce frustration and increase efficiency. Configuring Preferences Let’s take a look at the External Editing options, which can be [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://lightroomkillertips.com/understanding-lightroom-classic-photoshop-workflow/">Understanding the Lightroom Classic to Photoshop Workflow</a> appeared first on <a rel="nofollow" href="https://lightroomkillertips.com">Lightroom Killer Tips</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Understanding the basics of how to take your photos from Lightroom Classic (works the same in earlier versions of Lightroom Classic too) to Photoshop and back again (and possibly back and forth more than once) can reduce frustration and increase efficiency.</p>
+<h3>Configuring Preferences</h3>
+<p>Let’s take a look at the External Editing options, which can be found by going to Lightroom &gt; Preferences &gt; External Editing (PC: Edit &gt; Preferences &gt; External Editing).</p>
+<p><a href="https://lightroomkillertips.com/wp-content/uploads/2018/01/lr-to-ps-workflow_01.jpg" class="fancyboxgroup" rel="gallery-10371"><img class="aligncenter size-large wp-image-10378" src="https://lightroomkillertips.com/wp-content/uploads/2018/01/lr-to-ps-workflow_01-1024x826.jpg" alt="" width="838" height="676" srcset="https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/lr-to-ps-workflow_01-1024x826.jpg 1024w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/lr-to-ps-workflow_01-300x242.jpg 300w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/lr-to-ps-workflow_01-768x619.jpg 768w" sizes="(max-width: 838px) 100vw, 838px" /></a></p>
+<p>By default Lightroom will detect the most current version of Photoshop (or even Photoshop Elements) that you have installed (Photoshop trumps Photoshop Elements if you have both) and make that application the primary external editor, which is displayed at the top of the dialog box. You can optionally configure additional external editors in the Additional External Editor section.</p>
+<p>Tip: After configuring an additional editor you can click the Preset drop-down menu and save those settings with that editor as a preset to easily reuse again in the future.</p>
+<p><a href="https://lightroomkillertips.com/wp-content/uploads/2018/01/lr-to-ps-workflow_02.jpg" class="fancyboxgroup" rel="gallery-10371"><img class="aligncenter size-large wp-image-10377" src="https://lightroomkillertips.com/wp-content/uploads/2018/01/lr-to-ps-workflow_02-1024x826.jpg" alt="" width="838" height="676" srcset="https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/lr-to-ps-workflow_02-1024x826.jpg 1024w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/lr-to-ps-workflow_02-300x242.jpg 300w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/lr-to-ps-workflow_02-768x619.jpg 768w" sizes="(max-width: 838px) 100vw, 838px" /></a></p>
+<p>Regardless of whether you are using the primary external editor or an additional external editor you need to configure Lightroom to choose the File Format, Color Space, and Bit Depth of the copy that is sent to that editor. There is also a field for specifying the resolution value for the copy, but this has no effect on the pixel dimensions of the copy created, and it can be changed again at any time in the future based on your output needs, so simply choose a default value that you like at this stage. File type is also a personal preference, so choose TIF or PSD based on what you prefer, or just stick with the default setting. If you do go with PSD, make sure Photoshop’s File Handling preferences are set to always maximize PSD and PSB compatibility.</p>
+<p><a href="https://lightroomkillertips.com/wp-content/uploads/2018/01/lr-to-ps-workflow_03.jpg" class="fancyboxgroup" rel="gallery-10371"><img class="aligncenter size-large wp-image-10376" src="https://lightroomkillertips.com/wp-content/uploads/2018/01/lr-to-ps-workflow_03-1024x675.jpg" alt="" width="838" height="552" srcset="https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/lr-to-ps-workflow_03-1024x675.jpg 1024w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/lr-to-ps-workflow_03-300x198.jpg 300w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/lr-to-ps-workflow_03-768x506.jpg 768w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/lr-to-ps-workflow_03-207x136.jpg 207w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/lr-to-ps-workflow_03-260x170.jpg 260w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/lr-to-ps-workflow_03-430x283.jpg 430w" sizes="(max-width: 838px) 100vw, 838px" /></a></p>
+<p>The biggest choice you need to make is around bit depth. If you shoot raw and want to have the most data available for editing in Photoshop then choose 16 bit. If you are satisfied with the amount of image data available in an 8 bit file, and prefer a smaller file size then choose 8 bit. If you go with 16 bit then ProPhoto RGB is the best choice for color space, but if you go with 8 bit then I would suggest using Adobe RGB (ProPhoto RGB is a wide gamut color space that is better suited to 16 bit data). Lightroom will then use these settings for all copies sent to the external editor.</p>
+<p>At the very bottom of the External Editing dialog box is the place where you can customize the file naming convention applied to the copies sent to the external editor. By default the word Edit is simply appended to the existing file name. This works for me, so I just leave it as-is, but you can click the Template drop-down menu and choose an existing filename template or choose Edit to create a custom filename template that better suits your needs.</p>
+<h3>When?</h3>
+<p>One of the questions I get asked the most is about when in the workflow to send a photo from Lightroom to Photoshop. Well, if you are starting with a raw photo then it makes the most sense to do all your basic raw processing in Lightroom first (white balance, exposure, capture sharpening, lens corrections, etc.) and then send a copy with your Lightroom adjustments to Photoshop to do whatever work you need to do there. In this situation it is important to keep in mind that the copy that appears in Photoshop is not saved to your hard drive until you use the File &gt; Save menu in Photoshop, so don’t be surprised if you still see the file extension of the original raw photo at first.</p>
+<p><a href="https://lightroomkillertips.com/wp-content/uploads/2018/01/lr-to-ps-workflow_04.jpg" class="fancyboxgroup" rel="gallery-10371"><img class="aligncenter size-large wp-image-10375" src="https://lightroomkillertips.com/wp-content/uploads/2018/01/lr-to-ps-workflow_04-1024x621.jpg" alt="" width="838" height="508" srcset="https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/lr-to-ps-workflow_04-1024x621.jpg 1024w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/lr-to-ps-workflow_04-300x182.jpg 300w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/lr-to-ps-workflow_04-768x466.jpg 768w" sizes="(max-width: 838px) 100vw, 838px" /></a></p>
+<p>As soon you save the copy in Photoshop the file extension will update to reflect the file format and file name template you choose in Lightroom’s External Editing preferences, and at the same time the copy is saved to the same folder as the source photo and added to the Lightroom catalog.</p>
+<p><a href="https://lightroomkillertips.com/wp-content/uploads/2018/01/lr-to-ps-workflow_05.jpg" class="fancyboxgroup" rel="gallery-10371"><img class="aligncenter size-large wp-image-10374" src="https://lightroomkillertips.com/wp-content/uploads/2018/01/lr-to-ps-workflow_05-1024x621.jpg" alt="" width="838" height="508" srcset="https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/lr-to-ps-workflow_05-1024x621.jpg 1024w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/lr-to-ps-workflow_05-300x182.jpg 300w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/lr-to-ps-workflow_05-768x466.jpg 768w" sizes="(max-width: 838px) 100vw, 838px" /></a></p>
+<p>Once you are done editing in Photoshop be sure to save one last time, then close the photo and switch back to Lightroom.</p>
+<p>What about preserving layers?</p>
+<p>Another frequent question I get is how to open a layered TIF or PSD file from Lightroom to Photoshop without flattening the image. If you select a non-raw photo (TIF, PSD or JPG) in Lightroom and go to Photo &gt; Edit in &gt; Edit in Photoshop then you will be prompted to make a choice.</p>
+<p><a href="https://lightroomkillertips.com/wp-content/uploads/2018/01/lr-to-ps-workflow_06.jpg" class="fancyboxgroup" rel="gallery-10371"><img class="aligncenter size-full wp-image-10373" src="https://lightroomkillertips.com/wp-content/uploads/2018/01/lr-to-ps-workflow_06.jpg" alt="" width="806" height="606" srcset="https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/lr-to-ps-workflow_06.jpg 806w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/lr-to-ps-workflow_06-300x226.jpg 300w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/lr-to-ps-workflow_06-768x577.jpg 768w" sizes="(max-width: 806px) 100vw, 806px" /></a></p>
+<p>If you simply want to edit the original layered version in Photoshop without creating a new copy or applying any additional Lightroom adjustments then choose Edit Original. This would be the equivalent of opening that file from Bridge or Photoshop itself. Once you are done editing in Photoshop, just go to File &gt; Save, then close the photo and return to Lightroom.</p>
+<p>Lightroom can only ever apply its Develop adjustments to a new copy, and that copy will be flattened. For example, if you brought that layered photo into the Develop module and applied new adjustments to it, and then wanted to see the end result applied to a <strong>new copy</strong> that you could edit in Photoshop you would choose Edit a copy with Lightroom adjustments, which will result in a new flattened copy being sent to Photoshop. These are two different workflows with two different results, and the choice is yours.</p>
+<p>The post <a rel="nofollow" href="https://lightroomkillertips.com/understanding-lightroom-classic-photoshop-workflow/">Understanding the Lightroom Classic to Photoshop Workflow</a> appeared first on <a rel="nofollow" href="https://lightroomkillertips.com">Lightroom Killer Tips</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://lightroomkillertips.com/understanding-lightroom-classic-photoshop-workflow/feed/</wfw:commentRss>
+		<slash:comments>9</slash:comments>
+		</item>
+		<item>
+		<title>Customizing Your Lightroom Identity Plate</title>
+		<link>https://lightroomkillertips.com/customizing-lightroom-identity-plate/</link>
+		<comments>https://lightroomkillertips.com/customizing-lightroom-identity-plate/#respond</comments>
+		<pubDate>Tue, 16 Jan 2018 08:16:01 +0000</pubDate>
+		<dc:creator><![CDATA[Scott Kelby]]></dc:creator>
+				<category><![CDATA[Featured]]></category>
+		<category><![CDATA[Fun]]></category>
+		<category><![CDATA[Lightroom Coffee Break]]></category>
+		<category><![CDATA[add your logo]]></category>
+		<category><![CDATA[customize]]></category>
+		<category><![CDATA[Identity Plate]]></category>
+
+		<guid isPermaLink="false">https://lightroomkillertips.com/?p=10367</guid>
+		<description><![CDATA[<p>Benjamin's new video is really quick, and really helpful (as always). In 60-seconds or less, you'll learn how to customize your Identity Plate. Good stuff! </p>
+<p>The post <a rel="nofollow" href="https://lightroomkillertips.com/customizing-lightroom-identity-plate/">Customizing Your Lightroom Identity Plate</a> appeared first on <a rel="nofollow" href="https://lightroomkillertips.com">Lightroom Killer Tips</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Hi, gang &#8211; it&#8217;s Tuesdays, and Adobe&#8217;s own <strong>Benjamin Warde</strong> has a brand new video on how to quickly customize your copy of Lightroom with your own logo and look. Check it out:</p>
+<p><iframe width="838" height="629" src="https://www.youtube.com/embed/dnBEtcSSY0g?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+<p>Thanks, Benjamin!</p>
+<p>Here&#8217;s to having a way better than usual Tuesday!</p>
+<p>Best,</p>
+<p><em><strong>-Scott</strong></em></p>
+<p><strong>P.S.</strong> <em>Tomorrow my guest on The Grid (my live weekly photography show) is photographer <strong>Melanie Kern Favilla,</strong> and we&#8217;re doing blind photo critiques. <a href="https://l.facebook.com/l.php?u=http%3A%2F%2Fbit.ly%2F1oVJIIB&amp;h=ATN7pFecNG1UJm-iriIP1aGx1Aut3EXRhkokW61Qo8xj-BJE6Vk2pljrknKTjDmcCQpK4qmIvGfDLyQ8XRmn3QCcsqhGpL-N4Ry_vaigmslkN7i23JG7EkcE1HyAhh0GlpXmEFELYv1JQ1OOp7vVWIWJT3l_Fa05sYT50qllUrlXhnGK91IHzgBwQqErcC7T88PkfMSBnHZhIEJNRPrHaq42YGFSxCQU2xuHi9o3TY1rspJKHN5y4o6VH0ZjxbCWeXkChI8I32BEeHPXowRXGWZB1fXRFm3avcixHWWEU-5fGA">Submit your images now</a> if you want to be considered for a blind photo critique on the show (it&#8217;s airs Web at 4pM ET). </em></p>
+<p>The post <a rel="nofollow" href="https://lightroomkillertips.com/customizing-lightroom-identity-plate/">Customizing Your Lightroom Identity Plate</a> appeared first on <a rel="nofollow" href="https://lightroomkillertips.com">Lightroom Killer Tips</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://lightroomkillertips.com/customizing-lightroom-identity-plate/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Lightroom Adjustment Brush Tips for Beginners</title>
+		<link>https://lightroomkillertips.com/lightroom-adjustment-brush-tips-beginners/</link>
+		<comments>https://lightroomkillertips.com/lightroom-adjustment-brush-tips-beginners/#comments</comments>
+		<pubDate>Mon, 15 Jan 2018 08:16:03 +0000</pubDate>
+		<dc:creator><![CDATA[Scott Kelby]]></dc:creator>
+				<category><![CDATA[Adjustment Brushes]]></category>
+		<category><![CDATA[Develop]]></category>
+		<category><![CDATA[Featured]]></category>
+		<category><![CDATA[Lightroom Tips]]></category>
+
+		<guid isPermaLink="false">https://lightroomkillertips.com/?p=10365</guid>
+		<description><![CDATA[<p>How 'bout a list blast from the past - some great Adjustment Brush tips for new Lightroom users. You're doing to dig these (even if you're not a new user). :)</p>
+<p>The post <a rel="nofollow" href="https://lightroomkillertips.com/lightroom-adjustment-brush-tips-beginners/">Lightroom Adjustment Brush Tips for Beginners</a> appeared first on <a rel="nofollow" href="https://lightroomkillertips.com">Lightroom Killer Tips</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Here&#8217;s a few quick shortcuts for using the Adjustment Brush for those of you just getting into Lightroom (or if you&#8217;ve been using Lightroom for a while, maybe you forgot about these, or never knew these existed, or just wanted a refresher). Ya know, stuff like that. <img src="https://s.w.org/images/core/emoji/2.3/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p><a href="//img.kelbymediagroup.com/lightroomkillertips/uploads/2015/11/brush1.jpg" class="fancyboxgroup" rel="gallery-10365"><img class="alignnone size-full wp-image-8156" src="//img.kelbymediagroup.com/lightroomkillertips/uploads/2015/11/brush1.jpg" alt="brush1" width="750" height="567" srcset="https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2015/11/brush1.jpg 750w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2015/11/brush1-300x227.jpg 300w" sizes="(max-width: 750px) 100vw, 750px" /></a></p>
+<p><strong>Above:</strong> You&#8217;ll be changing brush sizes a lot, so you&#8217;ll want to know how to change brush sizes from your keyboard.</p>
+<p>By the way — the Adjustment Brush cursor you see above shows you the actual size of the brush (the smaller circle inside), and the amount of feathering [softening added to the edges] applied to your brush (the larger outer circle). When you see a big gap between the larger outer circle, and the inner circle, that means you have a lot of feathering applied (it&#8217;s a soft-edged brush). If you the two circles are very close together, it&#8217;s a hard-edge brush.</p>
+<p><a href="//img.kelbymediagroup.com/lightroomkillertips/uploads/2015/11/brush2.jpg" class="fancyboxgroup" rel="gallery-10365"><img class="alignnone size-full wp-image-8157" src="//img.kelbymediagroup.com/lightroomkillertips/uploads/2015/11/brush2.jpg" alt="brush2" width="750" height="565" srcset="https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2015/11/brush2.jpg 750w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2015/11/brush2-300x226.jpg 300w" sizes="(max-width: 750px) 100vw, 750px" /></a></p>
+<p><strong>Above:</strong> To shrink the size of the brush (don&#8217;t worry — the feathering amount moves in tandem with it), just press the left bracket key ( [ ) to shrink the brush size, and the right bracket key ( ] ) to make the brush size larger (these keys are just to the right of the letter &#8220;P&#8221; on a standard QWERTY keyboard).</p>
+<p><a href="//img.kelbymediagroup.com/lightroomkillertips/uploads/2015/11/brush3a.jpg" class="fancyboxgroup" rel="gallery-10365"><img class="alignnone size-full wp-image-8158" src="//img.kelbymediagroup.com/lightroomkillertips/uploads/2015/11/brush3a.jpg" alt="brush3a" width="750" height="561" srcset="https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2015/11/brush3a.jpg 750w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2015/11/brush3a-300x224.jpg 300w" sizes="(max-width: 750px) 100vw, 750px" /></a></p>
+<p><strong>Above:</strong> If you want to leave the brush size as is, but just change the amount of feathering (as seen above), hold the Shift key, and use the same left and right bracket keys.</p>
+<p><a href="//img.kelbymediagroup.com/lightroomkillertips/uploads/2015/11/brush5a.jpg" class="fancyboxgroup" rel="gallery-10365"><img class="alignnone size-full wp-image-8155" src="//img.kelbymediagroup.com/lightroomkillertips/uploads/2015/11/brush5a.jpg" alt="brush5a" width="750" height="601" srcset="https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2015/11/brush5a.jpg 750w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2015/11/brush5a-300x240.jpg 300w" sizes="(max-width: 750px) 100vw, 750px" /></a></p>
+<p><strong>Above:</strong> You know that Edit Pins that appear on screen when you paint over an area? Well, you have some options over how they appear.</p>
+<p>First, you can show/hide then by pressing Command-H (on Mac) or Ctrl-H on Windows. Next, there&#8217;s a option, down in the left corer of the Toolbar, which lets you choose when the edit pins appear.</p>
+<p><span style="color: #ff0000;"><strong>Always:</strong> </span>(the one with the checkbox, shown here) means the pins are always visible, even when your cursor isn&#8217;t over the image.</p>
+<p><span style="color: #ff0000;"><strong>Auto:</strong> </span>your Edit Pins automatically hide when your cursors moves away from the image area, so if you move your cursor over to move any of the Adjustment Brush sliders, they auto-hide.</p>
+<p><span style="color: #ff0000;"><strong>Selected:</strong></span> It only shows the pin you&#8217;re currently working on, and it hides the other ones. This is a pretty decent choice, because once you&#8217;re working on a different pin, why do you need to see the other ones all the time? Sometimes you might, but not usually.</p>
+<p><span style="color: #ff0000;"><strong>Never:</strong></span> This one is kinda obvious. It never shows the Edit pins.</p>
+<p><a href="//img.kelbymediagroup.com/lightroomkillertips/uploads/2015/11/brush5.jpg" class="fancyboxgroup" rel="gallery-10365"><img class="alignnone size-full wp-image-8154" src="//img.kelbymediagroup.com/lightroomkillertips/uploads/2015/11/brush5.jpg" alt="brush5" width="750" height="565" srcset="https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2015/11/brush5.jpg 750w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2015/11/brush5-300x226.jpg 300w" sizes="(max-width: 750px) 100vw, 750px" /></a></p>
+<p><span style="color: #ff0000;"><strong>Above:</strong></span> One more — if you want to see the area you painted over (the mask), you can either:</p>
+<p><strong>(a)</strong> Move your cursor over the active pin and it will display the mask as a red tint, as seen above.</p>
+<p><strong>(b)</strong> Press the letter &#8220;O&#8221; on your keyboard, and it keeps the mask turned on (like you see above), so you can see the mask as you paint.</p>
+<p>OK, how you find one or more of those helpful.</p>
+<p>Have a great Monday everybody!</p>
+<p>Best,</p>
+<p><em><strong>-Scott</strong></em></p>
+<p><strong>P.S.</strong> <em>I&#8217;m up in Nashville at PPA&#8217;s Imaging USA conference &amp; expo &#8211; look for my coverage and live tours of the expo floor over on my Facebook page today. If you&#8217;re here at the show, stop by my book signing at the Rocky Nook booth at 11:30 am &#8211; booth 767. Hope to see you there. <img src="https://s.w.org/images/core/emoji/2.3/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></em></p>
+<p>The post <a rel="nofollow" href="https://lightroomkillertips.com/lightroom-adjustment-brush-tips-beginners/">Lightroom Adjustment Brush Tips for Beginners</a> appeared first on <a rel="nofollow" href="https://lightroomkillertips.com">Lightroom Killer Tips</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://lightroomkillertips.com/lightroom-adjustment-brush-tips-beginners/feed/</wfw:commentRss>
+		<slash:comments>7</slash:comments>
+		</item>
+		<item>
+		<title>Seven More Really Handy Lightroom Shortcuts</title>
+		<link>https://lightroomkillertips.com/seven-really-handy-lightroom-shortcuts-2/</link>
+		<comments>https://lightroomkillertips.com/seven-really-handy-lightroom-shortcuts-2/#comments</comments>
+		<pubDate>Fri, 12 Jan 2018 08:16:09 +0000</pubDate>
+		<dc:creator><![CDATA[Scott Kelby]]></dc:creator>
+				<category><![CDATA[Featured]]></category>
+		<category><![CDATA[Keyboard Shortcuts]]></category>
+		<category><![CDATA[Library]]></category>
+		<category><![CDATA[Keyboard shortcuts]]></category>
+		<category><![CDATA[Shortcuts]]></category>
+
+		<guid isPermaLink="false">https://lightroomkillertips.com/?p=10359</guid>
+		<description><![CDATA[<p>Want some more shortcuts for the Library module to save some time? Sure ya do! :)</p>
+<p>The post <a rel="nofollow" href="https://lightroomkillertips.com/seven-really-handy-lightroom-shortcuts-2/">Seven More Really Handy Lightroom Shortcuts</a> appeared first on <a rel="nofollow" href="https://lightroomkillertips.com">Lightroom Killer Tips</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p><img class="alignnone size-full wp-image-10361" src="https://lightroomkillertips.com/wp-content/uploads/2018/01/moreshortlr.jpg" alt="" width="750" height="430" srcset="https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/moreshortlr.jpg 750w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/moreshortlr-300x172.jpg 300w" sizes="(max-width: 750px) 100vw, 750px" /></p>
+<p>It&#8217;s Friday; the weekend&#8217;s almost here, so let’s kick it off by learning some really helpful shortcuts for Lightroom&#8217;s <span style="color: #ff0000;"><strong>Library Module</strong>.</span> Here we go:</p>
+<p style="padding-left: 30px;"><strong>(1)</strong> Press &#8216;t&#8217; to toggle the toolbar at the bottom of the thumbnail grid on/off. When it&#8217;s on, press and hold &#8216;t&#8217; to temporarily toggle it off; release the &#8220;t&#8217; to bring it back.</p>
+<p style="padding-left: 30px;"><strong>(2)</strong> Press Option-1 to apply the first keyword in your current Keyword Set. Press Option-2, for the 2nd, Option-3 for the third and so on (On a PC, it&#8217;s Alt-1, Alt-2, Alt-3 and so on).</p>
+<p style="padding-left: 30px;"><strong>(3)</strong> Press \ (backslash) to show/hide the Library filter across the top of the Thumbnail grid</p>
+<p style="padding-left: 30px;"><strong>(4)</strong> Press + to make your thumbnails larger. Press – to make them smaller.</p>
+<p style="padding-left: 30px;"><strong>(5)</strong> Press Shift-Tab to hide all the top, bottom and side panels so only the Thumbnails are visible. Press Shift-Tab again to bring them back.</p>
+<p style="padding-left: 30px;"><strong>(6)</strong> To Stack selected images under one thumbnail; press &#8220;Command-G (PC: Ctrl-G).&#8221; To UnStack: click on the stacked thumbnail and press &#8220;Shift-Command-G (PC: Shift-Ctrl-G). To move an image to the top thumbnail in the Stack, press Shift-S. To expand the Stack, press &#8220;s.&#8221; To collapse it again, press &#8220;s&#8221; again.</p>
+<p style="padding-left: 30px;"><strong>(7)</strong> To apply a star-rating, and automatically move to the next image; hold Shift and press 1-5. To apply a Color Label, and automatically move to the next image; hold Shift and press 6-9. To remove all Stars, press &#8220;0.&#8221; To remove a color label, right-click on the thumbnail; go under &#8216;Set Color Label&#8217; and choose &#8220;None.&#8221;</p>
+<p>Hope you found that helpful. <img src="https://s.w.org/images/core/emoji/2.3/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p><strong>You keep sayin’…</strong><br />
+…that one of these days you’re going to go to the <strong>Photoshop World Conference.</strong> Why not this year? If you register now you can save $100 with the Early Bird discount, plus right now you can snag a hotel room right at the Hyatt Regency (our host hotel) at a special discount rate for attendees. Plus, airfares are cheap to Orlando now. Come on, say it with me — <em>“This is the year. I’m going!”</em> All the details are at <a href="http://photoshopworld.com/">PhotoshopWorld.com</a></p>
+<p><strong>One more thing…</strong><br />
+I&#8217;ve got 5 quit bits of news over on my blog today. <a href="https://scottkelby.com/5-quick-bits-news/">Here&#8217;s the link</a> if you&#8217;ve got a sec. 🙂</p>
+<p>Have a great weekend!</p>
+<p><em><strong>-Scott</strong></em></p>
+<p><strong>P.S.</strong> <em>Want a learn a bunch more Lightroom tips this weekend? Watch my class <a href="http://bit.ly/2isFBlI">Lightroom Killer Tips.</a> [catchy name, eh?] 🙂  The official trailer is below: </em></p>
+<p><iframe width="838" height="471" src="https://www.youtube.com/embed/SeZx4mvXc2s?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+<p>The post <a rel="nofollow" href="https://lightroomkillertips.com/seven-really-handy-lightroom-shortcuts-2/">Seven More Really Handy Lightroom Shortcuts</a> appeared first on <a rel="nofollow" href="https://lightroomkillertips.com">Lightroom Killer Tips</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://lightroomkillertips.com/seven-really-handy-lightroom-shortcuts-2/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+		</item>
+		<item>
+		<title>Understanding the History and Snapshots Panels: Part 2</title>
+		<link>https://lightroomkillertips.com/understanding-history-snapshots-panels-part-2/</link>
+		<comments>https://lightroomkillertips.com/understanding-history-snapshots-panels-part-2/#comments</comments>
+		<pubDate>Wed, 10 Jan 2018 08:00:48 +0000</pubDate>
+		<dc:creator><![CDATA[Rob Sylvan]]></dc:creator>
+				<category><![CDATA[Develop]]></category>
+		<category><![CDATA[Featured]]></category>
+		<category><![CDATA[History]]></category>
+		<category><![CDATA[Lightroom Classic]]></category>
+		<category><![CDATA[Snapshots]]></category>
+
+		<guid isPermaLink="false">https://lightroomkillertips.com/?p=10324</guid>
+		<description><![CDATA[<p>Picking up from last week&#8217;s post, the History and Snapshots panel share some common traits. If you expand the Navigator panel you can hover your cursor over a history step or a snapshot and see the Navigator panel preview change to reflect the state of the photo at that time. Similarly if you click on [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://lightroomkillertips.com/understanding-history-snapshots-panels-part-2/">Understanding the History and Snapshots Panels: Part 2</a> appeared first on <a rel="nofollow" href="https://lightroomkillertips.com">Lightroom Killer Tips</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Picking up from <a href="https://lightroomkillertips.com/understanding-history-snapshots-panels-part-1/">last week&#8217;s post</a>, the History and Snapshots panel share some common traits. If you expand the Navigator panel you can hover your cursor over a history step or a snapshot and see the Navigator panel preview change to reflect the state of the photo at that time. Similarly if you click on a history step or a snapshot you will set the photo to the settings contained in that step or snapshot respectively and this updates the live preview in the main editing window.</p>
+<p>Here is a key difference to understand about the way these panels work. Clicking on a snapshot reverts the photo to the settings contained in that snapshot and adds that action to the photo’s history in just the same way as if you applied a preset or moved a slider. Even though this may change the photo to reflect settings from an earlier time in your post-processing you still retain all of the history steps that lead to the moment you clicked on the snapshot.</p>
+<p><a href="https://lightroomkillertips.com/wp-content/uploads/2018/01/historysnapshots2Figure1.jpg" class="fancyboxgroup" rel="gallery-10324"><img class="aligncenter size-full wp-image-10356" src="https://lightroomkillertips.com/wp-content/uploads/2018/01/historysnapshots2Figure1.jpg" alt="" width="748" height="864" srcset="https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/historysnapshots2Figure1.jpg 748w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/historysnapshots2Figure1-260x300.jpg 260w" sizes="(max-width: 748px) 100vw, 748px" /></a></p>
+<p>Any adjustments you make after that continue to be added to the History panel in a linear fashion. However, if you click on a past history step you revert the photo back to the settings at that point in time, and the moment you make any new adjustment you will wipe away all of the history steps that were previously above the selected history step. When you click on a past history step and make a new adjustment you have effectively taken the photo in a new post-processing direction from that selected point in history and any work above that history step no longer applies and is deleted.</p>
+<p><a href="https://lightroomkillertips.com/wp-content/uploads/2018/01/historysnapshots2Figure2.jpg" class="fancyboxgroup" rel="gallery-10324"><img class="aligncenter size-large wp-image-10355" src="https://lightroomkillertips.com/wp-content/uploads/2018/01/historysnapshots2Figure2-957x1024.jpg" alt="" width="838" height="897" srcset="https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/historysnapshots2Figure2-957x1024.jpg 957w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/historysnapshots2Figure2-280x300.jpg 280w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/historysnapshots2Figure2-768x822.jpg 768w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/historysnapshots2Figure2.jpg 1413w" sizes="(max-width: 838px) 100vw, 838px" /></a></p>
+<p>So, if you take the photo in a certain direction and want to preserve those settings for all time, make a snapshot of that state. If you want to revert the photo back to that state without losing any history steps you can click that snapshot to go back and then take the photo in a new direction. If you are just experimenting and are not attached to the outcome, then just use the steps in the History panel to go back in time and wash away your experimental tracks by simply making any new adjustment.</p>
+<p>You can also make a snapshot from any history step by ctrl-clicking (PC: right-click) the desired history step and choosing Create Snapshot from the contextual menu that appears.</p>
+<p><a href="https://lightroomkillertips.com/wp-content/uploads/2018/01/historysnapshots2Figure3.jpg" class="fancyboxgroup" rel="gallery-10324"><img class="aligncenter size-large wp-image-10354" src="https://lightroomkillertips.com/wp-content/uploads/2018/01/historysnapshots2Figure3-788x1024.jpg" alt="" width="788" height="1024" srcset="https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/historysnapshots2Figure3-788x1024.jpg 788w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/historysnapshots2Figure3-231x300.jpg 231w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/historysnapshots2Figure3-768x998.jpg 768w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/historysnapshots2Figure3.jpg 1044w" sizes="(max-width: 788px) 100vw, 788px" /></a></p>
+<p>So, if you forget to make a snapshot at the time you make the adjustment you can always create one without having to revert the photo back to that state first.</p>
+<p>Sometimes history and snapshots are more useful for comparison sake than for reverting back to an earlier time. You may have noticed the second option in that contextual menu was Copy History Step Settings to Before (that same option exists when you ctrl-click/right-click a snapshot). I use Lightroom’s Before/After comparison view all of the time, and find it much more useful to compare a current adjustment against a significant develop state than to compare against the state at import. This is the second reason why I name and number my snapshots as I work, as I find it more useful to use a snapshot as the before state in many cases.</p>
+<p>If you find that you create a snapshot and then do more work that you wish to include in that previously made snapshot, just ctrl-click/right-click the snapshot and choose Update with Current Settings. You can also use that same contextual menu to rename and delete snapshots.</p>
+<p><a href="https://lightroomkillertips.com/wp-content/uploads/2018/01/historysnapshots2Figure4.jpg" class="fancyboxgroup" rel="gallery-10324"><img class="aligncenter size-large wp-image-10353" src="https://lightroomkillertips.com/wp-content/uploads/2018/01/historysnapshots2Figure4-795x1024.jpg" alt="" width="795" height="1024" srcset="https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/historysnapshots2Figure4-795x1024.jpg 795w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/historysnapshots2Figure4-233x300.jpg 233w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/historysnapshots2Figure4-768x990.jpg 768w, https://4bcokm12bvu948gi7312gnab-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/historysnapshots2Figure4.jpg 1067w" sizes="(max-width: 795px) 100vw, 795px" /></a></p>
+<p>One final note on snapshots versus history is that snapshots can be written to a photo’s XMP metadata whereas all of the individual history steps are not preserved (only the last set of settings are written to XMP). This might be useful if you like to preserve Lightroom changes in the photo’s XMP metadata in addition to the catalog.</p>
+<p>The post <a rel="nofollow" href="https://lightroomkillertips.com/understanding-history-snapshots-panels-part-2/">Understanding the History and Snapshots Panels: Part 2</a> appeared first on <a rel="nofollow" href="https://lightroomkillertips.com">Lightroom Killer Tips</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://lightroomkillertips.com/understanding-history-snapshots-panels-part-2/feed/</wfw:commentRss>
+		<slash:comments>4</slash:comments>
+		</item>
+		<item>
+		<title>How to Take Advantage of Lightroom&#8217;s Targeted Adjustment Tool</title>
+		<link>https://lightroomkillertips.com/take-advantage-lightrooms-targeted-adjustment-tool/</link>
+		<comments>https://lightroomkillertips.com/take-advantage-lightrooms-targeted-adjustment-tool/#comments</comments>
+		<pubDate>Tue, 09 Jan 2018 08:16:45 +0000</pubDate>
+		<dc:creator><![CDATA[Scott Kelby]]></dc:creator>
+				<category><![CDATA[Develop]]></category>
+		<category><![CDATA[Featured]]></category>
+		<category><![CDATA[Lightroom Coffee Break]]></category>
+		<category><![CDATA[Targeted Adjustment Tool]]></category>
+		<category><![CDATA[TAT]]></category>
+
+		<guid isPermaLink="false">https://lightroomkillertips.com/?p=10349</guid>
+		<description><![CDATA[<p>This tool is so awesome, but it&#8217;s also kind of hidden, and so a lot of folks don&#8217;t take advantage of it. Well, you can start 2018 unleashing this bad boy thanks to this quick 60-second video from Adobe&#8217;s own Benjamin Warde: Thanks, Benjamin! 🙂 Hope you have a great Tuesday! -Scott P.S. I know [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://lightroomkillertips.com/take-advantage-lightrooms-targeted-adjustment-tool/">How to Take Advantage of Lightroom&#8217;s Targeted Adjustment Tool</a> appeared first on <a rel="nofollow" href="https://lightroomkillertips.com">Lightroom Killer Tips</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>This tool is so awesome, but it&#8217;s also kind of hidden, and so a lot of folks don&#8217;t take advantage of it. Well, you can start 2018 unleashing this bad boy thanks to this quick 60-second video from Adobe&#8217;s own Benjamin Warde:</p>
+<p><iframe width="838" height="629" src="https://www.youtube.com/embed/uNg3n58xEf8?feature=oembed" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></p>
+<p>Thanks, Benjamin! <img src="https://s.w.org/images/core/emoji/2.3/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>Hope you have a great Tuesday!</p>
+<p><em><strong>-Scott</strong></em></p>
+<p><span style="color: #ff0000;"><strong>P.S.</strong></span> <em>I know a lot of you have been wondering when the McRib is coming back (I know that&#8217;s true, because a commercial on TV just now said so and they couldn&#8217;t say so if it wasn&#8217;t absolutely 100% true). Well, I have great news — it&#8217;s back now. So, ya know…you can get your McRibs now. Dilly, dilly. </em></p>
+<p>The post <a rel="nofollow" href="https://lightroomkillertips.com/take-advantage-lightrooms-targeted-adjustment-tool/">How to Take Advantage of Lightroom&#8217;s Targeted Adjustment Tool</a> appeared first on <a rel="nofollow" href="https://lightroomkillertips.com">Lightroom Killer Tips</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://lightroomkillertips.com/take-advantage-lightrooms-targeted-adjustment-tool/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+	</channel>
+</rss>

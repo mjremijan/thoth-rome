@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" media="screen" href="/~files/feed-premium.xsl"?>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:feedpress="https://feed.press/xmlns" version="2.0">
+    <channel>
+        <feedpress:locale>en</feedpress:locale>
+        <atom:link rel="self" href="http://feeds.dzone.com/java"/>
+        <atom:link rel="hub" href="http://feedpress.superfeedr.com/"/>
+        <title>DZone Java Zone</title>
+        <link>https://dzone.com/java-jdk-development-tutorials-tools-news</link>
+        <description>Recent posts in Java on DZone.com</description>
+        <item>
+            <title>This Week in Spring: AWS, Cloud Native, and Spring Boot 2</title>
+            <link>https://dzone.com/articles/this-week-in-spring-january-23rd-2018?utm_medium=feed&amp;utm_source=feedpress.me&amp;utm_campaign=Feed%3A+dzone%2Fjava</link>
+            <description>&lt;p pid="1"&gt;Hi, Spring fans! Welcome to another installment of &lt;em&gt;This Week In Spring&lt;/em&gt;. This week I’m in Los Angeles (warm!) talking to customers and then it’s off to Chicago (not warm!). There’s so much good stuff to cover this week so let’s get to it!&lt;/p&gt;
+&lt;ul&gt;
+ &lt;li&gt;In PCF 2.0, the application runtime is now joined by an enterprise-grade Kubernetes service, called Pivotal Container Service, and a new Functions-as-a-Service offering, Pivotal Function Service. &lt;a href="https://content.pivotal.io/podcasts/pcf-2-0-brings-kubernetes-functions-to-the-pivotal-platform-ep-54?_lrsc=8640ca61-b02e-473e-8be9-a376c2d951ed" target="_blank"&gt;Pivotal’s Jared Ruckle joins Jeff and Dormain for a look at PCF 2.0 in this new podcast&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-sleuth#distributed-tracing-with-brave" target="_blank"&gt;Spring Cloud Sleuth now integrates with Brave&lt;/a&gt; and it’s an exciting time for distributed tracing.&lt;/li&gt;
+ &lt;li&gt;Spring Cloud Vault lead Mark Paluch &lt;a href="https://github.com/spring-projects/spring-vault/commit/28ff17d4f8cbd09114bb9f2a841ac51aa24402bc" target="_blank"&gt;has integrated Spring Security with Spring Cloud Vault&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;It’s been a busy week for the Spring Cloud Sleuth team! This commit makes &lt;a href="https://github.com/spring-cloud/spring-cloud-sleuth/commit/22d91bac247e8273fa93ffe05f50179182425f72" target="_blank"&gt;Spring Cloud Sleuth OpenTracing-compatible&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;Support for &lt;a href="https://github.com/micrometer-metrics/micrometer/pull/228" target="_blank"&gt;integrating Micrometer (think SLF4J, but for metrics) with Jersey 2 (a JAX-RS implementation) has just landed&lt;/a&gt;!&lt;/li&gt;
+ &lt;li&gt;The &lt;a href="https://github.com/awslabs/aws-serverless-java-container/releases/tag/aws-serverless-java-container-0.9" target="_blank"&gt;new release of AWS’ Java container for serverless&lt;/a&gt; supports activation &lt;a href="https://github.com/awslabs/aws-serverless-java-container/issues/88" target="_blank"&gt;of Spring profiles&lt;/a&gt;. Anyway, this is cool. But use &lt;a href="https://github.com/spring-cloud/spring-cloud-function/tree/master/spring-cloud-function-adapters/spring-cloud-function-adapter-aws" target="_blank"&gt;Spring Cloud Function and the AWS adapter&lt;/a&gt;; it’s a cleaner integration.&lt;/li&gt;
+ &lt;li&gt;The Spring Boot support for VS Code &lt;a href="https://twitter.com/azurefriday/status/955593853888733184?ref_src=twcamp%5Eshare%7Ctwsrc%5Eios%7Ctwgr%5Ecom.blork.Pinner.AddBookmarkExtension" target="_blank"&gt;features in this week’s installment of “Azure Fridays”&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;This is &lt;a href="http://techprehension.com/2018/01/21/10-must-read-books-for-every-micro-services-and-cloud-native-professional/" target="_blank"&gt;an interesting list of ten books people building microservices and cloud native applications should read&lt;/a&gt;. I’m pleased that the book, &lt;em&gt;Cloud Native Java&lt;/em&gt;, is in the list.&lt;/li&gt;
+ &lt;li&gt;Paweł Urban has a nice post on how &lt;a href="https://medium.com/@urbanpawel/receive-spring-boot-exception-alerts-via-email-using-logstash-c29b83368275" target="_blank"&gt;to receive Spring Boot error alerts by email with Logstash&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;Spring Boot lead Phillip Webb &lt;a href="https://twitter.com/springcentral/status/955516012383813632" target="_blank"&gt;tweeted on the exciting progress of Spring Boot 2.0 so far&lt;/a&gt;: There have been 17 weeks of work, 6099 commits, and 1153 issues closed! WOW!&lt;/li&gt;
+ &lt;li&gt;This is a great look at &lt;a href="https://javax0.wordpress.com/2018/01/10/java-9-module-services/" target="_blank"&gt;Java’s service loader mechanism&lt;/a&gt;, and in particular, it looks at how the service loader mechanism in Java 9 modules works. It also looks, incidentally, at how Spring itself does component scanning on the classpath.&lt;/li&gt;
+ &lt;li&gt;Spring Test lead and JUnit project lead Sam Brannen &lt;a href="http://junit.org/junit5/docs/snapshot/user-guide/#extensions-registration-programmatic" target="_blank"&gt;has just debuted support for programmatic extension registration via @RegisterExtension in the upcoming #JUnit 5.1 release&lt;/a&gt;! This bodes well for future integrations in Spring projects like Spring REST Docs. JUnit 5 is an exciting horizon for application developers. Learn more about it &lt;a href="https://www.youtube.com/watch?time_continue=1&amp;amp;v=-mIrA5cVfZ4" target="_blank"&gt;by watching Sam’s JavaOne 2017 talk&lt;/a&gt;.&lt;/li&gt;
+ &lt;li&gt;This isn’t specifically to do with Spring, itself, &lt;a href="https://marxsoftware.blogspot.de/2018/01/schopenhauers-law-immutability.html?m=1" target="_blank"&gt;but it’s an interesting look at the differences between immutable and unmodifiable in the upcoming JDK 10&lt;/a&gt;. Check it out!&lt;/li&gt;
+ &lt;li&gt;&lt;a href="https://blog.takipi.com/pivotal-cloud-foundry-vs-kubernetes-choosing-the-right-cloud-native-application-deployment-platform/?_lrsc=a9da2d09-785e-40fd-bb30-d5762c6c5848" target="_blank"&gt;This is an oldie-but-a-goodie&lt;/a&gt;: it looks at when to choose Pivotal Cloud Foundry, Kubernetes, or both.&lt;/li&gt;
+ &lt;li&gt;Richard Seroter and Jeff Hammond’s SpringOne Platform 2017 talk &lt;a href="https://www.infoq.com/presentations/pcf-2-future" target="_blank"&gt;introducing Pivotal Cloud Foundry 2.0 is now up on InfoQ&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;The Spring Data team has contributed a &lt;a href="https://github.com/buschmais/jqa-spring-plugin/pull/15" target="_blank"&gt;lot of small improvements to the JQAssistant project plugin for Spring&lt;/a&gt;. &lt;a href="https://jqassistant.org/" target="_blank"&gt;JQAssistant&lt;/a&gt; supports scanning and validating Java-based projects. This new support looks very promising.&lt;/li&gt;
+ &lt;li&gt;What should &lt;a href="https://bit.ly/2mLVHtq" target="_blank"&gt;your monitoring architecture include&lt;/a&gt;? Cloud Foundry talks all about it in the 2018 Dzone Guide to DevOps&lt;/li&gt;
+ &lt;li&gt;Hibernate ORM 5.3.0.Beta1 has been &lt;a href="http://in.relation.to/2018/01/18/hibernate-orm-530-beta1-release/" target="_blank"&gt;released with support for #JPA 2.2.&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;Dr. Mark Pollack just &lt;a href="https://twitter.com/springcentral/status/954397044302426114" target="_blank"&gt;announced Spring Cloud Skipper 1.0 RC1&lt;/a&gt;.&lt;/li&gt;
+ &lt;li&gt;This Polish-language look at &lt;a href="https://codecouple.pl/2018/01/19/26-spring-boot-consumer-driven-contract/" target="_blank"&gt;Spring Cloud Contract looks very interesting&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="https://twitter.com/pivotal/status/953694959378448385" target="_blank"&gt;@pivotal tweeted&lt;/a&gt;: ‘Maybe we should regularly play a “Where in the world is @starbuxman?” game in 2018?’ Indeed, 2018 is starting to move in gear and I’ll be bringing Spring wherever I can. &lt;a href="https://twitter.com/starbuxman/status/953577456492937216" target="_blank"&gt;Find me in these cities&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;Spring Cloud ninja Ryan Baxter just announced &lt;a href="https://twitter.com/springcentral/status/953690920595070976" target="_blank"&gt;Spring Cloud Edgware Service Release 1 (SR1) has been released.&lt;/a&gt;. The new release is jam-packed with new released. Check ’em out!&lt;/li&gt;
+ &lt;li&gt;This post — introducing Spring Boot — was voted one &lt;a href="https://www.ibm.com/developerworks/java/library/j-spring-boot-basics-perry/index.html" target="_blank"&gt;of IBM DeveloperWorks’ top 2017 posts&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;Spring Data lead &lt;a href="https://github.com/synyx/hades/commit/09d2f72" target="_blank"&gt;Oliver Gierke celebrates the tenth anniversary&lt;/a&gt; of the first commits that would eventually become Spring Data JPA. Happy birthday Spring Data JPA (then called “Hades”)!!&lt;/li&gt;
+ &lt;li&gt;Project Reactor lead Simon Basl&amp;eacute; introduces better error handling, an upcoming feature of Reactor 3.2, &lt;a href="https://twitter.com/springcentral/status/953350596857229312" target="_blank"&gt;that’s now available in milestone releases&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;Check out the new &lt;a href="https://twitter.com/springcentral/status/953348839125131264" target="_blank"&gt;Spring Session for Apache Geode and Pivotal Gemfire releases&lt;/a&gt;!&lt;/li&gt;
+ &lt;li&gt;Get trained on Cloud Foundry in this &lt;em&gt;free&lt;/em&gt;&amp;nbsp;&lt;a href="https://www.edx.org/course/introduction-cloud-foundry-cloud-native-linuxfoundationx-lfs132x#!?_lrsc=3b7be921-f2cf-4716-9876-e5a96fdc824f&amp;amp;utm_source=employee-social&amp;amp;utm_medium=twitter&amp;amp;utm_campaign=employee_advocacy" target="_blank"&gt;Cloud Foundry course offered by the Linux Foundation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;</description>
+            <category>java</category>
+            <category>aws</category>
+            <category>serverless</category>
+            <category>spring boot 2</category>
+            <category>cloud native development</category>
+            <pubDate>Wed, 24 Jan 2018 17:01:01 GMT</pubDate>
+            <guid isPermaLink="false">https://dzone.com/articles/1997003</guid>
+            <media:thumbnail url="https://dzone.com/thumbnail?fid=7934885&amp;w=600"/>
+            <dc:creator>Joshua Long</dc:creator>
+        </item>
+        <item>
+            <title>Centralize Authentication with Kong Gateway and OIDC</title>
+            <link>https://dzone.com/articles/centralize-authentication-with-kong-gateway-and-oidc?utm_medium=feed&amp;utm_source=feedpress.me&amp;utm_campaign=Feed%3A+dzone%2Fjava</link>
+            <description>&lt;section class="Blog is-single"&gt;
+ &lt;article class="BlogPost"&gt;
+  &lt;p&gt;Kong is an open-source API Gateway and microservices management layer that you can integrate with Okta using its OpenID Connect plugin. Why might you need an API Gateway like Kong? Well, you're probably trying to easily add services on top of all your APIs, for example, logging, authentication, or rate limiting. Kong's OIDC plugin ensures that it's only speaking to Okta using the Authorization Code flow.&lt;/p&gt;
+  &lt;p&gt;It then passes the contents of the ID Token to an internal service using an HTTP header called x-userinfo. Your app just needs to know what to do with this HTTP header. It doesn’t have to do anything with OIDC itself. You can easily set the Kong OIDC plugin&amp;nbsp;up to work with any IdP, in this tutorial we'll use Okta. This project is easier to understand visually. Here’s what an architecture might look like without an API Gateway:&lt;/p&gt;</description>
+            <category>java</category>
+            <category>tutorial</category>
+            <category>spring boot</category>
+            <category>authentication</category>
+            <category>oidc</category>
+            <category>kong gateway</category>
+            <pubDate>Wed, 24 Jan 2018 08:01:01 GMT</pubDate>
+            <guid isPermaLink="false">https://dzone.com/articles/1996673</guid>
+            <media:thumbnail url="https://dzone.com/thumbnail?fid=7936391&amp;w=600"/>
+            <dc:creator>Micah Silverman</dc:creator>
+        </item>
+        <item>
+            <title>Functional Programming: Recursion</title>
+            <link>https://dzone.com/articles/functional-programming-recursion?utm_medium=feed&amp;utm_source=feedpress.me&amp;utm_campaign=Feed%3A+dzone%2Fjava</link>
+            <description>&lt;p pid="19"&gt;Recursion is a technique that allows us to break down a problem into smaller pieces. This technique allows us to remove some local &lt;a href="https://dzone.com/articles/side-effects-1"&gt;side effects&lt;/a&gt; that we perform while writing looping structures and also makes our code more expressive and readable. In this post, we will see why it is a very useful technique in functional programming and how it can help us.&lt;/p&gt;
+&lt;h2&gt;Functional Loops&lt;/h2&gt;
+&lt;p pid="20"&gt;In the function that we wrote in the previous post:&lt;/p&gt;</description>
+            <category>java</category>
+            <category>tutorial</category>
+            <category>functional programming</category>
+            <category>recursion</category>
+            <category>functional loops</category>
+            <pubDate>Wed, 24 Jan 2018 05:01:01 GMT</pubDate>
+            <guid isPermaLink="false">https://dzone.com/articles/1985871</guid>
+            <media:thumbnail url="https://dzone.com/thumbnail?fid=7887804&amp;w=600"/>
+            <dc:creator>Christian Panadero</dc:creator>
+        </item>
+        <item>
+            <title>How to Deal With Exceptions</title>
+            <link>https://dzone.com/articles/how-to-deal-with-exceptions?utm_medium=feed&amp;utm_source=feedpress.me&amp;utm_campaign=Feed%3A+dzone%2Fjava</link>
+            <description>&lt;p pid="243"&gt;I recently had a discussion with a friend, who is a relatively junior but very smart software developer. She asked me about exception handling. The questions were pointing to a tips-and-tricks kind of path and there is definitely a list of them. But I am a believer in context and motivation behind the way we write software so I decided to write my thoughts on exceptions from such a perspective.&amp;nbsp;&lt;/p&gt;
+&lt;p pid="249"&gt;Exceptions in programming (using Java as a stage for our story) are used to notify us that a problem occurred during the execution of our code. Exceptions are a special category of classes. What makes them special is that they extend the Exception class which in turn extends the Throwable class. Being implementations of Throwable allows us to &amp;quot;throw&amp;quot; them when necessary. So, how can an exception happen? Instances of exception classes are thrown either from the JVM or in a section of code using the throw statement. That is the how, but why?&lt;/p&gt;</description>
+            <category>java</category>
+            <category>exception handling</category>
+            <category>exceptions</category>
+            <pubDate>Tue, 23 Jan 2018 18:02:06 GMT</pubDate>
+            <guid isPermaLink="false">https://dzone.com/articles/1904791</guid>
+            <media:thumbnail url="https://dzone.com/thumbnail?fid=7926720&amp;w=600"/>
+            <dc:creator>Tasos Martidis</dc:creator>
+        </item>
+        <item>
+            <title>Creating Stubs Using Java 8 Lambdas</title>
+            <link>https://dzone.com/articles/to-mock-to-stub-or-to-lambda?utm_medium=feed&amp;utm_source=feedpress.me&amp;utm_campaign=Feed%3A+dzone%2Fjava</link>
+            <description>&lt;p pid="1"&gt;Using stub (or mock) objects and mock frameworks is a common approach for writing tests, but people starting to use them very rarely consider the difficulties they are going to face in a dynamic project where requirements change very often, and when the tests have to be maintained over time by other people in the team.&lt;/p&gt;
+&lt;p pid="1"&gt;I recently wrote an &lt;a href="https://dzone.com/articles/use-mock-objects-judiciously"&gt;article&lt;/a&gt; giving some insights on good and bad practices using mocks with the help of Java examples. In general, we often rely on libraries for the creation of stub (or mock) objects in Java. This article shows situations where the dependencies to such libraries can be omitted by using Java 8 lambda expressions. The code is based on the examples from my previous article, which makes the comparison of various approaches easier.&lt;/p&gt;</description>
+            <category>java</category>
+            <category>tutorial</category>
+            <category>java 8</category>
+            <category>mock objects</category>
+            <category>lambda expression</category>
+            <category>stub</category>
+            <pubDate>Tue, 23 Jan 2018 16:15:58 GMT</pubDate>
+            <guid isPermaLink="false">https://dzone.com/articles/1816099</guid>
+            <media:thumbnail url="https://dzone.com/thumbnail?fid=7888482&amp;w=600"/>
+            <dc:creator>Daniela Kolarova</dc:creator>
+        </item>
+        <item>
+            <title>Partial Functions in Scala</title>
+            <link>https://dzone.com/articles/partial-functions-in-scala?utm_medium=feed&amp;utm_source=feedpress.me&amp;utm_campaign=Feed%3A+dzone%2Fjava</link>
+            <description>&lt;p pid="2"&gt;As the name suggests, partial functions are only partial implementations. They do not cover every possible scenario of incoming parameters. A partial function caters to only a subset of possible data for which it has been defined. In order to assist developers, if the partial function is defined for a given input, Scala's&amp;nbsp;&lt;code&gt;PartialFunction&lt;/code&gt;&lt;span id="_tmp_pre_1"&gt;&amp;nbsp;&lt;/span&gt;trait provides the&amp;nbsp;&lt;code&gt;isDefinedAt&lt;/code&gt;&lt;span id="_tmp_pre_2"&gt;&amp;nbsp;&lt;/span&gt;method. The&amp;nbsp;&lt;code&gt;isDefinedAt&lt;/code&gt;&lt;span id="_tmp_pre_3"&gt;&amp;nbsp;&lt;/span&gt;method can be queried if it can handle a given value.&lt;/p&gt;
+&lt;p pid="4"&gt;Partial functions in Scala can be defined by using the&amp;nbsp;&lt;code&gt;case&lt;/code&gt;&lt;span id="_tmp_pre_4"&gt;&amp;nbsp;&lt;/span&gt;statement. Let us define a simple partial function,&amp;nbsp;&lt;code&gt;squareRoot&lt;/code&gt;. The function would take in a&amp;nbsp;&lt;code&gt;double&lt;/code&gt;&amp;nbsp;input parameter and would return the square root.&lt;/p&gt;</description>
+            <category>java</category>
+            <category>scala</category>
+            <category>functional programming</category>
+            <category>partial functions</category>
+            <pubDate>Tue, 23 Jan 2018 15:02:22 GMT</pubDate>
+            <guid isPermaLink="false">https://dzone.com/articles/1991623</guid>
+            <media:thumbnail url="https://dzone.com/thumbnail?fid=7926584&amp;w=600"/>
+            <dc:creator>Gaurav Gaur</dc:creator>
+        </item>
+        <item>
+            <title>Faster Sorting of Arrays of Primitives Coming to Java?</title>
+            <link>https://dzone.com/articles/faster-sorting-of-arrays-of-primitives-coming-to-j?utm_medium=feed&amp;utm_source=feedpress.me&amp;utm_campaign=Feed%3A+dzone%2Fjava</link>
+            <description>&lt;p pid="1"&gt;It appears that sorting arrays of primitives in Java may experience a performance improvement in the not-so-far future. &lt;a href="https://www.linkedin.com/in/vladimir-yaroslavskiy-91b568/" target="_blank"&gt;Vladimir Yaroslavskiy&lt;/a&gt; has posted a &lt;a href="http://mail.openjdk.java.net/pipermail/core-libs-dev/2018-January/051000.html" target="_blank"&gt;message&lt;/a&gt; to the &lt;a href="http://mail.openjdk.java.net/mailman/listinfo/core-libs-dev" target="_blank"&gt;core-libs-dev mailing list&lt;/a&gt; titled &amp;quot;&lt;a href="http://mail.openjdk.java.net/pipermail/core-libs-dev/2018-January/051000.html" target="_blank"&gt;The new optimized version of Dual-Pivot Quicksort&lt;/a&gt;&amp;quot; in which Yaroslavskiy writes of an &amp;quot;optimized and faster version of Dual-Pivot Quicksort&amp;quot; that he has &amp;quot;been working on ... for the last 5 years.&amp;quot;&lt;/p&gt;
+&lt;p pid="2"&gt;The &amp;quot;&lt;a href="http://mail.openjdk.java.net/pipermail/core-libs-dev/2018-January/051000.html" target="_blank"&gt;The new optimized version of Dual-Pivot Quicksort&lt;/a&gt;&amp;quot; message includes some historical background on the &lt;a href="http://codeblab.com/wp-content/uploads/2009/09/DualPivotQuicksort.pdf" target="_blank"&gt;Dual-Pivot Quicksort&lt;/a&gt;; highlights relative performance of the new version for random data, &amp;quot;nearly structured arrays,&amp;quot; and &amp;quot;period inputs&amp;quot;; provides a comprehensive summary of the changes involved; and provides a &lt;a href="http://cr.openjdk.java.net/~alanb/DualPivotSortUpdate/webrev.01/" target="_blank"&gt;link for open code review of the changes&lt;/a&gt;.&lt;/p&gt;</description>
+            <category>java</category>
+            <category>performance</category>
+            <category>algorithms</category>
+            <category>sorting</category>
+            <category>arrays</category>
+            <category>primitives</category>
+            <category>quicksort</category>
+            <pubDate>Tue, 23 Jan 2018 10:02:56 GMT</pubDate>
+            <guid isPermaLink="false">https://dzone.com/articles/1993569</guid>
+            <media:thumbnail url="https://dzone.com/thumbnail?fid=7925955&amp;w=600"/>
+            <dc:creator>Dustin Marx</dc:creator>
+        </item>
+        <item>
+            <title>Maven Dependency Management Without Going Full Maven</title>
+            <link>https://dzone.com/articles/maven-dependency-management-without-going-full-mav?utm_medium=feed&amp;utm_source=feedpress.me&amp;utm_campaign=Feed%3A+dzone%2Fjava</link>
+            <description>&lt;p pid="3"&gt;You may have already discovered the joys of managing your projects with &lt;a href="https://maven.apache.org/" target="_blank"&gt;Maven&lt;/a&gt;, thanks to a virtually endless range of features it has to offer. Whether you are a newbie or a pro, using it in &lt;a href="https://www.genuitec.com/dom/products/myeclipse/" target="_blank"&gt;MyEclipse &lt;/a&gt;will take it to a whole new level if you are looking for a better experience inside an IDE.&lt;/p&gt;
+&lt;h2&gt;Dependencies Only Mode&lt;/h2&gt;
+&lt;p pid="4"&gt;You might be used to the fact that with Maven you can manage a project's dependencies, builds, reporting, and documentation from a single place. Maven dependency management is one of the best-known Maven features, and is one of the areas where Maven excels. However, exploiting &lt;em&gt;only&lt;/em&gt; this feature is typically not possible - you would need to go almost all the way with a Maven-based project configuration, adding and configuring Maven plugins, dealing with profiles, and goals. If you don't have the time or the need to go through the works, MyEclipse jumps into the picture, offering the &lt;em&gt;Dependencies Only&lt;/em&gt; mode, which has actually been available since MyEclipse 2015.&lt;/p&gt;</description>
+            <category>java</category>
+            <category>maven</category>
+            <category>dependency management</category>
+            <category>myeclipse</category>
+            <pubDate>Tue, 23 Jan 2018 06:02:51 GMT</pubDate>
+            <guid isPermaLink="false">https://dzone.com/articles/1971929</guid>
+            <media:thumbnail url="https://dzone.com/thumbnail?fid=7827131&amp;w=600"/>
+            <dc:creator>Nataliya Muriy</dc:creator>
+        </item>
+        <item>
+            <title>Easy Fine-Grained Sorting With JDK 8</title>
+            <link>https://dzone.com/articles/easy-fine-grained-sorting-with-jdk-8?utm_medium=feed&amp;utm_source=feedpress.me&amp;utm_campaign=Feed%3A+dzone%2Fjava</link>
+            <description>&lt;p pid="1"&gt;&lt;a href="http://www.oracle.com/technetwork/java/javase/overview/java8-2100321.html" target="_blank"&gt;Java 8&lt;/a&gt;'s introduction of &lt;a href="http://www.oracle.com/technetwork/articles/java/ma14-java-se-8-streams-2177646.html" target="_blank"&gt;streams&lt;/a&gt; and useful &lt;a href="https://dzone.com/articles/java-8-default-and-static-methods-in-interfaces" target="_blank"&gt;static&lt;/a&gt;/&lt;a href="https://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html" target="_blank"&gt;default&lt;/a&gt; methods on the &lt;a href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html" target="_blank"&gt;Comparator interface&lt;/a&gt; make it easy to compare two objects based on individual fields' values without the need to implement a &lt;a href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html#compare-T-T-" target="_blank"&gt;compare(T,T)&lt;/a&gt; method on the class whose objects are being compared.&lt;/p&gt;
+&lt;p pid="2"&gt;I'm going to use a simple &lt;code&gt;Song&lt;/code&gt; class to help demonstrate this and its &lt;code&gt;Song.java&lt;/code&gt; code listing is shown next.&lt;/p&gt;</description>
+            <category>java</category>
+            <category>tutorial</category>
+            <category>java 8</category>
+            <category>sorting</category>
+            <category>streams</category>
+            <category>comparator</category>
+            <pubDate>Mon, 22 Jan 2018 21:01:01 GMT</pubDate>
+            <guid isPermaLink="false">https://dzone.com/articles/1982323</guid>
+            <media:thumbnail url="https://dzone.com/thumbnail?fid=7874282&amp;w=600"/>
+            <dc:creator>Dustin Marx</dc:creator>
+        </item>
+        <item>
+            <title>Java in 2018</title>
+            <link>https://dzone.com/articles/java-in-2018?utm_medium=feed&amp;utm_source=feedpress.me&amp;utm_campaign=Feed%3A+dzone%2Fjava</link>
+            <description>&lt;p pid="2"&gt;So what’s ahead in 2018? How will the community deal with the transition? How will Java evolve to meet the new needs of organizations big and small?&lt;/p&gt;
+&lt;p pid="3"&gt;Thanks to &lt;a href="https://www.linkedin.com/in/duimovich/" target="_blank"&gt;John Duimovich&lt;/a&gt;, &lt;a href="https://www.ibm.com/support/knowledgecenter/en/SSYKE2/welcome_javasdk_family.html" target="_blank"&gt;IBM&lt;/a&gt; Distinguished Engineer and Java CTO, for sharing his predictions on what to expect from Java 2018.&lt;/p&gt;</description>
+            <category>java</category>
+            <category>java ee</category>
+            <category>kotlin</category>
+            <category>serverless</category>
+            <category>eclipse foundation</category>
+            <pubDate>Mon, 22 Jan 2018 17:01:02 GMT</pubDate>
+            <guid isPermaLink="false">https://dzone.com/articles/1988983</guid>
+            <media:thumbnail url="https://dzone.com/thumbnail?fid=7898963&amp;w=600"/>
+            <dc:creator>Tom Smith</dc:creator>
+        </item>
+        <item>
+            <title>Mapping Enum Keys With EnumMaps [Snippets]</title>
+            <link>https://dzone.com/articles/mapping-enum-keys-with-enummaps?utm_medium=feed&amp;utm_source=feedpress.me&amp;utm_campaign=Feed%3A+dzone%2Fjava</link>
+            <description>&lt;p pid="1"&gt;Here’s a type that has been around in the JDK for a while and that comes in handy when we want to define maps with enum types as keys: An &lt;code&gt;EnumMap&lt;/code&gt; is a&amp;nbsp;specialized &lt;code&gt;Map&lt;/code&gt;.&lt;/p&gt;
+&lt;p pid="2"&gt;We’ll create a map for a given enum:&lt;/p&gt;</description>
+            <category>java</category>
+            <category>enum key</category>
+            <category>enummaps</category>
+            <pubDate>Mon, 22 Jan 2018 11:01:01 GMT</pubDate>
+            <guid isPermaLink="false">https://dzone.com/articles/1988988</guid>
+            <media:thumbnail url="https://dzone.com/thumbnail?fid=7898970&amp;w=600"/>
+            <dc:creator>Sebastian Daschner</dc:creator>
+        </item>
+        <item>
+            <title>What's New in Effective Java's Third Edition?</title>
+            <link>https://dzone.com/articles/whats-new-in-effective-javas-third-edition?utm_medium=feed&amp;utm_source=feedpress.me&amp;utm_campaign=Feed%3A+dzone%2Fjava</link>
+            <description>&lt;p pid="62"&gt;Ever since hearing about the&amp;nbsp;&lt;a href="http://marxsoftware.blogspot.com/2017/11/effective-java-3-coming-soon.html" target="_blank" style="background-color: rgb(255, 255, 255);"&gt;pending publication&lt;/a&gt;&amp;nbsp;of the&amp;nbsp;&lt;a href="https://www.thoughts-on-java.org/review-effective-java-3rd-edition/" target="_blank" style="background-color: rgb(255, 255, 255);"&gt;Third Edition&lt;/a&gt;&amp;nbsp;of&amp;nbsp;&lt;a href="http://www.informit.com/store/effective-java-9780134685991" target="_blank" style="background-color: rgb(255, 255, 255);"&gt;Effective Java&lt;/a&gt;, I've wondered what would be new in it. I assumed that features introduced to Java since Java 6 would be covered and that is indeed the case. However, there are some other changes as well to this third edition of the Java developer classic. In this post, I provide a high-level overview of the topics that are added, changed significantly, or removed in this third edition.&lt;/p&gt; 
+&lt;p pid="65"&gt;Before listing what I've observed that appears to be new in&amp;nbsp;&lt;em&gt;Effective Java, Third Edition&lt;/em&gt;, I need to make the disclaimer statement that I'm likely to miss several changes throughout this book with 12 chapters encompassing 90 items covering well over 350 pages. This post is not intended to provide detailed coverage of the changes in the third edition, but rather is intended as a high-level sampling of the changes and readers are encouraged to borrow or purchase a copy of this Third Edition of&amp;nbsp;&lt;em&gt;Effective Java&lt;/em&gt;&amp;nbsp;to access the low-level details.&lt;/p&gt;</description>
+            <category>java</category>
+            <category>java 8</category>
+            <category>java 9</category>
+            <category>java 7</category>
+            <category>effective java</category>
+            <pubDate>Mon, 22 Jan 2018 08:01:03 GMT</pubDate>
+            <guid isPermaLink="false">https://dzone.com/articles/1989090</guid>
+            <media:thumbnail url="https://dzone.com/thumbnail?fid=7902566&amp;w=600"/>
+            <dc:creator>Dustin Marx</dc:creator>
+        </item>
+        <item>
+            <title>Converting HTML to RichTextString for Apache POI</title>
+            <link>https://dzone.com/articles/converting-html-to-richtextstring-for-apache-poi?utm_medium=feed&amp;utm_source=feedpress.me&amp;utm_campaign=Feed%3A+dzone%2Fjava</link>
+            <description>&lt;p pid="140"&gt;In this tutorial, we will be building an application that takes HTML as an input and creates a Microsoft Excel Workbook with a&amp;nbsp;&lt;strong&gt;RichText representation of the HTML&lt;/strong&gt;&amp;nbsp;that was provided. To generate the Microsoft Excel Workbook, we will be using&amp;nbsp;&lt;strong&gt;Apache POI&lt;/strong&gt;. To analyze the HTML, we will be using Jericho.&lt;/p&gt;
+&lt;p pid="3"&gt;The full source code for this tutorial is available on&amp;nbsp;&lt;a href="https://github.com/michaelcgood/HTML-to-Apache-POI-RichTextString" rel="noopener" target="_blank"&gt;GitHub&lt;/a&gt;.&lt;/p&gt;</description>
+            <category>java</category>
+            <category>tutorial</category>
+            <category>spring</category>
+            <category>java 9</category>
+            <category>apache poi</category>
+            <category>microsoft excel</category>
+            <category>html conversion</category>
+            <category>rich text</category>
+            <pubDate>Mon, 22 Jan 2018 05:01:01 GMT</pubDate>
+            <guid isPermaLink="false">https://dzone.com/articles/1986975</guid>
+            <media:thumbnail url="https://dzone.com/thumbnail?fid=7900576&amp;w=600"/>
+            <dc:creator>Michael Good</dc:creator>
+        </item>
+        <item>
+            <title>5 Tips for Performant, Thread-Safe Java From ConcurrentHashMap</title>
+            <link>https://dzone.com/articles/5-tips-for-high-performance-thread-safe-java-from?utm_medium=feed&amp;utm_source=feedpress.me&amp;utm_campaign=Feed%3A+dzone%2Fjava</link>
+            <description>&lt;p pid="2"&gt;java.util.concurrent.ConcurrentHashMap is a highly optimized concurrent hash map implementation. Here are 5 tips we can learn from its implementation:&lt;/p&gt;
+&lt;p pid="3"&gt;&lt;strong&gt;Disclaimer: The techniques described here increase the complexity of the code, making it harder to reason about it and test. So please only apply have them when you have seen through profiling that your code is on the hot path.&lt;/strong&gt;&lt;/p&gt;</description>
+            <category>java</category>
+            <category>tutorial</category>
+            <category>java performance</category>
+            <category>concurrent programming</category>
+            <category>thread safe</category>
+            <category>concurrenthashmap</category>
+            <pubDate>Sun, 21 Jan 2018 06:01:03 GMT</pubDate>
+            <guid isPermaLink="false">https://dzone.com/articles/1988839</guid>
+            <media:thumbnail url="https://dzone.com/thumbnail?fid=7900664&amp;w=600"/>
+            <dc:creator>Thomas Krieger</dc:creator>
+        </item>
+        <item>
+            <title>Functional Programming Principles Every Imperative Programmer Should Use</title>
+            <link>https://dzone.com/articles/functional-programming-principles-every-imperative?utm_medium=feed&amp;utm_source=feedpress.me&amp;utm_campaign=Feed%3A+dzone%2Fjava</link>
+            <description>&lt;p pid="109" style="text-align: left;"&gt;Sometimes it seems like functional programmers are a totally different breed. Even by programmer standards, they seem more nerdy than the rest. They use weird terms such as &amp;quot;monad,&amp;quot; &amp;quot;for-comprehension,&amp;quot; and &amp;quot;lambda.&amp;quot; They use languages that don't end every line with a semicolon. And, no matter how uneasy Java programmers are around C++ programmers, both groups can at least agree that Haskell is &lt;em&gt;weird&lt;/em&gt;.&lt;/p&gt;
+&lt;p pid="111" style="text-align: center;"&gt;&lt;em&gt;The truth is, functional programming has much to offer, even to developers accustomed to working in imperative languages. (Source: &lt;a href="https://xkcd.com/1270/" target="_blank"&gt;xkcd.com&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;</description>
+            <category>java</category>
+            <category>functional programming</category>
+            <category>recursion</category>
+            <category>immutability</category>
+            <category>imperative programming</category>
+            <pubDate>Sat, 20 Jan 2018 06:01:55 GMT</pubDate>
+            <guid isPermaLink="false">https://dzone.com/articles/1941634</guid>
+            <media:thumbnail url="https://dzone.com/thumbnail?fid=7888757&amp;w=600"/>
+            <dc:creator>Stephen Rollins</dc:creator>
+        </item>
+        <item>
+            <title>This Week in Spring: Kafka, Spring Cloud, and Testing</title>
+            <link>https://dzone.com/articles/this-week-in-spring-kafka-spring-cloud-and-testing?utm_medium=feed&amp;utm_source=feedpress.me&amp;utm_campaign=Feed%3A+dzone%2Fjava</link>
+            <description>&lt;p pid="1"&gt;Aloha! This week I’m in &lt;a href="https://twitter.com/LavaOneConf" target="_blank"&gt;sunny Honolulu for the first annual LavaOne conference&lt;/a&gt;. If you’re not here, you should be! The show is amazing, enjoys 50% female to male audience attendance, the speakers are world-class (well, except yours truly, but don’t tell them that..), and the location is pretty hard to beat!&lt;/p&gt; 
+&lt;p pid="4"&gt;That said, nothing gives me more pleasure than saddling up to a table with a laptop, some green tea, sunglasses, and sunscreen and checking in on the community. This week’s been a heckuva week indeed! Lot’s of great stuff so let’s get to it!&lt;/p&gt;</description>
+            <category>java</category>
+            <category>software testing</category>
+            <category>spring cloud</category>
+            <category>apache kafka</category>
+            <pubDate>Fri, 19 Jan 2018 14:59:47 GMT</pubDate>
+            <guid isPermaLink="false">https://dzone.com/articles/1981104</guid>
+            <media:thumbnail url="https://dzone.com/thumbnail?fid=7888310&amp;w=600"/>
+            <dc:creator>Joshua Long</dc:creator>
+        </item>
+        <item>
+            <title>9 Things Java Programmers Should Learn in 2018</title>
+            <link>https://dzone.com/articles/5-things-java-programmer-should-learn-in-2018?utm_medium=feed&amp;utm_source=feedpress.me&amp;utm_campaign=Feed%3A+dzone%2Fjava</link>
+            <description>&lt;p pid="53"&gt;First of all, I wish you a very happy new year, guys. It's that time of year when we start afresh, make plans, set goals, and make resolutions for the new year.&lt;/p&gt;
+&lt;p pid="54"&gt;Being a Java developer and the author of a &lt;a href="http://java67.blogspot.com/" target="_blank"&gt;Java blog&lt;/a&gt;, I frequently receive requests from Java programmers from all over the world asking how they can improve themselves.&lt;/p&gt;</description>
+            <category>java</category>
+            <category>spring</category>
+            <category>networking</category>
+            <category>unit testing</category>
+            <category>java performance</category>
+            <category>jdk 9</category>
+            <pubDate>Fri, 19 Jan 2018 08:01:01 GMT</pubDate>
+            <guid isPermaLink="false">https://dzone.com/articles/1942319</guid>
+            <media:thumbnail url="https://dzone.com/thumbnail?fid=7888665&amp;w=600"/>
+            <dc:creator>Javin Paul</dc:creator>
+        </item>
+        <item>
+            <title>Why You Should Take a Look at Kotlin's Standard Library</title>
+            <link>https://dzone.com/articles/why-you-should-take-a-look-at-kotlins-standard-lib?utm_medium=feed&amp;utm_source=feedpress.me&amp;utm_campaign=Feed%3A+dzone%2Fjava</link>
+            <description>&lt;p pid="1"&gt;As we add support for Java deployments at &lt;a href="https://octopus.com/download" target="_blank"&gt;Octopus&lt;/a&gt;, more integration code is being written in Kotlin. As a longtime Java developer, I took the opportunity to learn some of the improvements that the Kotlin language designers added to their language over Java.&lt;/p&gt;
+&lt;p pid="2"&gt;About the same time, I completed Dave Fancher's &lt;a href="https://app.pluralsight.com/library/courses/functional-programming-csharp/table-of-contents" target="_blank"&gt;Functional Programming with C#&lt;/a&gt; course on Pluralsight. I enjoyed the course because it provides some clear and practical advice on how to approach function programming in C#. In it, Dave provides two extension methods, &lt;code&gt;Map&lt;/code&gt; and &lt;code&gt;Tee&lt;/code&gt;, which allow you to transform objects and pass them onto other mutating methods, along with examples on how and why you would use them.&lt;/p&gt;</description>
+            <category>java</category>
+            <category>tutorial</category>
+            <category>functional programming</category>
+            <category>standard library</category>
+            <category>kotlin functions</category>
+            <pubDate>Fri, 19 Jan 2018 05:01:01 GMT</pubDate>
+            <guid isPermaLink="false">https://dzone.com/articles/1986835</guid>
+            <media:thumbnail url="https://dzone.com/thumbnail?fid=7888354&amp;w=600"/>
+            <dc:creator>Paul Stovell</dc:creator>
+        </item>
+        <item>
+            <title>Java Quiz 9: Demonstrating Multilevel Inheritance</title>
+            <link>https://dzone.com/articles/java-quiz-9-demonstrating-multilevel-inheritance?utm_medium=feed&amp;utm_source=feedpress.me&amp;utm_campaign=Feed%3A+dzone%2Fjava</link>
+            <description>&lt;p pid="15"&gt;Before we start with this week's quiz, here is the answer to&amp;nbsp;&lt;a href="https://dzone.com/articles/java-quiz-8-upcasting-and-downcasting-objects"&gt;Java Quiz 8: Upcasting and Downcasting Objects&lt;/a&gt;.&lt;/p&gt;
+&lt;p pid="2"&gt;By upcasting objects, the overridden variable depends on the type of the object reference vc, but the overridden methods depend on the type of the object that was created. By downcasting objects, both variables and methods depend&amp;nbsp;on the type of the object reference car.&lt;/p&gt;</description>
+            <category>java</category>
+            <category>quiz</category>
+            <pubDate>Thu, 18 Jan 2018 14:02:14 GMT</pubDate>
+            <guid isPermaLink="false">https://dzone.com/articles/1975236</guid>
+            <media:thumbnail url="https://dzone.com/thumbnail?fid=7864379&amp;w=600"/>
+            <dc:creator>Sar Maroof</dc:creator>
+        </item>
+        <item>
+            <title>Docker and Java: Why My App Is OOMKilled</title>
+            <link>https://dzone.com/articles/why-my-java-application-is-oomkilled?utm_medium=feed&amp;utm_source=feedpress.me&amp;utm_campaign=Feed%3A+dzone%2Fjava</link>
+            <description>&lt;p pid="23"&gt;Those who have already run a Java application inside Docker have probably come across the problem of the JVM incorrectly detecting the available memory when running inside of the container. The JVM sees the available memory of the machine instead of the memory available only to the Docker container. This can lead to cases where applications running inside the container is killed when tries to use more memory beyond the&amp;nbsp;&lt;a href="https://docs.docker.com/engine/admin/resource_constraints/#limit-a-containers-access-to-memory"&gt;limits of the Docker container&lt;/a&gt;.&lt;/p&gt;
+&lt;p pid="3"&gt;The JVM incorrectly detecting the available memory has to do with the fact that the Linux tools/libs created for returning system resource information (e.g.&amp;nbsp;&lt;code&gt;/proc/meminfo&lt;/code&gt;,&amp;nbsp;&lt;code&gt;/proc/vmstat&lt;/code&gt;) were created before&amp;nbsp;&lt;strong&gt;cgroups&lt;/strong&gt;&amp;nbsp;even existed. These will return resource information of the host (physical or virtual machine).&lt;/p&gt;</description>
+            <category>java</category>
+            <category>tutorial</category>
+            <category>docker</category>
+            <category>kubernetes</category>
+            <category>java 9</category>
+            <category>oom</category>
+            <pubDate>Thu, 18 Jan 2018 08:01:01 GMT</pubDate>
+            <guid isPermaLink="false">https://dzone.com/articles/1960711</guid>
+            <media:thumbnail url="https://dzone.com/thumbnail?fid=7874220&amp;w=600"/>
+            <dc:creator>Sebastian Toader</dc:creator>
+        </item>
+    </channel>
+</rss>

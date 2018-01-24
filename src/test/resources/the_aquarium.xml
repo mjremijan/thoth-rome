@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.7.3" -->
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>Oracle Blogs | Oracle The Aquarium Blog</title>
+        <description>Oracle Blogs</description>
+        <link>https://blogs.oracle.com/theaquarium/compendium/rss</link>
+        <lastBuildDate>Wed, 24 Jan 2018 01:15:00 +0000</lastBuildDate>
+        <generator>FeedCreator 1.7.3</generator>
+        <item>
+            <title>EE4J - Eclipse Enterprise for Java</title>
+            <link>https://blogs.oracle.com/theaquarium/ee4j-eclipse-enterprise-for-java</link>
+            <description>&lt;p&gt;A lot of progress has been made since we have announced, 2 weeks ago, &lt;a href=&quot;https://blogs.oracle.com/theaquarium/opening-up-ee-update&quot;&gt;our intent to move the Java EE development to the Eclipse Foundation&lt;/a&gt;. Today, we are thrilled to announce EE4J (Eclipse Enterprise for Java), a new top level Eclipse project that will host this initiative.&lt;/p&gt;
+
+&lt;p&gt;We are just at the beginning of this effort. Oracle, IBM, Red Hat and the Eclipse Foundation are actively collaborating to move as quickly as possible despite all the tasks that need to be tackled. We also plan to rapidly engage additional community members to help us. And as Mike Milinkovich (Eclipse) says in his &lt;a href=&quot;https://mmilinkov.wordpress.com/2017/09/28/introducing-ee4j&quot;&gt;announcement&lt;/a&gt;&amp;nbsp;&amp;quot;&lt;em&gt;it is a massive but exciting undertaking&lt;/em&gt;&amp;quot;!&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;We are working on a FAQ that should be published soon. In the meantime, please read the &lt;a href=&quot;https://projects.eclipse.org/projects/ee4j/charter&quot;&gt;EE4J draft charter&lt;/a&gt;. You are also encouraged to participate in the &lt;a href=&quot;https://dev.eclipse.org/mailman/listinfo/ee4j-community&quot;&gt;ee4j-community&lt;/a&gt;&amp;nbsp;discussions.&lt;/p&gt;
+            </description>
+            <category>Community</category>
+            <category>Eclipse</category>
+            <category>JavaEE</category>
+            <pubDate>Fri, 29 Sep 2017 00:30:00 +0000</pubDate>
+            <guid>https://blogs.oracle.com/theaquarium/ee4j-eclipse-enterprise-for-java</guid>
+            <dc:creator>David Delabassee</dc:creator>
+        </item>
+        <item>
+            <title>Java EE 8 @ JavaOne 2017</title>
+            <link>https://blogs.oracle.com/theaquarium/java-ee-8-javaone-2017</link>
+            <description>&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;https://raw.githubusercontent.com/javaee/website-template/master/assets/JavaOne-Conferences.png&quot; style=&quot;width: 460px;display: block;margin: 0 auto;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.oracle.com/javaone/index.html&quot;&gt;JavaOne&lt;/a&gt; is almost upon us again! Obviously, Java EE will be well covered. Here is a selection of some of the Java EE 8 related sessions (technical sessions, panels, BoFs, etc.). This is just an excerpt so&amp;nbsp;make sure to browse the full &lt;a href=&quot;https://events.rainfocus.com/catalog/oracle/oow17/catalogjavaone17&quot;&gt;session catalog&lt;/a&gt;. Also, if are attending JavaOne, make sure to visit the &lt;a href=&quot;https://www.oracle.com/javaone/developer-lounge.html&quot;&gt;Developer Lounge&lt;/a&gt;, &amp;nbsp;there are many cool new stuff to check and&amp;nbsp;some of us will be around and available to chat.&lt;/p&gt;
+
+&lt;p&gt;Please do note that you will need to&lt;u&gt; bring your own laptop for&amp;nbsp;most of the Hands-on-Labs&lt;/u&gt; (including &amp;quot;Java EE 8: Hands-on with the New Features [&lt;a href=&quot;https://events.rainfocus.com/catalog/oracle/oow17/catalogjavaone17?search=HOL1671&amp;amp;showEnrolled=false&quot;&gt;HOL1671&lt;/a&gt;]&amp;quot;).&lt;/p&gt;
+
+&lt;p&gt;&lt;u&gt;&lt;strong&gt;Sunday, Oct 01&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-left: 40px;&quot;&gt;&lt;strong&gt;Rapid Development Tools for Java EE 8&lt;/strong&gt; [&lt;a href=&quot;https://events.rainfocus.com/catalog/oracle/oow17/catalogjavaone17?search=CON3883&amp;amp;showEnrolled=false&quot;&gt;CON3883&lt;/a&gt;]&lt;br /&gt;
+                2:00 p.m. - 2:45 p.m. | Moscone West - Room 2008: NetBeans Track&lt;/p&gt;
+
+&lt;p style=&quot;margin-left: 40px;&quot;&gt;&lt;strong&gt;Powerful Lessons from Top Java EE Experts&lt;/strong&gt; [&lt;a href=&quot;https://events.rainfocus.com/catalog/oracle/oow17/catalogjavaone17?search=CON7624&amp;amp;showEnrolled=false&quot;&gt;CON7624&lt;/a&gt;]&lt;br /&gt;
+                4:00 p.m. - 4:45 p.m. | Moscone West - Room 2002: Java User Group Track&lt;/p&gt;
+
+&lt;p&gt;&lt;u&gt;&lt;strong&gt;Monday, Oct 02&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-left: 40px;&quot;&gt;&lt;strong&gt;Java EE 8: Hands-on with the New Features&lt;/strong&gt; [&lt;a href=&quot;https://events.rainfocus.com/catalog/oracle/oow17/catalogjavaone17?search=HOL1671&amp;amp;showEnrolled=false&quot;&gt;HOL1671&lt;/a&gt;]&lt;br /&gt;
+                8:30 a.m. - 10:30 a.m. | Hilton San Francisco Union Square (Lobby Level) - Golden Gate 4/5&lt;/p&gt;
+
+&lt;p style=&quot;margin-left: 40px;&quot;&gt;&lt;strong&gt;Java EE 8: What&amp;rsquo;s New in the Java EE 8 Release&lt;/strong&gt; [&lt;a href=&quot;https://events.rainfocus.com/catalog/oracle/oow17/catalogjavaone17?search=CON2661&amp;amp;showEnrolled=false&quot;&gt;CON2661&lt;/a&gt;]&lt;br /&gt;
+                11:00 a.m. - 11:45 a.m. | Moscone West - Room 2020&lt;/p&gt;
+
+&lt;p style=&quot;margin-left: 40px;&quot;&gt;&lt;strong&gt;Servlet 4.0: A New Twist on an Old Favorite&lt;/strong&gt; [&lt;a href=&quot;https://events.rainfocus.com/catalog/oracle/oow17/catalogjavaone17?search=CON2022&amp;amp;showEnrolled=false&quot;&gt;CON2022&lt;/a&gt;]&lt;br /&gt;
+                12:15 p.m. - 1:00 p.m. | Moscone West - Room 2020&lt;/p&gt;
+
+&lt;p style=&quot;margin-left: 40px;&quot;&gt;&lt;strong&gt;Java Keynote&lt;/strong&gt; [&lt;a href=&quot;https://events.rainfocus.com/catalog/oracle/oow17/catalogjavaone17?search=KEY7692&amp;amp;showEnrolled=false&quot;&gt;KEY7692&lt;/a&gt;]&lt;br /&gt;
+                2:00 p.m. - 4:00 p.m. | Moscone North - Hall D&lt;/p&gt;
+
+&lt;p style=&quot;margin-left: 40px;&quot;&gt;&lt;strong&gt;Opening Up Java EE: Panel Discussion with Oracle, IBM, Red Hat, and the Eclipse Foundation&lt;/strong&gt; [&lt;a href=&quot;https://events.rainfocus.com/catalog/oracle/oow17/catalogjavaone17?search=CON8030&amp;amp;showEnrolled=false&quot;&gt;CON8030&lt;/a&gt;]&lt;br /&gt;
+                4:30 p.m. - 5:15 p.m. | Moscone West - Room 2020&lt;/p&gt;
+
+&lt;p style=&quot;margin-left: 40px;&quot;&gt;&lt;strong&gt;JSF 2.3 in Action&lt;/strong&gt; [&lt;a href=&quot;https://events.rainfocus.com/catalog/oracle/oow17/catalogjavaone17?search=BOF2723&amp;amp;showEnrolled=false&quot;&gt;BOF2723&lt;/a&gt;]&lt;br /&gt;
+                7:30 p.m. - 8:15 p.m. | Moscone West - Room 2024&lt;/p&gt;
+
+&lt;p&gt;&lt;u&gt;&lt;strong&gt;Tuesday, Oct 03&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-left: 40px;&quot;&gt;&lt;strong&gt;JSR 375: New Security APIs for Java EE&lt;/strong&gt; [&lt;a href=&quot;https://events.rainfocus.com/catalog/oracle/oow17/catalogjavaone17?search=CON3544&amp;amp;showEnrolled=false&quot;&gt;CON3544&lt;/a&gt;]&lt;br /&gt;
+                9:30 a.m. - 10:15 a.m. | Moscone West - Room 2006&lt;/p&gt;
+
+&lt;p style=&quot;margin-left: 40px;&quot;&gt;&lt;strong&gt;Modern Application and Microservices Security from EE6 JASPIC to the EE8 Security API&lt;/strong&gt; [&lt;a href=&quot;https://events.rainfocus.com/catalog/oracle/oow17/catalogjavaone17?search=CON5954&amp;amp;showEnrolled=false&quot;&gt;CON5954&lt;/a&gt;]&lt;br /&gt;
+                9:30 a.m. - 10:15 a.m. | Moscone West - Room 2024&lt;/p&gt;
+
+&lt;p style=&quot;margin-left: 40px;&quot;&gt;&lt;strong&gt;What&amp;rsquo;s New in JAX-RS 2.1?&lt;/strong&gt; [&lt;a href=&quot;https://events.rainfocus.com/catalog/oracle/oow17/catalogjavaone17?search=CON3625&amp;amp;showEnrolled=false&quot;&gt;CON3625&lt;/a&gt;]&lt;br /&gt;
+                3:00 p.m. - 3:45 p.m. | Moscone West - Room 2006&lt;/p&gt;
+
+&lt;p style=&quot;margin-left: 40px;&quot;&gt;&lt;strong&gt;CDI Ecosystem&lt;/strong&gt; [&lt;a href=&quot;https://events.rainfocus.com/catalog/oracle/oow17/catalogjavaone17?search=BOF6113&amp;amp;showEnrolled=false&quot;&gt;BOF6113&lt;/a&gt;]&lt;br /&gt;
+                6:45 p.m. - 7:30 p.m. | Moscone West - Room 2020&lt;/p&gt;
+
+&lt;p&gt;&lt;u&gt;&lt;strong&gt;Wednesday, Oct 04&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-left: 40px;&quot;&gt;&lt;strong&gt;Contemporary Java Web Applications with JSF 2.3&lt;/strong&gt; [&lt;a href=&quot;https://events.rainfocus.com/catalog/oracle/oow17/catalogjavaone17?search=CON2023&amp;amp;showEnrolled=false&quot;&gt;CON2023&lt;/a&gt;]&lt;br /&gt;
+                10:45 a.m. - 11:30 a.m. | Moscone West - Room 2020&lt;/p&gt;
+
+&lt;p style=&quot;margin-left: 40px;&quot;&gt;&lt;strong&gt;Panel: Accelerating the Adoption of Java EE 8 with MicroProfile&lt;/strong&gt; [&lt;a href=&quot;https://events.rainfocus.com/catalog/oracle/oow17/catalogjavaone17?search=CON1825&amp;amp;showEnrolled=false&quot;&gt;CON1825&lt;/a&gt;]&lt;br /&gt;
+                11:45 a.m. - 12:30 p.m. | Moscone West - Room 202&lt;/p&gt;
+
+&lt;p style=&quot;margin-left: 40px;&quot;&gt;&lt;strong&gt;Discover CDI 2.0 in Live Coding&lt;/strong&gt; [&lt;a href=&quot;https://events.rainfocus.com/catalog/oracle/oow17/catalogjavaone17?search=CON6083&amp;amp;showEnrolled=false&quot;&gt;CON6083&lt;/a&gt;]&lt;br /&gt;
+                12:45 p.m. - 1:30 p.m. | Moscone West - Room 2020&lt;/p&gt;
+
+&lt;p style=&quot;margin-left: 40px;&quot;&gt;&lt;strong&gt;Java EE 8 on a Diet with Payara Micro 5&lt;/strong&gt; [&lt;a href=&quot;https://events.rainfocus.com/catalog/oracle/oow17/catalogjavaone17?search=CON3013&amp;amp;showEnrolled=false&quot;&gt;CON3013&lt;/a&gt;]&lt;br /&gt;
+                4:30 p.m. - 5:15 p.m. | Moscone West - Room 2024&lt;/p&gt;
+
+&lt;p&gt;&lt;u&gt;&lt;strong&gt;Thursday, Oct 05&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-left: 40px;&quot;&gt;&lt;strong&gt;What&amp;rsquo;s New in Java EE 8? An Overview&lt;/strong&gt; [&lt;a href=&quot;https://events.rainfocus.com/catalog/oracle/oow17/catalogjavaone17?search=CON1431&amp;amp;showEnrolled=false&quot;&gt;CON1431&lt;/a&gt;]&lt;br /&gt;
+                10:45 a.m. - 11:30 a.m. | Marriott Marquis (Yerba Buena Level) - Salon 14&lt;/p&gt;
+
+&lt;p style=&quot;margin-left: 40px;&quot;&gt;&lt;strong&gt;Keeping Your Data Sane with Bean Validation 2.0&lt;/strong&gt; [&lt;a href=&quot;https://events.rainfocus.com/catalog/oracle/oow17/catalogjavaone17?search=CON1512&amp;amp;showEnrolled=false&quot;&gt;CON1512&lt;/a&gt;]&lt;br /&gt;
+                11:45 a.m. - 12:30 p.m. | Marriott Marquis (Yerba Buena Level) - Nob Hill A/B&lt;/p&gt;
+
+&lt;p style=&quot;margin-left: 40px;&quot;&gt;&lt;strong&gt;Java EE 8: What&amp;rsquo;s New on the JSON Front&lt;/strong&gt; [&lt;a href=&quot;https://events.rainfocus.com/catalog/oracle/oow17/catalogjavaone17?search=CON7773&amp;amp;showEnrolled=false&quot;&gt;CON7773&lt;/a&gt;]&lt;br /&gt;
+                2:45 p.m. - 3:30 p.m. | Marriott Marquis (Yerba Buena Level) - Nob Hill A/B&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+            </description>
+            <category>Community</category>
+            <category>JavaEE</category>
+            <category>JavaOne</category>
+            <pubDate>Tue, 26 Sep 2017 15:23:59 +0000</pubDate>
+            <guid>https://blogs.oracle.com/theaquarium/java-ee-8-javaone-2017</guid>
+            <enclosure url="https://raw.githubusercontent.com/javaee/website-template/master/assets/JavaOne-Conferences.png" length="0" type="image/png" />
+            <dc:creator>David Delabassee</dc:creator>
+        </item>
+        <item>
+            <title>Java EE 8 and GlassFish 5.0 Released!</title>
+            <link>https://blogs.oracle.com/theaquarium/java-ee-8-is-final-and-glassfish-50-is-released</link>
+            <description>&lt;p&gt;&lt;img alt=&quot;Java EE 8&quot; src=&quot;https://raw.githubusercontent.com/javaee/website-template/master/assets/EE8-gfx-420.jpg&quot; style=&quot;display: block;margin: 0 auto;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We are pleased to announce the general availability of GlassFish 5.0, the Java EE 8 Open Source Reference Implementation and that the Java EE 8 umbrella specification and all the underlying specifications (JAX-RS 2.1, Servlet 4.0, CDI 2.0, JSON-B 1.0, Bean Validation 2.0, etc.) are finalized and approved!&lt;/p&gt;
+
+&lt;p&gt;Java EE 8 adds some nice capabilities to the platform:&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;Servlet 4.0 API with HTTP/2 support&lt;/li&gt;
+	&lt;li&gt;Enhanced JSON support including a new JSON binding API&lt;/li&gt;
+	&lt;li&gt;A new REST Reactive Client API&lt;/li&gt;
+	&lt;li&gt;Asynchronous CDI Events&lt;/li&gt;
+	&lt;li&gt;A new portable Security API&lt;/li&gt;
+	&lt;li&gt;Server-Sent Events support (Client &amp;amp; Server-side)&lt;/li&gt;
+	&lt;li&gt;Support for Java SE 8 capabilities (e.g. Date &amp;amp; Time API, Streams API, annotations enhancements)&lt;/li&gt;
+	&lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Today, you can use these new features using GlassFish 5.0 and hopefully with additional Java EE 8 application servers in the near future. Below you will find some resources that might help you to get started with Java EE 8.&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;One of the challenges we faced in this release is that we moved from the old Java.net infrastructure to GitHub in the middle of the development cycle. &amp;nbsp;It wasn&amp;rsquo;t necessarily simple but we now clearly see the benefits of such a modern collaborative software development platform! Exploring the code is now just &lt;a href=&quot;http://github.com/javaee/&quot;&gt;one link away&lt;/a&gt;! We hope the GitHub adoption will make the platform more accessible to developers.&lt;/p&gt;
+
+&lt;p&gt;Java EE 8 is really the result of a teamwork involving many people:&amp;nbsp;&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;All the JCP Specification Leads and all the Expert Groups members&lt;/li&gt;
+	&lt;li&gt;All the people involved in developing the different Reference Implementations that comprise Java EE&lt;/li&gt;
+	&lt;li&gt;The different Java EE implementers&lt;/li&gt;
+	&lt;li&gt;The Java EE community at large&lt;/li&gt;
+	&lt;li&gt;And many others who most of the time works behind the scene like the team at Oracle who develops GlassFish itself and the team managing the build infrastructure!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Kudos to all of you! Java EE 8 wouldn&amp;rsquo;t have been possible without your work and dedication!&lt;/p&gt;
+
+&lt;p&gt;As you probably know, this is just the beginning as we are working, together with the community including the Eclipse Foundation, Red Hat and IBM to open Java EE even more by transferring its development under the auspices of the Eclipse Foundation (see &lt;a href=&quot;https://blogs.oracle.com/theaquarium/opening-up-java-ee&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://blogs.oracle.com/theaquarium/opening-up-ee-update&quot;&gt;here&lt;/a&gt;). There are many discussions going on and we hope to be able to &lt;a href=&quot;https://events.rainfocus.com/catalog/oracle/oow17/catalogjavaone17?search=CON8030&amp;amp;showEnrolled=false&quot;&gt;share additional details at JavaOne&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Today also marks the general availability of Java SE 9. As mentioned above GlassFish 5.0 leverages new features in Java SE 8, and is certified today on Java SE 8. Even though we have a lot of work in front of us with the transition to the Eclipse Foundation, our current intent is to certify Java SE 9 in an upcoming GlassFish 5 release. &amp;nbsp;We will keep you posted on future developments in this area.&lt;/p&gt;
+
+&lt;p&gt;David on behalf of all the Oracle Java EE Team.&lt;/p&gt;
+
+&lt;p&gt;&lt;u&gt;Resources:&lt;/u&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;&lt;a href=&quot;https://www.oracle.com/corporate/pressrelease/java-se-9-and-ee-8-092117.html&quot;&gt;Press Release&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;https://javaee.github.io/glassfish/download&quot;&gt;GlassFish 5.0 downloads&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;https://javaee.github.io/glassfish/documentation&quot;&gt;GlassFish 5.0 documentation&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;http://www.oracle.com/technetwork/java/javaee/downloads/index.html&quot;&gt;Java EE 8 SDK downloads&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;https://javaee.github.io/tutorial/&quot;&gt;Java EE 8 tutorial&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;http://www.oracle.com/technetwork/java/javaee/overview/index.html&quot;&gt;Java EE at a Glance&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+            </description>
+            <category>JavaEE</category>
+            <pubDate>Thu, 21 Sep 2017 18:59:00 +0000</pubDate>
+            <guid>https://blogs.oracle.com/theaquarium/java-ee-8-is-final-and-glassfish-50-is-released</guid>
+            <enclosure url="https://raw.githubusercontent.com/javaee/website-template/master/assets/EE8-gfx-500.jpg" length="0" type="image/jpeg" />
+            <dc:creator>David Delabassee</dc:creator>
+        </item>
+        <item>
+            <title>Opening Up Java EE - An Update</title>
+            <link>https://blogs.oracle.com/theaquarium/opening-up-ee-update</link>
+            <description>&lt;p&gt;&lt;span style=&quot;color:#000000;&quot;&gt;In a previous post, we announced that Oracle was beginning to explore moving Java EE technologies to an open source foundation in order to make the process of evolving these standards more agile, flexible and open. Since mid-August, we’ve had many discussions with other vendors, community members and open source foundations in order to move the process forward. Here’s an update on the progress we have made so far.&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;color:#000000;&quot;&gt;First, we have reached out to IBM and Red Hat, the other largest contributors to the Java EE platform, to solicit their support for this new direction. Oracle, IBM and Red Hat are collaborating on an ongoing basis to refine an approach that we can collectively support. &amp;nbsp;We've made good progress on this front, and expect to continue to work together to make this transition successful for all parties. Thank you IBM and Red Hat!&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;color:#000000;&quot;&gt;Second, we’ve refined our proposal. Subject to the usual caveats about plans being subject to change in the future, our intention is that we would:&lt;/span&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;&lt;span style=&quot;color:#000000;&quot;&gt;Relicense Oracle-led Java EE technologies, and related GlassFish technologies, to the foundation. This would include RIs, TCKs, and associated project documentation.&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;span style=&quot;color:#000000;&quot;&gt;Demonstrate the ability to build a compatible implementation, using foundation sources, that passes existing Java EE 8 TCKs.&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;span style=&quot;color:#000000;&quot;&gt;Define a branding strategy for the platform within the foundation, including a new name for Java EE to be determined. We intend to enable use of existing javax package names and component specification names for existing JSRs to provide continuity.&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;span style=&quot;color:#000000;&quot;&gt;Define a process by which existing specifications can evolve, and new specifications can be included in the platform.&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;span style=&quot;color:#000000;&quot;&gt;Recruit and enable developers and other community members, as well as vendors, to sponsor platform technologies, and bring the platform forward within the foundation. This would include potential incorporation of Eclipse MicroProfile technologies into the platform.&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;span style=&quot;color:#000000;&quot;&gt;Begin doing the above as soon as possible after completion of Java EE 8 to facilitate a rapid transition.&amp;nbsp;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;span style=&quot;color:#000000;&quot;&gt;Third, we have met with several foundations to discuss our proposal. We appreciate the time they have invested with us, and the feedback and input they offered. After careful review, we have selected the Eclipse Foundation as the foundation that we will work with going forward to make the above a reality. The Eclipse Foundation has strong experience and involvement with Java EE and related technologies. This will help us transition Java EE rapidly, create community-friendly processes for evolving the platform, and leverage complementary projects such as MicroProfile. We look forward to this collaboration.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;color:#000000;&quot;&gt;Note that in addition to all of the above, Oracle will continue to support existing Java EE licensees, including licensees moving to Java EE 8. Oracle also intends to continue to support its existing WebLogic Server versions, and to support Java EE 8 in a future WebLogic Server version. We believe this plan will enable us to continue to support existing Java EE standards, while enabling the evolution to a more open environment. There's more work to do, but we believe we're on the right track. We hope to have additional updates soon!&lt;/span&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;color:#000000;&quot;&gt;&lt;u&gt;Safe Harbor Statement&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;color:#000000;&quot;&gt;The preceding is intended to outline our general product direction. It is intended for information purposes only, and may not be incorporated into any contract. It is not a commitment to deliver any material, code, or functionality, and should not be relied upon in making purchasing decisions. The development, release, and timing of any features or functionality described for Oracle’s products remains at the sole discretion of Oracle.&lt;/span&gt;&lt;/p&gt;
+
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+            </description>
+            <category>Community</category>
+            <category>Eclipse</category>
+            <category>JavaEE</category>
+            <pubDate>Tue, 12 Sep 2017 19:58:00 +0000</pubDate>
+            <guid>https://blogs.oracle.com/theaquarium/opening-up-ee-update</guid>
+            <dc:creator>David Delabassee</dc:creator>
+        </item>
+        <item>
+            <title>Opening Up Java EE</title>
+            <link>https://blogs.oracle.com/theaquarium/opening-up-java-ee</link>
+            <description>&lt;p&gt;We continue to make great progress on Java EE 8. Specifications are nearly complete, and we expect to deliver the reference implementation this summer. As we approach the delivery of Java EE 8 and the JavaOne 2017 conference, we believe there is an opportunity to rethink how Java EE is developed in order to make it more agile and responsive to changing industry and technology demands.&lt;/p&gt;
+
+&lt;p&gt;Java EE is enormously successful, with a competitive market of compatible implementations, broad adoption of individual technologies, a huge ecosystem of frameworks and tools, and countless applications delivering value to enterprises and end users. But although Java EE is developed in open source with the participation of the Java EE community, often the process is not seen as being agile, flexible or open enough, particularly when compared to other open source communities. We’d like to do better.&lt;/p&gt;
+
+&lt;p&gt;We are discussing how we can improve the Java EE development process following the delivery of Java EE 8. We believe that moving Java EE technologies including reference implementations and test compatibility kit&amp;nbsp;to an open source foundation may be the right next step, in order to adopt more agile processes, implement more flexible licensing, and change the governance process. We plan on exploring this possibility with the community, our licensees and several candidate foundations to see if we can move Java EE forward in this direction.&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;We intend to meet ongoing commitments to developers, end users, customers, technology consumers, technology contributors, partners and licensees. And we will support existing Java EE implementations and future implementations of Java EE 8. We will continue to participate in the future evolution of Java EE technologies. But we believe a more open process, that is not dependent on a single vendor as platform lead, will encourage greater participation and innovation, and will be in best interests of the community. &amp;nbsp;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;If you would like to provide input or comments on this direction, please send email to &lt;u&gt;&lt;em&gt;feedback@javaee.groups.io&lt;/em&gt;&lt;/u&gt;. We will keep you updated as we explore this approach in more detail.&lt;/p&gt;
+
+&lt;p&gt;For more information about how this affects WebLogic Server, see &lt;a href=&quot;https://blogs.oracle.com/weblogicserver/weblogic-server-and-opening-up-java-ee&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;u&gt;Safe Harbor Statement&lt;/u&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;em&gt;The preceding is intended to outline our general product direction. It is intended for information purposes only, and may not be incorporated into any contract. It is not a commitment to deliver any material, code, or functionality, and should not be relied upon in making purchasing decisions. The development, release, and timing of any features or functionality described for Oracle’s products remains at the sole discretion of Oracle.&lt;/em&gt;&lt;/p&gt;
+            </description>
+            <category>Community</category>
+            <category>JavaEE</category>
+            <pubDate>Thu, 17 Aug 2017 21:59:00 +0000</pubDate>
+            <guid>https://blogs.oracle.com/theaquarium/opening-up-java-ee</guid>
+            <dc:creator>David Delabassee</dc:creator>
+        </item>
+        <item>
+            <title> Java EE 8 - July recap</title>
+            <link>https://blogs.oracle.com/theaquarium/java-ee-8-july-recap</link>
+            <description>&lt;p&gt;Despite the traditional summer slowdown, the last few weeks have been important for Java EE 8. Here is a short recap of some of the progress made around the platform during the course of last month.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;Java EE 8 July stats&quot; src=&quot;https://github.com/javaee/website-template/raw/master/assets/EE8_JulyStatus.jpg&quot; style=&quot;display: block;
+                margin-left: auto;
+                margin-right: auto;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In July, &lt;a href=&quot;https://jcp.org/aboutJava/communityprocess/final/jsr367/index.html&quot;&gt;JSON-B (JSR 367) went final&lt;/a&gt;.&amp;nbsp;That means that we now have 4 Java EE 8 related APIs that are final: &lt;a href=&quot;https://jcp.org/en/jsr/detail?id=365&quot;&gt;CDI 2.0 (JSR 365)&lt;/a&gt;, &lt;a href=&quot;https://jcp.org/en/jsr/detail?id=372&quot;&gt;JSF 2.3 (JSR 372)&lt;/a&gt;, &lt;a href=&quot;https://jcp.org/en/jsr/detail?id=374&quot;&gt;JSON-P 1.1 (JSR 374)&lt;/a&gt; and &lt;a href=&quot;https://jcp.org/en/jsr/detail?id=367&quot;&gt;JSON-B 1.0 (JSR 367)&lt;/a&gt;. And that is excluding the APIs updated via a Maintenance Release, ex. &lt;a href=&quot;https://github.com/javaee/jpa-spec&quot;&gt;JPA 2.2 &lt;/a&gt;which is now finalised too.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jcp.org/en/jsr/detail?id=369&quot;&gt;Servlet 4.0 (JSR 369)&lt;/a&gt; has finished the Proposed Final Draft period and will soon enter into the Proposed File Draft ballot.&lt;/p&gt;
+
+&lt;p&gt;For &lt;a href=&quot;https://jcp.org/en/jsr/detail?id=370&quot;&gt;JAX-RS 2.1 (JSR 370&lt;/a&gt;) and &lt;a href=&quot;https://jcp.org/en/jsr/detail?id=380&quot;&gt;Bean Validation 2.0 (JSR 380)&lt;/a&gt;, things went a little bit faster as both specifications went through their respective Proposed Final Draft period and have both unanimously passed their Final Approval Ballot in July (see results &lt;a href=&quot;https://jcp.org/en/jsr/results?id=6031&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://jcp.org/en/jsr/results?id=6033&quot;&gt;here&lt;/a&gt;). Congratulations to the JAX-RS and Bean Validation Experts Groups!&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;https://raw.githubusercontent.com/javaee/website-template/master/assets/UnanimousVotes.jpg&quot; style=&quot;display: block;
+                margin-left: auto;
+                margin-right: auto &quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In July, the Java EE 8 EG has published their &lt;a href=&quot;https://jcp.org/aboutJava/communityprocess/pfd/jsr366/index.html&quot;&gt;Proposed Final Draft&lt;/a&gt;&amp;nbsp;and will &lt;a href=&quot;https://javaee.groups.io/g/javaee-spec/messages?start=8:2017:-120&quot;&gt;submit shorty their Final Drafts to the JCP to enter the Final Approval Ballot&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Mid July, the &lt;a href=&quot;https://jcp.org/en/jsr/detail?id=375&quot;&gt;Java EE Security API (JSR 375)&lt;/a&gt; EG has released their &lt;a href=&quot;https://jcp.org/aboutJava/communityprocess/pfd/jsr375/index.html&quot;&gt;Proposed Final Draft&lt;/a&gt; and is &lt;a href=&quot;https://javaee.groups.io/g/javaee-security-spec/topics&quot;&gt;actively working on the final technical details&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;As we are getting closer the finalization of the Java EE 8 platform, we have also accelerated the GlassFish 5 Promotion process. The goal is now to have&lt;a href=&quot;https://javaee.groups.io/g/glassfish/topic/twice_a_week_glassfish/5571976?p=,,,20,0,0,0::recentpostdate%2Fsticky,,,20,2,0,5571976&quot;&gt;&amp;nbsp;2 GF5 promotion builds per week&lt;/a&gt;. Talking about GlassFish, the number of stars on the &lt;a href=&quot;https://github.com/javaee/glassfish&quot;&gt;GF GitHub repo&lt;/a&gt; is still relatively low. This is explained by the fact that the GF repo is relatively young. But as we are slowly but surely getting closer the final bits of GlassFish 5, it would be nice to raise that number. So if you are using GlassFish, do not hesitate to&amp;nbsp;&lt;a href=&quot;https://github.com/javaee/glassfish&quot;&gt;&amp;lsquo;star&amp;rsquo; it on GitHub&lt;/a&gt;. This small but nice recognition costs just one click!&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;https://raw.githubusercontent.com/javaee/website-template/master/assets/GF5_GhStars.jpg&quot; style=&quot;display: block;
+                margin-left: auto;
+                margin-right: auto &quot; /&gt;&lt;/p&gt;
+            </description>
+            <category>JavaEE</category>
+            <pubDate>Tue, 01 Aug 2017 13:54:00 +0000</pubDate>
+            <guid>https://blogs.oracle.com/theaquarium/java-ee-8-july-recap</guid>
+            <enclosure url="https://github.com/javaee/website-template/raw/master/assets/EE8_JulyStatus.jpg" length="0" type="image/jpeg" />
+            <dc:creator>David Delabassee</dc:creator>
+        </item>
+        <item>
+            <title>Java EE 8 - June recap</title>
+            <link>https://blogs.oracle.com/theaquarium/java-ee-8-june-recap</link>
+            <description>&lt;p&gt;The last few weeks were fruitful in term of progress for Java EE 8! Here is a short recap covering some of the main news...&lt;/p&gt;
+
+&lt;p&gt;JSON-B (&lt;a href=&quot;https://jcp.org/en/jsr/detail?id=367&quot;&gt;JSR 367&lt;/a&gt;) successfully passed its Final Approval Ballot. So next to JSON-P 1.1 (&lt;a href=&quot;https://jcp.org/en/jsr/detail?id=374&quot;&gt;JSR 374&lt;/a&gt;), JSF 2.3 (&lt;a href=&quot;https://jcp.org/en/jsr/detail?id=372&quot;&gt;JSR 372&lt;/a&gt;) and JPA 2.2 (&lt;a href=&quot;https://jcp.org/en/jsr/detail?id=338&quot;&gt;JSR 338&lt;/a&gt;) which has recently passed the Maintenance Release ballot, JSON-B is another Java EE 8 related specification that is final!&lt;/p&gt;
+
+&lt;p&gt;In June, 3 additionals specifications have passed their Public Review Ballot and have then posted their Proposed Final Draft: Servlet 4.0 (&lt;a href=&quot;https://jcp.org/en/jsr/detail?id=369&quot;&gt;JSR 369&lt;/a&gt;), JAX-RS 2.1 (&lt;a href=&quot;https://jcp.org/en/jsr/detail?id=370&quot;&gt;JSR 370&lt;/a&gt;) and Bean Validation 2.0 (&lt;a href=&quot;https://jcp.org/en/jsr/detail?id=380&quot;&gt;JSR 380&lt;/a&gt;). Those 3 specifications are now in the final phase, i.e. Proposed Final Draft, before getting finalized!&lt;/p&gt;
+
+&lt;p&gt;The Security API for Java EE Expert Group (&lt;a href=&quot;https://jcp.org/en/jsr/detail?id=375&quot;&gt;JSR 375&lt;/a&gt;) has also posted the Public Review and is currently closing its Public Review Ballot period. The experts are busy wrapping the specification to submit the Proposed Final Draft shortly.&lt;/p&gt;
+
+&lt;p&gt;And last but not least, the Java EE 8 (&lt;a href=&quot;https://jcp.org/en/jsr/detail?id=366&quot;&gt;JSR 366&lt;/a&gt;), the umbrella specification has also &lt;a href=&quot;https://jcp.org/en/jsr/results?id=5993&quot;&gt;successfully passed&lt;/a&gt; in June the Public Review Ballot and is ready to move to Proposed Final Draft!&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;Results&quot; src=&quot;https://raw.githubusercontent.com/javaee/website-template/master/assets/EE8_PublicReviewBallot.png&quot; style=&quot;display: block; margin: auto; width: 75%;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;All in all, we can now say that Java EE 8 specifications are nearly complete. As a consequence, we are observing a steady ramping down on specifications related works and an increase of GlassFish 5 related activities. Last month, &lt;a href=&quot;https://javaee.groups.io/g/glassfish/topic/structural_change_in/5163659?p=,,,20,0,0,0::recentpostdate%2Fsticky,,,20,2,0,5163659&quot;&gt;the GlassFish code base has been restructured&lt;/a&gt;. The different Reference Implementations (Jersey, Yasson, Mojarra, etc.) are already or are currently being integrated in GlassFish 5 (e.g. &lt;a href=&quot;https://github.com/javaee/glassfish/issues/21978&quot;&gt;EclipseLink 2.7.0 for JPA 2.2&lt;/a&gt;). There has been some back for regarding Weld 3 integration but &lt;a href=&quot;https://javaee.groups.io/g/glassfish/message/45&quot;&gt;Weld 3 has been recently re-integrated back in GlassFish 5&lt;/a&gt;. The &lt;a href=&quot;https://github.com/javaee/glassfish/pull/21962&quot;&gt;Bean Validation 2 integration&lt;/a&gt; is now being tackled...&lt;/p&gt;
+
+&lt;p&gt;In summary, it is fair to say that Java EE 8 is progressing nicely!&lt;/p&gt;
+
+&lt;p&gt;PS: If you are using Docker, make sure to check this&amp;nbsp;&lt;a href=&quot;https://blogs.oracle.com/theaquarium/glassfish-docker-images-–-update&quot;&gt;Docker update covering both GF 4.1.2 and GF 5&lt;/a&gt;.&lt;/p&gt;
+            </description>
+            <pubDate>Mon, 10 Jul 2017 15:07:00 +0000</pubDate>
+            <guid>https://blogs.oracle.com/theaquarium/java-ee-8-june-recap</guid>
+            <enclosure url="https://raw.githubusercontent.com/javaee/website-template/master/assets/EE8_PublicReviewBallot.png" length="0" type="image/png" />
+            <dc:creator>David Delabassee</dc:creator>
+        </item>
+        <item>
+            <title>GlassFish Docker Images – Update</title>
+            <link>https://blogs.oracle.com/theaquarium/glassfish-docker-images-%E2%80%93-update</link>
+            <description>p { margin-bottom: 0.25cm; line-height: 120%; }a:link {  }
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%&quot;&gt;We have updated the &lt;a href=&quot;https://hub.docker.com/r/oracle/glassfish&quot;&gt;docker image for GlassFish&lt;/a&gt; available in DockerHub. Please find below the highlights of the update.&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&amp;nbsp;&lt;/p&gt;
+
+                GlassFish 4.1.2 Docker Images
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;The latest GlassFish release is 4.1.2. The latest tag of oracle/glassfish is pointing to oracle/glassfish:4.1.2. The docker image for GlassFish 4.1.2 full profile can be downloaded as&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;strong&gt;docker pull oracle/glassfish&lt;/strong&gt;&lt;br /&gt;
+                OR&lt;br /&gt;
+&lt;strong&gt;docker pull oracle/glassfish:4.1.2&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;The docker image for GlassFish 4.1.2 web profile can be downloaded as&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;strong&gt;docker pull oracle/glassfish:4.1.2-web&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&amp;nbsp;&lt;/p&gt;
+
+                GlassFish 5.0 Nightly Docker Images&amp;nbsp;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;Earlier GlassFish 5.0 nightly docker image used to be available under &lt;a href=&quot;https://hub.docker.com/r/glassfish/nightly/&quot;&gt;&amp;#39;glassfish&amp;#39; organization in DockerHub&lt;/a&gt;. In order to keep and maintain all GlassFish docker images under same organization we have moved this image from &amp;#39;glassfish&amp;#39; organization to &lt;a href=&quot;https://hub.docker.com/r/oracle/glassfish/&quot;&gt;&amp;#39;oracle&amp;#39; organization in DockerHub&lt;/a&gt;. Please do not use glassfish/nightly docker image as we are not maintaining it any more. Instead please use oracle/glassfish:nightly (or oracle/glassfish:nightly-web for web profile) for the latest nightly images for GlassFish 5.0&lt;br /&gt;
+                GlassFish 5.0 full profile nightly docker image can be downloaded as&lt;br /&gt;
+&amp;nbsp;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;strong&gt;docker pull oracle/glassfish:nightly&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;GlassFish 5.0 web profile nightly docker image can be downloaded as&lt;br /&gt;
+&amp;nbsp;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;strong&gt;docker pull oracle/glassfish:nightly-web&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&amp;nbsp;&lt;/p&gt;
+
+                GlassFish Admin Password Handling
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;Earlier admin password was default (&amp;#39;glassfish&amp;#39; was the default admin password) for oracle/glassfish image. It had security flaws. So we have updated the image to use orchestrator provided password at runtime. If the orchestrator does not provide password in time of docker run, it would auto generate password at runtime.&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;u&gt;Orchestrator provided password&lt;/u&gt;&lt;br /&gt;
+&amp;nbsp;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;strong&gt;docker run -ti -e ADMIN_PASSWORD=&amp;lt;your-secret-password&amp;gt; -p 4848:4848 -p 8080:8080 -d oracle/glassfish:4.1.2&lt;/strong&gt;&lt;br /&gt;
+&amp;nbsp;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;u&gt;Auto Generated password&lt;/u&gt;&lt;br /&gt;
+&amp;nbsp;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;strong&gt;docker run -ti -p 4848:4848 -p 8080:8080 -d oracle/glassfish:4.1.2&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;br /&gt;
+                The auto generate password can be obtained from docker log&lt;br /&gt;
+&amp;nbsp;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;strong&gt;docker logs &amp;lt;CONTAINER&amp;gt; | grep &amp;quot;GENERATED ADMIN PASSWORD&amp;quot;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;This change is done for all the tags (4.1.1, 4.1.1-web, 4.1.2, 4.1.2-web, nightly, nightly-web and latest) of GlassFish image.&lt;/p&gt;
+
+&amp;nbsp;
+
+                Updated Base Image
+
+&lt;p style=&quot;margin-bottom: 0cm; font-weight: normal; line-height: 100%&quot;&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; font-weight: normal; line-height: 100%&quot;&gt;Earlier GlassFish images used&amp;nbsp;oraclelinux:latest which is 225 MB in size.&amp;nbsp;Now GlassFish images are lighter as we changed to use oraclelinux:7-slim as base image which is 114MB in size. This change is made for all the tags of oracle/glassfish image.&lt;/p&gt;
+
+&amp;nbsp;
+
+                JDK Version used in GlassFish docker images
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%&quot;&gt;&amp;nbsp;&lt;/p&gt;
+
+
+	
+		
+                Image
+                JDK Version
+		
+	
+	
+		
+			&lt;span style=&quot;font-weight: normal&quot;&gt;oracle/glassfish:latest&lt;/span&gt;
+                openjdk 1.7.0_141
+		
+		
+			&lt;span style=&quot;font-weight: normal&quot;&gt;oracle/glassfish:&lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;4.1.1&lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt; &lt;/span&gt;
+                openjdk 1.7.0_141
+		
+		
+			&lt;span style=&quot;font-weight: normal&quot;&gt;oracle/glassfish:&lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;4.1.2&lt;/span&gt;
+                openjdk 1.7.0_141
+		
+		
+			&lt;span style=&quot;font-weight: normal&quot;&gt;oracle/glassfish:&lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;4.1.1-web&lt;/span&gt;
+                openjdk 1.7.0_141
+		
+		
+			&lt;span style=&quot;font-weight: normal&quot;&gt;oracle/glassfish:&lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;4.1.2-web&lt;/span&gt;
+                openjdk 1.7.0_141
+		
+		
+			&lt;span style=&quot;font-weight: normal&quot;&gt;oracle/glassfish:&lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;nightly&lt;/span&gt;
+			&lt;span style=&quot;font-weight: normal&quot;&gt;openjdk 1.8.0_131&lt;/span&gt;
+		
+		
+			&lt;span style=&quot;font-weight: normal&quot;&gt;oracle/glassfish:&lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt; nightly-web&lt;/span&gt;
+			&lt;span style=&quot;font-weight: normal&quot;&gt;openjdk 1.8.0_131&lt;/span&gt;
+		
+	
+
+
+&amp;nbsp;
+
+                Docker Build Scripts
+
+&lt;p style=&quot;margin-bottom: 0cm; font-weight: normal; line-height: 100%&quot;&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; font-weight: normal; line-height: 100%&quot;&gt;The docker build scripts for all the tags of oracle/glassfish docker image is available &lt;a href=&quot;https://github.com/oracle/docker-images/tree/master/GlassFish&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; font-weight: normal; line-height: 100%&quot;&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; font-weight: normal; line-height: 100%&quot;&gt;Please do try out the images and share your experience with us.&lt;/p&gt;
+            </description>
+            <category>GlassFish</category>
+            <category>The Aquarium</category>
+            <pubDate>Tue, 04 Jul 2017 15:40:28 +0000</pubDate>
+            <guid>https://blogs.oracle.com/theaquarium/glassfish-docker-images-%E2%80%93-update</guid>
+            <dc:creator>Arindam Bandyopadhyay</dc:creator>
+        </item>
+        <item>
+            <title>Java EE 8 - May recap</title>
+            <link>https://blogs.oracle.com/theaquarium/java-ee-8-may-recap</link>
+            <description>&lt;p&gt;Here is a short recap covering some recent Java EE 8 updates.&lt;/p&gt;
+
+&lt;p&gt;In May, JSON-P 1.1 (&lt;a href=&quot;https://jcp.org/en/jsr/detail?id=374&quot;&gt;JSR 374&lt;/a&gt;) has &lt;a href=&quot;https://jcp.org/en/jsr/results?id=5982&quot; target=&quot;_blank&quot;&gt;passed its Final Approval Ballot&lt;/a&gt;. Next to this, CDI 2.0 (&lt;a href=&quot;https://jcp.org/en/jsr/detail?id=365&quot; target=&quot;_blank&quot;&gt;JSR 365&lt;/a&gt;) has also successfully &lt;a href=&quot;https://jcp.org/en/jsr/results?id=5995&quot; target=&quot;_blank&quot;&gt;passed the Final Approval Ballot&lt;/a&gt;. Given the importance of CDI across the Java EE platform, this is a key milestone towards Java EE 8! &amp;nbsp;Make sure to check this &lt;a href=&quot;http://weld.cdi-spec.org/news/2017/05/19/tour-around-weld-3/&quot; target=&quot;_blank&quot;&gt;CDI 2 &amp;ndash; Weld 3 Tour&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Last month, JSON-B (&lt;a href=&quot;https://jcp.org/en/jsr/detail?id=367&quot; target=&quot;_blank&quot;&gt;JSR 367&lt;/a&gt;) has entered in the Final Approval ballot period. In the meantime, you can get Yasson, the JSON-B Reference Implementation, &lt;a href=&quot;https://repo.eclipse.org/content/repositories/yasson-releases/org/eclipse/yasson/1.0.0-M2/&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Servlet 4.0 (&lt;a href=&quot;https://jcp.org/en/jsr/detail?id=369&quot; target=&quot;_blank&quot;&gt;JSR 369&lt;/a&gt;) , JAX-RS 2.1 (&lt;a href=&quot;https://jcp.org/en/jsr/detail?id=370&quot; target=&quot;_blank&quot;&gt;JSR 370&lt;/a&gt;) and Bean Validation 2.0 (&lt;a href=&quot;https://jcp.org/en/jsr/detail?id=380&quot; target=&quot;_blank&quot;&gt;JSR 380&lt;/a&gt;) have all finished their Public Review in May and are now in the Public Review ballot period. In addition, the respective Spec Leads gave a status update on their JSRs to the JCP Executive Committee:&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;&lt;a href=&quot;https://jcp.org/aboutJava/communityprocess/ec-public/materials/2017-05-08/20170508-JSR-369-Review.pdf&quot; target=&quot;_blank&quot;&gt;Ed Burns&amp;rsquo;s Servlet 4.0 status update&lt;/a&gt;&amp;nbsp;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;https://jcp.org/aboutJava/communityprocess/ec-public/materials/2017-05-08/JAXRS-2.1-Review-Process.pdf&quot; target=&quot;_blank&quot;&gt;Santiago Pericas-Geertsen&amp;rsquo;s JAX-RS 2.1 status update&lt;/a&gt;&amp;nbsp;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;https://jcp.org/aboutJava/communityprocess/ec-public/materials/2017-05-08/JSR_380_EC_Meeting_2017_05_09_Gunnar_Morling.pdf&quot; target=&quot;_blank&quot;&gt;Gunnar Morling&amp;rsquo;s Bean Validation 2.0 status update&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Finaly, it should be mentioned that Java EE 8 (&lt;a href=&quot;https://jcp.org/en/jsr/detail?id=366&quot; target=&quot;_blank&quot;&gt;JSR 366&lt;/a&gt;) has also entered in the Public Review Ballot period.&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;Java EE Security API (&lt;a href=&quot;https://jcp.org/en/jsr/detail?id=375&quot; target=&quot;_blank&quot;&gt;JSR 375&lt;/a&gt;) is now in &lt;a href=&quot;https://jcp.org/aboutJava/communityprocess/pr/jsr375/index.html&quot; target=&quot;_blank&quot;&gt;Public Review&lt;/a&gt;; this is clearly an important step for this new API.&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;Progress is also being made on different specifications that will get a maintenance release for Java EE 8:&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;JAX-B 2.0 (JSR 222) has passed the &lt;a href=&quot;https://jcp.org/en/jsr/results?id=5976&quot; target=&quot;_blank&quot;&gt;Maintenance Release&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;Interceptors (JSR 318) &lt;a href=&quot;https://jcp.org/aboutJava/communityprocess/maintenance/jsr318/index3.html&quot; target=&quot;_blank&quot;&gt;Maintenance Release&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;Java Persistence 2.1 (JSR 338) &lt;a href=&quot;https://jcp.org/aboutJava/communityprocess/maintenance/jsr338/index.html&quot; target=&quot;_blank&quot;&gt;Maintenance Review&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;JavaMail (JSR 919) &lt;a href=&quot;https://jcp.org/aboutJava/communityprocess/maintenance/jsr919/index4.html&quot; target=&quot;_blank&quot;&gt;Maintenance Review 4&lt;/a&gt;,&amp;nbsp;&lt;a href=&quot;https://javaee.groups.io/g/javamail/message/1&quot; target=&quot;_blank&quot;&gt;JavaMail 1.6.0 Release Candidate 2&lt;/a&gt;&amp;nbsp;&amp;nbsp;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Overall, we can observe a steady progress towards the finalization of the different Java EE 8 specifications. Last month, 2 promoted builds of GF5 were released. The fact that those are the first post-Java.net builds explains their relatively limited scope (see &lt;a href=&quot;https://blogs.oracle.com/theaquarium/glassfish-5-promoted-build-6&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://blogs.oracle.com/theaquarium/glassfish-5-promoted-build-7&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;). A lot of work has been done in the new GlassFish build pipeline. Now that this effort is mostly done, it is fair to expect a boost on GF5 progress in the coming weeks. To conclude on the infrastructure front, we should mention that all the Java EE related discussions are now hosted on a new platform &lt;a href=&quot;https://javaee.groups.io&quot; target=&quot;_blank&quot;&gt;javaee.groups.io&lt;/a&gt;. So if you have done so yet,&lt;a href=&quot;https://javaee.groups.io&quot; target=&quot;_blank&quot;&gt; join the conversation&lt;/a&gt;!&lt;/p&gt;
+            </description>
+            <category>JavaEE</category>
+            <category>JCP</category>
+            <pubDate>Wed, 07 Jun 2017 09:42:07 +0000</pubDate>
+            <guid>https://blogs.oracle.com/theaquarium/java-ee-8-may-recap</guid>
+            <dc:creator>David Delabassee</dc:creator>
+        </item>
+        <item>
+            <title>GlassFish 5 Promoted Build 7</title>
+            <link>https://blogs.oracle.com/theaquarium/glassfish-5-promoted-build-7</link>
+            <description>&lt;p&gt;This week&amp;#39;s promoted GlassFish build b07 is available &lt;a href=&quot;http://download.oracle.com/glassfish/5.0/promoted/&quot;&gt;here&lt;/a&gt;. We don&amp;#39;t have any component updates to call out for this week, but bulk of the changes were in fixing copyrights in all files. There were also some minor developer tests related changes.&lt;/p&gt;
+
+
+	
+		
+                Git Revision
+                Issue
+                Description
+		
+		
+                b211a72
+                21683
+                The value of &amp;quot;Group List&amp;quot; in &amp;quot;Realm User&amp;quot; cannot be deleted by GUI
+		
+		
+                4f148d8
+                -
+                Prevent deletion of default JDBC resource
+		
+		
+                ea27715
+                -
+                Update copyright plugin to 1.42 and update the copyright template&amp;nbsp;for all files in the workspace
+		
+	
+
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;Overall, we are making good progress having accepted 43 pull requests so far after the migration to GitHub. Do continue to raise issues on &lt;a href=&quot;https://github.com/javaee/glassfish/issues&quot;&gt;issue tracker&lt;/a&gt; and&amp;nbsp;subscribe to&amp;nbsp;https://javaee.groups.io/g/glassfish to post your queries.&lt;/p&gt;
+            </description>
+            <pubDate>Mon, 29 May 2017 13:03:28 +0000</pubDate>
+            <guid>https://blogs.oracle.com/theaquarium/glassfish-5-promoted-build-7</guid>
+            <dc:creator>Yamini Kalyandurga</dc:creator>
+        </item>
+        <item>
+            <title>GlassFish 5 Promoted Build 6</title>
+            <link>https://blogs.oracle.com/theaquarium/glassfish-5-promoted-build-6</link>
+            <description>&lt;p&gt;We had to pause GlassFish promotions process for few weeks due to Java.net migration. The &lt;a href=&quot;http://download.oracle.com/glassfish/5.0/nightly/index.html&quot;&gt;nightly builds&lt;/a&gt; have been available again shortly after the migration.&lt;/p&gt;
+
+&lt;p&gt;Please note our new home &lt;a href=&quot;https://javaee.github.io/glassfish/&quot; target=&quot;_blank&quot;&gt;https://javaee.github.io/glassfish/&lt;/a&gt;;&amp;nbsp;the GlassFish sources are now located at &lt;a href=&quot;https://github.com/javaee/glassfish&quot; target=&quot;_blank&quot;&gt;https://github.com/javaee/glassfish&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The latest GlassFish 5.0-b06 promotion bundles are available &lt;a href=&quot;http://download.oracle.com/glassfish/5.0/promoted/index.html&quot;&gt;here&lt;/a&gt;.&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;Here are some details on this build:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Component Update:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;
+	&lt;p&gt;Grizzly 2.4.0-beta2&lt;/p&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Bug Fixes:&lt;/strong&gt;&lt;/p&gt;
+
+
+	
+		
+			
+			&lt;p style=&quot;text-align: center;&quot;&gt;Issue ID&lt;/p&gt;
+			
+			
+			&lt;p&gt;&amp;nbsp;Summary&lt;/p&gt;
+			
+		
+	
+	
+		
+			
+			&lt;p style=&quot;text-align: center;&quot;&gt;20684&lt;/p&gt;
+			
+			
+			&lt;p&gt;&amp;nbsp;Visual issue in the Batch Admin UI&lt;/p&gt;
+			
+		
+		
+			
+			&lt;p style=&quot;text-align: center;&quot;&gt;21693&lt;/p&gt;
+			
+			
+			&lt;p&gt;&amp;nbsp;Rename install directory to &amp;#39;glassfish5&amp;#39;&lt;/p&gt;
+			
+		
+		
+			
+			&lt;p style=&quot;text-align: center;&quot;&gt;21702&lt;/p&gt;
+			
+			
+			&lt;p&gt;&amp;nbsp;Update Java EE version in master pom.xml to EE8&lt;/p&gt;
+			
+		
+		
+			
+			&lt;p style=&quot;text-align: center;&quot;&gt;21714&lt;/p&gt;
+			
+			
+			&lt;p&gt;&amp;nbsp;Warning related core.jar bundle not started in time of startup&lt;/p&gt;
+			
+		
+	
+
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;One small but important change is the install directory is now &lt;em&gt;glassfish5/ &lt;/em&gt;instead of&amp;nbsp;&lt;em&gt;&lt;span&gt;glassfish4/&lt;/span&gt;&lt;/em&gt;.&amp;nbsp;Make sure to update your scripts to reflect this.&lt;/p&gt;
+
+&lt;p&gt;Please do try out and report any problems on GitHub &lt;a href=&quot;https://github.com/javaee/glassfish/issues&quot;&gt;issue tracker&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+            </description>
+            <pubDate>Mon, 22 May 2017 10:59:00 +0000</pubDate>
+            <guid>https://blogs.oracle.com/theaquarium/glassfish-5-promoted-build-6</guid>
+            <dc:creator>Yamini Kalyandurga</dc:creator>
+        </item>
+        <item>
+            <title>Java EE 8 - April recap</title>
+            <link>https://blogs.oracle.com/theaquarium/java-ee-8-april-recap</link>
+            <description>&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;With a few days delay, here is a short recap of some the April news related to Java EE 8.&amp;nbsp;&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;&amp;nbsp;&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;text-align: justify;&quot;&gt;First an important update regarding Java.net that will be shutdown shortly. All the GlassFish development and most of the Java development is being migrated to GitHub under the &lt;/span&gt;&lt;a href=&quot;https://github.com/javaee&quot; style=&quot;text-align: justify;&quot;&gt;Java EE organization&lt;/a&gt;&lt;span style=&quot;text-align: justify;&quot;&gt;. From now on, we will leverage GitHub to go forward; this will hopefully enable a greater participation. Some projects like &lt;/span&gt;&lt;a href=&quot;https://github.com/jersey/jersey&quot; style=&quot;text-align: justify;&quot;&gt;Jersey&lt;/a&gt;&lt;span style=&quot;text-align: justify;&quot;&gt; and specifications like &lt;/span&gt;&lt;a href=&quot;https://github.com/jax-rs&quot; style=&quot;text-align: justify;&quot;&gt;JAX-RS&lt;/a&gt;&lt;span style=&quot;text-align: justify;&quot;&gt; were already mirrored from Java.net to GitHub, those repositories will remain unchanged for the time being. Most of the Java.net repositories and issues have been migrated to GitHub but we still have things to do including refreshing most of the projects web sites. We are also putting the final touches on the new mailing lists and we should, hopefully, be able to share the details very soon. And last but not least, this blog platform will also be migrated to a new modern platform.&amp;nbsp;&lt;/span&gt;&lt;/div&gt;
+
+&lt;div&gt;
+&lt;img alt=&quot;Java EE GitHub Organization&quot; src=&quot;https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/092eb4d7-5881-48fe-a4a4-ae3cd278b36b/Image/aa4c431f335065e164ea5914c4f4faa7/eegh.jpg&quot; style=&quot;width: 500px;&quot; /&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;Overall, the effort that went into the migration from Java.net to GitHub has slightly impacted the work on GlassFish 5 last month but it was a short-term pain for a long-term gain! You can download the mid April GlassFish 5 promoted build &lt;a href=&quot;https://javaee.github.io/glassfish/download&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/div&gt;
+
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;The good news is that the progress of the different EGs hasn&amp;rsquo;t been really impacted by this migration.&lt;/div&gt;
+
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;JavaServer Faces 2.3 has posted the&amp;nbsp;&lt;a href=&quot;https://jcp.org/aboutJava/communityprocess/final/jsr372/index.html&quot;&gt;Final Release of the JSR 372 specification&lt;/a&gt; while &lt;a href=&quot;https://jcp.org/en/jsr/results?id=5982&quot;&gt;JSON-P 1.1 has passed the Final Approval Ballot&lt;/a&gt;.&amp;nbsp;Congratulation to both EGs! JSON-B 1.0 (JSR 367) is now in &lt;a href=&quot;https://jcp.org/aboutJava/communityprocess/pfd/jsr367/index.html&quot;&gt;Proposed Final Draft&lt;/a&gt;, yet another specification very close to the Final Approval ballot!&lt;/div&gt;
+
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;The Servlet 4.0 (JSR 369) EG is now in &lt;a href=&quot;https://jcp.org/aboutJava/communityprocess/pr/jsr369/index.html&quot;&gt;Public Review&lt;/a&gt;. &amp;nbsp;Regarding Servlet 4 and more specifically HTTP/2 support over TLS on JDK 8, there is a &lt;a href=&quot;https://java.net/projects/servlet-spec/lists/users/archive/2017-04/message/43&quot;&gt;clarification on ALPN support on top of JDK 8&lt;/a&gt;.&lt;/div&gt;
+
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;The JAX-RS 2.1 (JSR 370) EG is making good progress; it has posted a &lt;a href=&quot;https://jcp.org/aboutJava/communityprocess/pr/jsr370/index.html&quot;&gt;Public Review&lt;/a&gt;. Make sure to review the draft specification and provide feedback. Santiago Pericas-Geertsen (JAX-RS 2.1 Co-Spec Lead) gave a session on JAX-RS 2.1 at Devoxx US; the video is now available &lt;a href=&quot;https://www.youtube.com/watch?v=x68STOyYgTo&quot;&gt;here&lt;/a&gt;. It should be noted that since this presentation in early March, it was decided to &lt;a href=&quot;https://java.net/projects/jax-rs-spec/lists/users/archive/2017-04/message/0&quot;&gt;drop for now the support of non-blocking I/O in providers&lt;/a&gt;. In any case, Santiago&amp;#39;s session is interesting to understand JAX-RS 2.1 new APIs (SSE API, Reactive Client API) but also to understand the motivation (and the challenges) behind non-blocking I/O support in JAX-RS providers.&lt;/div&gt;
+
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;During Devoxx US, Will Hopkins (Spec Lead) gave a overview on Java EE Security (JSR375), you can watch the replay &lt;a href=&quot;https://www.youtube.com/watch?v=D0SfxPvUj18&quot;&gt;here&lt;/a&gt;. The &lt;a href=&quot;https://java.net/projects/javaee-spec/lists/users/archive/2017-04/message/0&quot;&gt;question was raised in the Platform EG (JSR 366) about the inclusion of this JSR in the Web Profile&lt;/a&gt;. Given the strong positive feedback on this question, it was decided to include this API in the Web Profile (in addition to the full platform). It is one of the update included in the &lt;a href=&quot;https://jcp.org/aboutJava/communityprocess/pr/jsr366/index.html&quot;&gt;second Early Draft of the Java EE 8 specification&lt;/a&gt; that is now available for Public Review. Also, make sure to watch the &lt;a href=&quot;https://www.youtube.com/watch?v=OXsdKzBIUzU&quot;&gt;Java EE 8 overview&lt;/a&gt; that Linda De Michiel (JSR 366 Spec Lead) gave at Devoxx US.&lt;/div&gt;
+
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;CDI 2 has entered the &lt;a href=&quot;https://jcp.org/en/jsr/detail?id=365&quot;&gt;Final Approval Ballot&lt;/a&gt;&amp;nbsp;and while waiting the results, you can watch another great Devoxx US session: &amp;ldquo;&lt;a href=&quot;https://www.youtube.com/watch?v=Zm7KueTn000&quot;&gt;CDI 2.0 New &amp;amp; Noteworthy&lt;/a&gt;&amp;rdquo; by John Ament (JSR 365 EG member). Talking about Red Hat lead JSRs, Bean Validation 2 (JSR 380) is now in &lt;a href=&quot;https://jcp.org/aboutJava/communityprocess/pr/jsr380/index.html&quot;&gt;Public Review&lt;/a&gt;. You can watch Emmanuel Bernard (BV 1.x Spec Lead) &amp;ldquo;&lt;a href=&quot;https://www.youtube.com/watch?v=pNmzT4K9aTw&quot;&gt;Bean Validation 2 overview&lt;/a&gt;&amp;rdquo; Devoxx US session.&lt;/div&gt;
+
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+
+&lt;div&gt;On the Maintenance Release front, we can mention for now 2 upcoming MRs for Java EE 8: &lt;a href=&quot;https://java.net/projects/javaee-spec/lists/users/archive/2017-04/message/90&quot;&gt;Interceptors&lt;/a&gt;&amp;nbsp;and &lt;a href=&quot;https://java.net/projects/jpa-spec/lists/users/archive/2017-04/message/1&quot;&gt;JPA&lt;/a&gt;.&lt;/div&gt;
+
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;And last but not least, we are happy to see &lt;a href=&quot;https://jcp.org/en/jsr/detail?id=371&quot;&gt;MVC (JSR 371)&lt;/a&gt; going forward, independently of Java EE, with &lt;a href=&quot;https://java.net/projects/mvc-spec/lists/users/archive/2017-05/message/0&quot;&gt;not one but two new Spec Leads&lt;/a&gt;: Ivar Grimstad and Christian Katlepoth. With Ivar and Christan, that JSR is in good hands!&amp;nbsp;&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;&amp;nbsp;&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;In summary, April has been a very busy month bringing us another step closer to completing Java EE 8 this summer!&lt;/div&gt;
+
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+            </description>
+            <category>JavaEE</category>
+            <category>The Aquarium</category>
+            <pubDate>Tue, 16 May 2017 06:16:00 +0000</pubDate>
+            <guid>https://blogs.oracle.com/theaquarium/java-ee-8-april-recap</guid>
+            <enclosure url="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/092eb4d7-5881-48fe-a4a4-ae3cd278b36b/File/aa4c431f335065e164ea5914c4f4faa7/gheeorg.jpg" length="0" type="image/jpeg" />
+            <dc:creator>David Delabassee</dc:creator>
+        </item>
+        <item>
+            <title>GlassFish 5 Promoted Build 4</title>
+            <link>https://blogs.oracle.com/theaquarium/glassfish-5-promoted-build-4</link>
+            <description>&lt;p&gt;The latest GlassFish 5.0 promotion i.e glassfish-5.0-b04 is available for download &lt;a href=&quot;http://download.oracle.com/glassfish/5.0/promoted/index.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Component updates included in this build are:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Grizzly 2.3.30&lt;/li&gt; &lt;li&gt;JSON-P 1.1.0-M2&lt;/li&gt; &lt;/ul&gt; &lt;div&gt; Bugs Fixed&amp;nbsp; &lt;p&gt;This build includes some critical security fixes apart from the following bug fixes.&amp;nbsp;&lt;/p&gt;    &amp;nbsp;Issue ID &amp;nbsp;Description   &lt;a href=&quot;https://java.net/jira/browse/GLASSFISH-21582&quot;&gt; &lt;span&gt;GLASSFISH-21582&lt;/span&gt;&lt;/a&gt;  &lt;span&gt;No error is displayed on Batch Job Executions screen when Batch Runtime database is down&lt;/span&gt;   &lt;a href=&quot;https://java.net/jira/browse/GLASSFISH-21652&quot;&gt; &lt;span&gt;GLASSFISH-21652&lt;/span&gt;&lt;/a&gt;  &lt;span&gt;ConnectionQueueStatsProvider.java#onTaskQueuedEvent is not counted correctly when there exists plural acceptor threads&lt;/span&gt;    &lt;a class=&quot;external-link&quot; href=&quot;https://java.net/jira/browse/GLASSFISH-21256&quot; rel=&quot;nofollow&quot; style=&quot;color: #3b73af; text-decoration: none; font-family: Arial, sans-serif; font-size: 14px;&quot;&gt;GLASSFISH-21256&lt;/a&gt;  &lt;span&gt;Debug not shown correctly on General Information in the admin console&lt;/span&gt;   &lt;a href=&quot;https://java.net/jira/browse/GLASSFISH-21409&quot;&gt; &lt;span&gt;GLASSFISH-21409&lt;/span&gt;&lt;/a&gt;  &lt;span&gt;Encoding mapping key search error&lt;/span&gt;   &lt;a href=&quot;https://java.net/jira/browse/GLASSFISH-21319&quot;&gt; &lt;span&gt;GLASSFISH-21319&lt;/span&gt;&lt;/a&gt;  &lt;span&gt;javax.inject.jar missing in javaee.jar&lt;/span&gt;    &lt;/div&gt; &lt;p&gt; &lt;/p&gt; &lt;p&gt; &lt;/p&gt; &lt;p&gt; &lt;/p&gt; &lt;p&gt; &lt;/p&gt; &lt;p&gt; &lt;/p&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;p&gt; &lt;/p&gt; Servlet 4.0 Update&amp;nbsp; &lt;p&gt; &lt;/p&gt; &lt;p&gt; &lt;/p&gt;    &amp;nbsp;Issue ID or Commit Revision &amp;nbsp;Description    &lt;a href=&quot;https://java.net/jira/browse/SERVLET_SPEC-73&quot; class=&quot;external-link&quot; rel=&quot;nofollow&quot; style=&quot;color: #3b73af; text-decoration: none;&quot;&gt;SERVLET_SPEC-73&lt;/a&gt;&lt;span&gt; implemented by &lt;/span&gt;&lt;a href=&quot;https://java.net/jira/browse/GLASSFISH-21670&quot; class=&quot;external-link&quot; rel=&quot;nofollow&quot; style=&quot;color: #3b73af;&quot;&gt;GLASSFISH-21670&lt;/a&gt;  &lt;span&gt;Implementation of servlet mapping discovery&lt;/span&gt;    &lt;span&gt;r64750&lt;/span&gt;  &lt;p&gt;Integrated Grizzly 2.3.30&lt;/p&gt; &lt;p&gt;-Removed experimental SPDY code&lt;/p&gt; &lt;p&gt;-Removed Http2 dom element. &amp;nbsp;HTTP2 attributes migrated to http dom attribute.&amp;nbsp;&lt;/p&gt;     &lt;a href=&quot;https://java.net/jira/browse/SERVLET_SPEC-161&quot; class=&quot;external-link&quot; rel=&quot;nofollow&quot; style=&quot;color: #3b73af; text-decoration: none;&quot;&gt;SERVLET_SPEC-161&lt;/a&gt;&lt;span&gt; implemented by &lt;/span&gt;&lt;a href=&quot;https://java.net/jira/browse/GLASSFISH-21688&quot; class=&quot;external-link&quot; rel=&quot;nofollow&quot; style=&quot;color: #3b73af; text-decoration: none;&quot;&gt;GLASSFISH-21688&lt;/a&gt;  &lt;div&gt;New XML element for request and response encoding.&lt;/div&gt;    &lt;a href=&quot;https://java.net/jira/browse/GLASSFISH-21664&quot; style=&quot;color: #3b73af;&quot;&gt;GLASSFISH-21664&lt;/a&gt; Implement Servlet 4.0 Server Push    &lt;a href=&quot;https://java.net/jira/browse/GLASSFISH-21708&quot; style=&quot;color: #3b73af;&quot;&gt; GLASSFISH-21708&lt;/a&gt; Implement SERVLET_SPEC-171    &lt;p&gt; &lt;/p&gt; &lt;p&gt; &lt;/p&gt; &lt;div&gt; &lt;p&gt; &lt;/p&gt; &lt;/div&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;p&gt; &lt;/p&gt; &lt;p&gt; &lt;/p&gt; &lt;p&gt; &lt;/p&gt; &lt;p&gt;Just to re-iterate, weekly promotions go through more thorough testing but if you want to use the latest, you can pick up the nightly bits from &lt;a href=&quot;http://javaweb.us.oracle.com/java/re/glassfish/5.0/nightly/latest/&quot;&gt;here&lt;/a&gt;. Do try out the bits and share your experience with us.&lt;/p&gt;</description>
+            <category>GlassFish</category>
+            <pubDate>Tue, 04 Apr 2017 07:33:02 +0000</pubDate>
+            <guid>https://blogs.oracle.com/theaquarium/glassfish-5-promoted-build-4</guid>
+            <dc:creator>Yamini Kalyandurga</dc:creator>
+        </item>
+        <item>
+            <title>Java EE 8 - March recap</title>
+            <link>https://blogs.oracle.com/theaquarium/java-ee-8-march-recap</link>
+            <description>&lt;div&gt;Here's a quick recap of some of the recent Java EE 8 news.&lt;/div&gt; &lt;div&gt; &lt;p&gt;JSF 2.3 (&lt;a href=&quot;https://jcp.org/en/jsr/detail?id=372&quot;&gt;JSR 372&lt;/a&gt;) is now &lt;a href=&quot;http://arjan-tijms.omnifaces.org/2017/03/jsf-23-released.html&quot;&gt;final&lt;/a&gt;! You can check the&amp;nbsp;&lt;a href=&quot;https://javaserverfaces.java.net/nonav/2.3/releasenotes.html&quot;&gt;Release Notes&lt;/a&gt;&amp;nbsp;and download the&amp;nbsp;&lt;a href=&quot;https://javaserverfaces.java.net/nonav/2.3/download.html&quot;&gt;Reference Implementation&lt;/a&gt;. A small party was held at JavaLand to celebrate this community effort!&lt;/p&gt;&lt;img width=&quot;420&quot; src=&quot;http://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/f4a5b21d-66fa-4885-92bf-c4e81c06d916/Image/7d0e25b423464efb961bc627a4f8709c/jsf23party.jpg&quot; /&gt; &lt;/div&gt; &lt;div&gt;JSON-P 1.1 (&lt;a href=&quot;https://jcp.org/en/jsr/detail?id=374&quot;&gt;JSR 374&lt;/a&gt;) has successfully &lt;a href=&quot;https://jcp.org/en/jsr/results?id=5917&quot;&gt;passed the Public Review Ballot&lt;/a&gt;&amp;nbsp;and is now in &lt;a href=&quot;https://jcp.org/aboutJava/communityprocess/pfd/jsr374/index.html&quot;&gt;Proposed Final Draft&lt;/a&gt;.&lt;/div&gt; &lt;div&gt; &lt;p&gt;CDI 2 (&lt;a href=&quot;https://jcp.org/en/jsr/detail?id=365&quot;&gt;JSR 365&lt;/a&gt;) has also &lt;a href=&quot;https://jcp.org/en/jsr/results?id=5925&quot;&gt;passed the Public Review Ballot&lt;/a&gt;&amp;nbsp;and is about to enter the Proposed Final Draft stage too. Make sure to check this &lt;a href=&quot;http://docs.jboss.org/cdi/learn/cdi_2/slides.html&quot;&gt;CDI 2.0 overview&lt;/a&gt;.&amp;nbsp;&lt;/p&gt; &lt;p&gt;JSON-B 1.0 (&lt;a href=&quot;https://jcp.org/en/jsr/detail?id=367&quot;&gt;JSR 367&lt;/a&gt;) should also &lt;a href=&quot;https://java.net/projects/jsonb-spec/lists/users/archive/2017-03/message/17&quot;&gt;enter the Proposed Final Draft&lt;/a&gt; phase shortly.&amp;nbsp;&lt;/p&gt; &lt;/div&gt; &lt;div&gt; &lt;p&gt;The JAX-RS 2.1 EG (&lt;a href=&quot;https://jcp.org/en/jsr/detail?id=370&quot;&gt;JSR 370&lt;/a&gt;) has posted an &lt;a href=&quot;https://jcp.org/aboutJava/communityprocess/edr/jsr370/index.html&quot;&gt;Early Draft&lt;/a&gt; that covers 2 of the 3 big-ticket JAX-RS 2.1 features: SSE support and a Reactive Client API. The &lt;a href=&quot;https://java.net/projects/jax-rs-spec/lists/users/archive/2017-03/message/5&quot;&gt;details on Non Blocking IO support&lt;/a&gt;, the 3rd big-ticket feature, are now also being discussed. To get a good overview of JAX-RS 2.1, check the presentation that Santiago Pericas-Geertsen (JAX-RS 2.1 co-Spec Lead) did at Devoxx US (video will be published soon).&amp;nbsp;&lt;/p&gt; &lt;/div&gt;   &lt;div&gt; &lt;p&gt;The Java EE Security API EG (&lt;a href=&quot;https://www.jcp.org/en/jsr/detail?id=375&quot;&gt;JSR 375&lt;/a&gt;) has posted its first &lt;a href=&quot;https://java.net/projects/javaee-security-spec/lists/jsr375-experts/archive/2017-03/message/5&quot;&gt;Early Draft&lt;/a&gt;. For both JAX-RS 2.1 and the Java EE Security API make sure to read the drafts and provides your feedback in time!&lt;/p&gt; &lt;/div&gt; &lt;div&gt;The Servlet 4 EG (&lt;a href=&quot;https://jcp.org/en/jsr/detail?id=369&quot;&gt;JSR 369&lt;/a&gt;) is also making progress towards another Early Draft; they have just &lt;a href=&quot;https://java.net/projects/servlet-spec/lists/users/archive/2017-03/message/11&quot;&gt;published an updated schedule&lt;/a&gt; that align with the Java EE 8 global schedule. In parallel, we are observing progress on the Reference Implementation work (e.g. &lt;a href=&quot;https://java.net/projects/glassfish/sources/svn/revision/64819&quot;&gt;Server Push support&lt;/a&gt; is being added).&amp;nbsp;&lt;/div&gt; &lt;div&gt;&lt;br /&gt;&lt;/div&gt; &lt;div&gt;JavaMail should get a Maintenance Release for Java EE 8 (see details &lt;a href=&quot;https://java.net/projects/javamail/lists/users/archive/2017-02/message/0&quot;&gt;here&lt;/a&gt;), a Release Candidate of JavaMail 1.6 is available &lt;a href=&quot;https://java.net/projects/javamail/lists/users/archive/2017-02/message/0&quot;&gt;here&lt;/a&gt;.&lt;/div&gt; &lt;div&gt;&lt;br /&gt;&lt;/div&gt; &lt;div&gt;In other news, &lt;a href=&quot;https://java.net/projects/javaee-spec/lists/users/archive/2017-03/message/0&quot;&gt;IBM has confirmed&lt;/a&gt; that they are not planning to do a Maintenance Release of the Batch API (&lt;a href=&quot;https://jcp.org/en/jsr/detail?id=352&quot;&gt;JSR 352&lt;/a&gt;) for Java EE 8.&lt;/div&gt; &lt;div&gt;&lt;br /&gt;&lt;/div&gt; &lt;div&gt;&lt;a href=&quot;https://blogs.oracle.com/theaquarium/entry/glassfish_5_update&quot;&gt;GlassFish 5&lt;/a&gt;, the Java EE 8 Reference Implementation is starting to take shape,&amp;nbsp;&lt;a href=&quot;https://blogs.oracle.com/theaquarium/entry/additional_details_on_gf5_promoted&quot;&gt;Promoted Build 3&lt;/a&gt;&amp;nbsp;and &lt;a href=&quot;http://download.oracle.com/glassfish/5.0/promoted/index.html&quot;&gt;4&lt;/a&gt; have been released in March.&lt;/div&gt; &lt;div&gt;&lt;br /&gt;&lt;/div&gt; &lt;div&gt;Finally, you might want to check the &lt;a href=&quot;https://www.youtube.com/watch?v=3UAaTs77mws&quot;&gt;3rd Adopt a JSR online meeting&lt;/a&gt; held by the JCP.&amp;nbsp;&lt;/div&gt; &lt;div&gt; &lt;p&gt;As usual, feedback and participation are encouraged! You should expect more news shortly including an update on the plans to move away from Java.Net.&amp;nbsp;&lt;/p&gt; &lt;/div&gt;</description>
+            <category>JavaEE</category>
+            <pubDate>Mon, 03 Apr 2017 09:22:46 +0000</pubDate>
+            <guid>https://blogs.oracle.com/theaquarium/java-ee-8-march-recap</guid>
+            <enclosure url="http://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/f4a5b21d-66fa-4885-92bf-c4e81c06d916/Image/7d0e25b423464efb961bc627a4f8709c/jsf23party.jpg" length="0" type="image/jpeg" />
+            <dc:creator>David Delabassee</dc:creator>
+        </item>
+        <item>
+            <title>GlassFish 4.1.2 Released</title>
+            <link>https://blogs.oracle.com/theaquarium/glassfish-412-released</link>
+            <description>&lt;br /&gt;&lt;img width=&quot;140&quot; src=&quot;http://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/f4a5b21d-66fa-4885-92bf-c4e81c06d916/Image/063f92223ca88c997985b089d17d6a2a/gf_logo.png&quot; /&gt; &lt;p&gt;&amp;nbsp;GlassFish 4.1.2 is the latest update release of GlassFish 4.x line, the Java EE 7 Reference Implementation. GF 4.1.2 supercedes 4.1.1&amp;nbsp;(Java EE 7 Update 2).&lt;/p&gt; &lt;p&gt;GlassFish 4.1.2 has undergone extensive testing that include the component unit tests, developer tests, full CTS 7 as well as standalone TCKs (e.g. websocket, bean validation, CDI, ...). These tests span the full Java EE 7 platform and the Java EE 7 Web profile.&lt;/p&gt; JDK Requirements&amp;nbsp; &lt;p&gt;Minimum JDK required is JDK 7 u80.&lt;/p&gt; Downloads &lt;p&gt;The release is available from the following locations:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;http://glassfish.java.net/download.html&quot;&gt;glassfish.org&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;ul&gt; &lt;li&gt;GF 4.1.2 bundle on maven central&lt;/li&gt; &lt;/ul&gt; &lt;blockquote&gt;&lt;a href=&quot;http://repo1.maven.org/maven2/org/glassfish/main/distributions/glassfish/4.1.2/&quot;&gt;http://repo1.maven.org/maven2/org/glassfish/main/distributions/glassfish/4.1.2/&lt;/a&gt;&lt;br /&gt;&lt;a href=&quot;http://repo1.maven.org/maven2/org/glassfish/main/distributions/glassfish/4.1.2/&quot;&gt;&lt;/a&gt;&lt;/blockquote&gt; &lt;blockquote&gt; &lt;blockquote&gt;&lt;em&gt;groupId=org.glassfish.main.distributions&amp;nbsp;&lt;/em&gt;&lt;/blockquote&gt; &lt;blockquote&gt;&lt;em&gt;artifactId=glassfish&lt;/em&gt;&lt;/blockquote&gt; &lt;blockquote&gt;&lt;em&gt;version=4.1.2&lt;/em&gt;&lt;/blockquote&gt; &lt;blockquote&gt;&lt;em&gt;type=zip&lt;/em&gt;&lt;/blockquote&gt; &lt;/blockquote&gt; &lt;ul&gt; &lt;li&gt;GF 4.1.2 Web bundle on maven central&lt;/li&gt; &lt;/ul&gt; &lt;blockquote&gt;&lt;a href=&quot;http://repo1.maven.org/maven2/org/glassfish/main/distributions/web/4.1.2/&quot;&gt;http://repo1.maven.org/maven2/org/glassfish/main/distributions/web/4.1.2/&lt;/a&gt;&lt;br /&gt;&lt;/blockquote&gt; &lt;blockquote&gt; &lt;blockquote&gt;&lt;em&gt;groupId=org.glassfish.main.distributions&lt;/em&gt;&lt;/blockquote&gt; &lt;blockquote&gt;&lt;em&gt;artifactId=web&lt;/em&gt;&lt;/blockquote&gt; &lt;blockquote&gt;&lt;em&gt;version=4.1.2&lt;/em&gt;&lt;/blockquote&gt; &lt;blockquote&gt;&lt;em&gt;type=zip&lt;/em&gt;&lt;/blockquote&gt; &lt;/blockquote&gt; &lt;ul&gt; &lt;li&gt;All GlassFish 4.1.2 maven artifacts are also posted to maven central; just search &amp;quot;&lt;em&gt;org.glassfish.main&lt;/em&gt;&amp;quot; on&amp;nbsp;&lt;a href=&quot;http://search.maven.org/&quot; rel=&quot;nofollow&quot;&gt;http://search.maven.org/&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; Bugs Fixed &lt;p&gt;We have incorporated the following critical fixes in this release.&lt;/p&gt;    Issue Description    &lt;a href=&quot;https://java.net/jira/browse/GLASSFISH-21390&quot;&gt;GLASSFISH-21390&lt;/a&gt;  The message of PWC4011: Unable to set request character encoding does not output    &lt;a href=&quot;https://java.net/jira/browse/GLASSFISH-21172&quot;&gt;GLASSFISH-21172&lt;/a&gt;  javax.transaction.RollbackException from @Transactional bean has no cause set    &lt;a href=&quot;https://java.net/jira/browse/GLASSFISH-21314&quot;&gt;GLASSFISH-21314&lt;/a&gt;  Cannot create JDBC Connection Pool    &lt;a href=&quot;https://java.net/jira/browse/GLASSFISH-21238&quot;&gt;GLASSFISH-21238&lt;/a&gt;  Response code 400 on a DELETE request with a body    &lt;a href=&quot;https://java.net/jira/browse/GLASSFISH-21642&quot;&gt;GLASSFISH-21642&lt;/a&gt;  access-logging-bad-requests web devtests fails in Hudson    Component Updates    Component Version in Glassfish 4.1.1 GlassFish 4.1.2    &lt;p&gt;JSF (Mojarra)&lt;/p&gt; &lt;p&gt;(&lt;a href=&quot;https://java.net/jira/browse/GLASSFISH-21662&quot;&gt;GLASSFISH-21662&lt;/a&gt;)&lt;/p&gt;  2.2.12  &lt;p&gt;2.2.14&amp;nbsp;&lt;/p&gt;     &lt;p&gt;Do give it a try and watch out this space for more!&amp;nbsp;&lt;/p&gt;</description>
+            <category>GlassFish</category>
+            <pubDate>Fri, 31 Mar 2017 11:02:51 +0000</pubDate>
+            <guid>https://blogs.oracle.com/theaquarium/glassfish-412-released</guid>
+            <enclosure url="http://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/f4a5b21d-66fa-4885-92bf-c4e81c06d916/Image/063f92223ca88c997985b089d17d6a2a/gf_logo.png" length="0" type="image/png" />
+            <dc:creator>Yamini Kalyandurga</dc:creator>
+        </item>
+    </channel>
+</rss>
