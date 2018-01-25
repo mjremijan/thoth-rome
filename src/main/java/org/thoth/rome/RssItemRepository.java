@@ -7,8 +7,6 @@ import com.rometools.rome.io.XmlReader;
 import java.io.File;
 import java.util.Date;
 import java.util.Optional;
-import org.thoth.rome.RssException;
-import org.thoth.rome.RssItem;
 
 /**
  *
@@ -32,8 +30,14 @@ public class RssItemRepository {
         SyndEntry entry
             = feed.getEntries().stream().findFirst().get();
 
+        // Feed title
+        Optional<String> feedTitle = Optional.ofNullable(feed.getTitle());
+
         // ID
         Optional<String> id = Optional.ofNullable(entry.getUri());
+
+        // ID
+        Optional<String> author = Optional.ofNullable(entry.getAuthor());
 
         // Title
         Optional<String> title = Optional.ofNullable(entry.getTitle());
@@ -58,6 +62,8 @@ public class RssItemRepository {
 
         return new RssItem(
               id.orElseThrow(() -> new RssException("No <guid> value"))
+            , feedTitle.orElseThrow(() -> new RssException("No <channel><title> value"))
+            , author.orElse(null)
             , title.orElseThrow(() -> new RssException("No <title> value"))
             , link.orElseThrow(() -> new RssException("No <link> value"))
             , publicationDate.orElse(null)

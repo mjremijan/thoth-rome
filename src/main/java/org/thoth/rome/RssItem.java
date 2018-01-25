@@ -8,13 +8,17 @@ import java.util.Date;
  */
 public class RssItem {
     protected String id;
+    protected String feed;
+    protected String author;
     protected String title;
     protected String link;
     protected Date publicationDate;
     protected String contents;
 
-    public RssItem(String id, String title, String link, Date publicationDate, String contents) {
+    public RssItem(String id, String feed, String author, String title, String link, Date publicationDate, String contents) {
         this.id = id;
+        this.feed = feed;
+        this.author = author;
         this.title = title;
         this.link = link;
         this.publicationDate = publicationDate;
@@ -41,5 +45,11 @@ public class RssItem {
         return contents;
     }
 
+    public String getAuthor() {
+        return author;
+    }
 
+    public String getFeed() {
+        return feed;
+    }
 }
