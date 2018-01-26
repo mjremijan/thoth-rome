@@ -20,12 +20,19 @@ public class RssItemRepository {
         this.feedFile = feedFile;
     }
 
-    public RssItem findFirst() throws Exception {
+    public SyndFeed getFeed() throws Exception {
         SyndFeedInput input
             = new SyndFeedInput();
 
         SyndFeed feed
             = input.build(new XmlReader(feedFile));
+
+        return feed;
+    }
+
+    public RssItem findFirst() throws Exception {
+        SyndFeed feed
+            = getFeed();
 
         SyndEntry entry
             = feed.getEntries().stream().findFirst().get();
