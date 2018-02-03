@@ -1,5 +1,6 @@
 package org.thoth.rome;
 
+import com.rometools.rome.feed.synd.SyndFeed;
 import java.io.File;
 import org.junit.Assert;
 import org.junit.Test;
@@ -11,6 +12,16 @@ import org.junit.Test;
  */
 public class DzoneJavaTest {
 
+    @Test
+    public void testTwo() throws Exception {
+
+        SyndFeed feed = new RssItemRepository(new File("src/test/resources/dzone_java.xml")).getFeed();
+        Assert.assertEquals(
+            "https://dzone.com/java-jdk-development-tutorials-tools-news"
+            ,feed.getLink()
+        );
+
+    }
     @Test
     public void testMe() throws Exception {
 
