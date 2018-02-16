@@ -45,6 +45,8 @@ public class MarsNewsTest {
             , element.getName()
         );
 
+        Assert.assertNull(element.getAttribute("asadfasdsfdf"));
+
         Assert.assertEquals(
             "https://www.sciencedaily.com/images/2018/02/180206100338-large.jpg"
             , element.getAttribute("url").getValue()
