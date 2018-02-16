@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" media="screen" href="/~d/styles/rss2full.xsl"?><?xml-stylesheet type="text/css" media="screen" href="http://feeds.sciencedaily.com/~d/styles/itemcontent.css"?><rss xmlns:media="http://search.yahoo.com/mrss/" xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0" version="2.0">
+    <channel>
+        <title>Mars News -- ScienceDaily</title>
+        <link>https://www.sciencedaily.com/news/space_time/mars/</link>
+        <description>Planet Mars News. Read astronomy articles on how Mars could have once supported life, the Mars Rover and more. See images and read full-text articles on Mars exploration.</description>
+        <language>en-us</language>
+        <pubDate>Fri, 16 Feb 2018 09:18:53 EST</pubDate>
+        <lastBuildDate>Fri, 16 Feb 2018 09:18:53 EST</lastBuildDate>
+        <ttl>60</ttl>
+        <image>
+            <title>Mars News -- ScienceDaily</title>
+            <url>https://www.sciencedaily.com/images/scidaily-logo-rss.png</url>
+            <link>https://www.sciencedaily.com/news/space_time/mars/</link>
+            <description>For more science news, visit ScienceDaily.</description>
+        </image>
+		
+        <atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="http://feeds.sciencedaily.com/sciencedaily/space_time/mars" />
+        <feedburner:info uri="sciencedaily/space_time/mars" />
+        <atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" />
+        <feedburner:emailServiceId>sciencedaily/space_time/mars</feedburner:emailServiceId>
+        <feedburner:feedburnerHostname>https://feedburner.google.com</feedburner:feedburnerHostname>
+        <item>
+            <title>Did surface life evolve on Mars? Newly published research casts increased doubt</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/M44UPh8nhP8/180206100338.htm</link>
+            <description>Surface life on Earth is abundant because of the availability of sunlight, surface water, generally moderate climate conditions. But the planet Mars would have never experienced such habitable conditions at the surface, according to new research. However, below the surface, hydrothermal systems on Mars may have provided the right environment for life on the Red Planet, researchers argue.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/M44UPh8nhP8" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2018/02/180206100338-large.jpg" height="184" width="300" />
+            <pubDate>Tue, 06 Feb 2018 10:03:38 EST</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2018/02/180206100338.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2018/02/180206100338.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>New technique for finding life on Mars</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/Xu09kDtAb2E/180118100822.htm</link>
+            <description>Miniaturized scientific instruments and new microbiology techniques successfully identified and characterized microorganisms living in Arctic permafrost -- one of the closest analogs to Mars on Earth. By avoiding delays that come with having to return samples to a laboratory for analysis, the methodology could also be used on Earth to detect and identify pathogens during epidemics in remote areas.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/Xu09kDtAb2E" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2018/01/180118100822-large.jpg" height="199" width="300" />
+            <pubDate>Thu, 18 Jan 2018 10:08:22 EST</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2018/01/180118100822.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2018/01/180118100822.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Steep slopes on Mars reveal structure of buried ice on Red Planet</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/1h3lzDXCAzI/180111141713.htm</link>
+            <description>Researchers have found eight sites where thick deposits of ice beneath Mars' surface are exposed in faces of eroding slopes. The ice was likely deposited as snow long ago. The deposits hold clues about Mars' climate history and also may make frozen water more accessible than previously thought to future robotic or human exploration missions.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/1h3lzDXCAzI" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2018/01/180111141713-large.jpg" height="240" width="300" />
+            <pubDate>Thu, 11 Jan 2018 14:17:13 EST</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2018/01/180111141713.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2018/01/180111141713.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Scientist's work may provide answer to Martian mountain mystery</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/De_r2eh_Hjk/180111141558.htm</link>
+            <description>By seeing which way the wind blows, a fluid dynamics expert has helped propose a solution to a Martian mountain mystery. He explains the common Martian phenomenon of a mountain positioned downwind from the center of an ancient meteorite impact zone.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/De_r2eh_Hjk" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2018/01/180111141558-large.jpg" height="200" width="300" />
+            <pubDate>Thu, 11 Jan 2018 14:15:58 EST</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2018/01/180111141558.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2018/01/180111141558.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Mars: Not as dry as it seems</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/GGmawGh7PH8/171220131659.htm</link>
+            <description>Two new articles have shed light on why there is, presumably, no life on Mars. Although today's Martian surface is barren, frozen and uninhabitable, a trail of evidence points to a once warmer, wetter planet, where water flowed freely -- and life may have thrived. The conundrum of what happened to this water is long standing and unsolved. However, new research suggests that this water is now locked in the Martian rocks.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/GGmawGh7PH8" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/12/171220131659-large.jpg" height="169" width="300" />
+            <pubDate>Wed, 20 Dec 2017 13:16:59 EST</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/12/171220131659.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/12/171220131659.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Mars mission sheds light on habitability of distant planets</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/sDfKlTf2jsY/171213124733.htm</link>
+            <description>Insights from NASA's Mars Atmosphere and Volatile Evolution, or MAVEN, mission about the loss of the Red Planet's atmosphere can help scientists understand the habitability of rocky planets orbiting other stars.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/sDfKlTf2jsY" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/12/171213124733-large.jpg" height="169" width="300" />
+            <pubDate>Wed, 13 Dec 2017 12:47:33 EST</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/12/171213124733.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/12/171213124733.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Mars' atmosphere well protected from the solar wind</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/mnLlh6l-ukc/171207140513.htm</link>
+            <description>Despite the absence of a global Earth-like magnetic dipole, the Martian atmosphere is well protected from the effects of the solar wind on ion escape from the planet. New research shows this using measurements from the Swedish particle instrument ASPERA-3 on the Mars Express spacecraft.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/mnLlh6l-ukc" height="1" width="1" alt=""/&gt;</description>
+            <pubDate>Thu, 07 Dec 2017 14:05:13 EST</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/12/171207140513.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/12/171207140513.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Clay minerals on Mars may have formed in primordial steam bath</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/CJUZ_9ZGpdg/171206132214.htm</link>
+            <description>New research suggests that the bulk of clay minerals on Mars could have been formed as the planet's crust cooled and solidified, not by later interactions with water on the surface as has long been assumed.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/CJUZ_9ZGpdg" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/12/171206132214-large.jpg" height="253" width="300" />
+            <pubDate>Wed, 06 Dec 2017 13:22:14 EST</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/12/171206132214.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/12/171206132214.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Earthworms can reproduce in Mars soil simulant</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/SSEU0egm0DI/171127091558.htm</link>
+            <description>Two young worms are the first offspring in a Mars soil experiment. A biologist found them in a Mars soil simulant that he obtained from NASA. At the start he only added adult worms. The experiments are crucial in the study that aims to determine whether people can keep themselves alive at the red planet by growing their own crops on Mars soils.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/SSEU0egm0DI" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/11/171127091558-large.jpg" height="225" width="300" />
+            <pubDate>Mon, 27 Nov 2017 09:15:58 EST</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/11/171127091558.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/11/171127091558.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Ice shapes the landslide landscape on Mars</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/5FvpjGswpNA/171121095135.htm</link>
+            <description>How good is your Martian geography? Scientists now explain the extent to which ice may have been an important medium of lubrication for landslides on Mars.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/5FvpjGswpNA" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/11/171121095135-large.jpg" height="174" width="300" />
+            <pubDate>Tue, 21 Nov 2017 09:51:35 EST</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/11/171121095135.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/11/171121095135.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Previous evidence of water on Mars now identified as grainflows</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/r5DyeumId1Y/171120124457.htm</link>
+            <description>Dark features previously proposed as evidence for significant liquid water flowing on Mars have now been identified as granular flows, where sand and dust move rather than liquid water, according to a new article. These findings indicate that present-day Mars may not have a significant volume of liquid water. The water-restricted conditions that exist on Mars would make it difficult for Earth-like life to exist near the surface.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/r5DyeumId1Y" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/11/171120124457-large.jpg" height="225" width="300" />
+            <pubDate>Mon, 20 Nov 2017 12:44:57 EST</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/11/171120124457.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/11/171120124457.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Salt pond in Antarctica, among the saltiest waters on Earth, is fed from beneath</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/TzFz3QeWPSc/171115155625.htm</link>
+            <description>One of the saltiest bodies on Earth, an analog for what water might look like on Mars, is just one piece of a larger aquifer.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/TzFz3QeWPSc" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/11/171115155625-large.jpg" height="217" width="300" />
+            <pubDate>Wed, 15 Nov 2017 15:56:25 EST</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/11/171115155625.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/11/171115155625.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Next Mars rover will have 23 'eyes'</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/NIK8OI8Q-FY/171103123016.htm</link>
+            <description>NASA's Mars 2020 mission will have more "eyes" than any rover before it: a grand total of 23, to create sweeping panoramas, reveal obstacles, study the atmosphere, and assist science instruments. They will provide dramatic views during the rover's descent to the Red Planet.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/NIK8OI8Q-FY" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/11/171103123016-large.jpg" height="169" width="300" />
+            <pubDate>Fri, 03 Nov 2017 12:30:16 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/11/171103123016.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/11/171103123016.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Martian landscapes formed from sand 'levitating' on a little boiling water</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/WKUSET1QWgA/171027085747.htm</link>
+            <description>Scientists have discovered a process that could explain the long-debated mystery of how land features on Mars are formed in the absence of significant amounts of water. Experiments reveal that Mars' thin atmosphere (about 7 mbar -- compared to 1,000 mbar on Earth) combined with periods of relatively warm surface temperatures causes water flowing on the surface to violently boil. This process can then move large amounts of sand and other sediment, which effectively 'levitates' on the boiling water.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/WKUSET1QWgA" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/10/171027085747-large.jpg" height="138" width="300" />
+            <pubDate>Fri, 27 Oct 2017 08:57:47 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/10/171027085747.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/10/171027085747.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Winters on Mars are shaping the Red Planet's landscape</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/Cr1m9ahId8k/171027085533.htm</link>
+            <description>Winter temperatures on the Red Planet condense carbon dioxide from a gas to a solid. These solid carbon dioxide blocks are then thought responsible for making gullies and furrows on Mars' landscape, based on innovative lab experiments.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/Cr1m9ahId8k" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/10/171027085533-large.jpg" height="539" width="300" />
+            <pubDate>Fri, 27 Oct 2017 08:55:33 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/10/171027085533.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/10/171027085533.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>NASA's MAVEN mission finds Mars has a twisted magnetic tail</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/2oZ0BIE5TF0/171019181855.htm</link>
+            <description>Mars has an invisible magnetic 'tail' that is twisted by interaction with the solar wind, according to new research using data from NASA's MAVEN spacecraft.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/2oZ0BIE5TF0" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/10/171019181855-large.jpg" height="240" width="300" />
+            <pubDate>Thu, 19 Oct 2017 18:18:55 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/10/171019181855.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/10/171019181855.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Solar eruptions could electrify Martian moons</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/RZWjkbjL2rI/171018124140.htm</link>
+            <description>Powerful solar eruptions could electrically charge areas of the Martian moon Phobos to hundreds of volts, presenting a complex electrical environment that could possibly affect sensitive electronics carried by future robotic explorers, according to a new NASA study. The study also considered electrical charges that could develop as astronauts transit the surface on potential human missions to Phobos.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/RZWjkbjL2rI" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/10/171018124140-large.jpg" height="293" width="300" />
+            <pubDate>Wed, 18 Oct 2017 12:41:40 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/10/171018124140.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/10/171018124140.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>A mission to Mars could make its own oxygen thanks to plasma technology</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/W2QtaRc12bQ/171018113316.htm</link>
+            <description>Plasma technology could hold the key to creating a sustainable oxygen supply on Mars, a new study has found. It suggests that Mars, with its 96 per cent carbon dioxide atmosphere, has nearly ideal conditions for creating oxygen from CO2 through a process known as decomposition.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/W2QtaRc12bQ" height="1" width="1" alt=""/&gt;</description>
+            <pubDate>Wed, 18 Oct 2017 11:33:16 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/10/171018113316.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/10/171018113316.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Study shows how water could have flowed on 'cold and icy' ancient Mars</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/GzPJ_-RaJXY/171017114341.htm</link>
+            <description>Research by planetary scientists finds that periodic melting of ice sheets on a cold early Mars would have created enough water to carve the ancient valleys and lakebeds seen on the planet today.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/GzPJ_-RaJXY" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/10/171017114341-large.jpg" height="277" width="300" />
+            <pubDate>Tue, 17 Oct 2017 11:43:41 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/10/171017114341.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/10/171017114341.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Looking for microbe 'fingerprints' on simulated Martian rocks</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/UbAOMFQN0ws/171017110100.htm</link>
+            <description>Scientists are searching for unique bio-signatures left on synthetic extraterrestrial minerals by microbial activity. A new paper describes investigations into these signatures at a miniaturized 'Mars farm' where researchers can observe interactions between the archaeon Metallosphaera sedula and Mars-like rocks. These microbes are capable of oxidizing and integrating metals into their metabolism.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/UbAOMFQN0ws" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/10/171017110100-large.jpg" height="226" width="300" />
+            <pubDate>Tue, 17 Oct 2017 11:01:00 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/10/171017110100.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/10/171017110100.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Space radiation won't stop NASA's human exploration</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/o3ttSdThkHY/171013095234.htm</link>
+            <description>While it's true that space radiation is one of the biggest challenges for a human journey to Mars, it's also true that NASA is developing technologies and countermeasures to ensure a safe and successful journey to the red planet.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/o3ttSdThkHY" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/10/171013095234-large.jpg" height="166" width="300" />
+            <pubDate>Fri, 13 Oct 2017 09:52:34 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/10/171013095234.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/10/171013095234.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>New insight into the limits of possible life on Mars</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/fTsOpCZn0E0/171013091028.htm</link>
+            <description>Researchers investigating whether liquid water could exist on Mars have provided new insight into the limits of life on the red planet.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/fTsOpCZn0E0" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/10/171013091028-large.jpg" height="300" width="300" />
+            <pubDate>Fri, 13 Oct 2017 09:10:28 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/10/171013091028.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/10/171013091028.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Mars study yields clues to possible cradle of life</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/_GhIa1RlxvM/171006154947.htm</link>
+            <description>The discovery of evidence for ancient sea-floor hydrothermal deposits on Mars identifies an area on the planet that may offer clues about the origin of life on Earth. The research offers evidence that these deposits were formed by heated water from a volcanically active part of the planet's crust entering the bottom of a large sea long ago.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/_GhIa1RlxvM" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/10/171006154947-large.jpg" height="186" width="300" />
+            <pubDate>Fri, 06 Oct 2017 15:49:47 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/10/171006154947.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/10/171006154947.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Mars' moon Phobos examined in a different light</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/VLOoS9l8nlw/171005102725.htm</link>
+            <description>NASA's longest-lived mission to Mars has gained its first look at the Martian moon Phobos, pursuing a deeper understanding by examining it in infrared wavelengths.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/VLOoS9l8nlw" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/10/171005102725-large.jpg" height="539" width="300" />
+            <pubDate>Thu, 05 Oct 2017 10:27:25 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/10/171005102725.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/10/171005102725.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Meteorite tells us that Mars had a dense atmosphere 4 billion years ago</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/P2eZzZ3MP2U/171002114214.htm</link>
+            <description>Exploration missions have suggested that Mars once had a warm climate, which sustained oceans on its surface. To keep Mars warm requires a dense atmosphere with a sufficient greenhouse effect, while the present-day Mars has a thin atmosphere whose surface pressure is only 0.006 bar, resulting in the cold climate it has today. It has been a big mystery as to when and how Mars lost its dense atmosphere.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/P2eZzZ3MP2U" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/10/171002114214-large.jpg" height="214" width="300" />
+            <pubDate>Mon, 02 Oct 2017 11:42:14 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/10/171002114214.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/10/171002114214.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>A fresh look at older data yields a surprise near the Martian equator</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/Go9KiBwJ2nw/170928152256.htm</link>
+            <description>Scientists taking a new look at older data from NASA's longest-operating Mars orbiter have discovered evidence of significant hydration near the Martian equator -- a mysterious signature in a region of the Red Planet where planetary scientists figure ice shouldn't exist.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/Go9KiBwJ2nw" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/09/170928152256-large.jpg" height="229" width="300" />
+            <pubDate>Thu, 28 Sep 2017 15:22:56 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/09/170928152256.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/09/170928152256.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>New light shed on how Earth and Mars were created</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/lUmyDdBRZyI/170927133629.htm</link>
+            <description>Analysing a mixture of earth samples and meteorites, scientists have shed new light on the sequence of events that led to the creation of the planets Earth and Mars.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/lUmyDdBRZyI" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/09/170927133629-large.jpg" height="200" width="300" />
+            <pubDate>Wed, 27 Sep 2017 13:36:29 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/09/170927133629.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/09/170927133629.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Lava tubes: Hidden sites for future human habitats on the Moon and Mars</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/CFTDIhiMimk/170925112842.htm</link>
+            <description>Lava tubes, underground caves created by volcanic activity, could provide protected habitats large enough to house streets on Mars or even towns on the Moon, according to new research. A further study shows how the next generation of lunar orbiters will be able to use radar to locate these structures under the Moon's surface. &lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/CFTDIhiMimk" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/09/170925112842-large.jpg" height="200" width="300" />
+            <pubDate>Mon, 25 Sep 2017 11:28:42 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/09/170925112842.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/09/170925112842.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Positive, negative or neutral, it all matters: NASA explains space radiation</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/sNDO0g5uFxI/170922090932.htm</link>
+            <description>Charged particles may be small, but they matter to astronauts. NASA's Human Research Program (HRP) is investigating these particles to solve one of its biggest challenges for a human journey to Mars: space radiation and its effects on the human body.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/sNDO0g5uFxI" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/09/170922090932-large.jpg" height="161" width="300" />
+            <pubDate>Fri, 22 Sep 2017 09:09:32 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/09/170922090932.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/09/170922090932.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Hope to discover sure signs of life on Mars? New research says look for the element vanadium</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/0lVRwjt9FeE/170921110654.htm</link>
+            <description>A new article suggests NASA and others hunting for proof of Martian biology in the form of 'microfossils' could use the element vanadium in combination with Raman spectroscopy to confirm traces of extraterrestrial life.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/0lVRwjt9FeE" height="1" width="1" alt=""/&gt;</description>
+            <pubDate>Thu, 21 Sep 2017 11:06:54 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/09/170921110654.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/09/170921110654.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Solar eruption ‘photobombed’ Mars encounter with Comet Siding Spring</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/Qmb3jRjcsq8/170921095030.htm</link>
+            <description>When Comet C/2013 A1 (Siding Spring) passed just 140,000 kilometers from Mars on 19th October 2014, depositing a large amount of debris in the Martian atmosphere, space agencies coordinated multiple spacecraft to witness the largest meteor shower in recorded history. It was a rare opportunity, as this kind of planetary event occurs only once every 100,000 years.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/Qmb3jRjcsq8" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/09/170921095030-large.jpg" height="150" width="300" />
+            <pubDate>Thu, 21 Sep 2017 09:50:30 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/09/170921095030.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/09/170921095030.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>More evidence of water on Mars</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/7xkvE_1C5Xw/170918123518.htm</link>
+            <description>River deposits exist across the surface of Mars and record a surface environment from over 3.5 billion years ago that was able to support liquid water at the surface. A region of Mars named Aeolis Dorsa contains some of the most spectacular and densely packed river deposits seen on Mars.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/7xkvE_1C5Xw" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/09/170918123518-large.jpg" height="264" width="300" />
+            <pubDate>Mon, 18 Sep 2017 12:35:18 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/09/170918123518.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/09/170918123518.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Devilish source of dust in atmosphere of Earth and Mars</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/hj-aHYv-Pco/170918092852.htm</link>
+            <description>Swirling columns of sand and dust, known as dust devils, are a feature of desert areas on Mars and on Earth. Now, a study of terrestrial dust devils has shown that around two thirds of the fine particles lifted by these vortices can remain suspended in the atmosphere and be transported around the globe. The findings have implications for the climate and weather of both planets and, potentially, human health here on Earth.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/hj-aHYv-Pco" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/09/170918092852-large.jpg" height="200" width="300" />
+            <pubDate>Mon, 18 Sep 2017 09:28:52 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/09/170918092852.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/09/170918092852.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>New gravity map suggests Mars has a porous crust</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/z5mrt-Vrd3E/170913193005.htm</link>
+            <description>Scientists have found evidence that Mars' crust is not as dense as previously thought, a clue that could help researchers better understand the Red Planet's interior structure and evolution.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/z5mrt-Vrd3E" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/09/170913193005-large.jpg" height="300" width="300" />
+            <pubDate>Wed, 13 Sep 2017 19:30:05 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/09/170913193005.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/09/170913193005.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Discovery of boron on Mars adds to evidence for habitability</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/4oIurV-Uav8/170905123226.htm</link>
+            <description>The discovery of boron on Mars gives scientists more clues about whether life could have ever existed on the planet, according to a new paper.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/4oIurV-Uav8" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/09/170905123226-large.jpg" height="305" width="300" />
+            <pubDate>Tue, 05 Sep 2017 12:32:26 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/09/170905123226.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/09/170905123226.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>The moving Martian bow shock</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/92JEurCbSTA/170822131823.htm</link>
+            <description>Physicists throw new light on the interaction between the planet Mars and supersonic particles in the solar wind.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/92JEurCbSTA" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/08/170822131823-large.jpg" height="169" width="300" />
+            <pubDate>Tue, 22 Aug 2017 13:18:23 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/08/170822131823.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/08/170822131823.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Mars 2020 mission to use smart methods to seek signs of past life</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/vq-bPJXY1xg/170816112715.htm</link>
+            <description>NASA's Mars 2020 mission, which will look for signs of past life on Mars, will use smart methods originally developed to find the oldest life on Earth, according the mission's Deputy Project Scientist. The 2020 mission will make coordinated measurements that could detect signs of ancient life - or biosignatures - in their original spatial context. These techniques, known as 'spatially resolved biosignature analysis' derive from geochemical analysis of early life on Earth.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/vq-bPJXY1xg" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/08/170816112715-large.jpg" height="169" width="300" />
+            <pubDate>Wed, 16 Aug 2017 11:27:15 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/08/170816112715.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/08/170816112715.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Tracking a solar eruption through the solar system</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/-5aQYZ8Vwrs/170815120438.htm</link>
+            <description>Ten spacecraft, from ESA's Venus Express to NASA's Voyager-2, felt the effect of a solar eruption as it washed through the solar system while three other satellites watched, providing a unique perspective on this space weather event.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/-5aQYZ8Vwrs" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/08/170815120438-large.jpg" height="93" width="300" />
+            <pubDate>Tue, 15 Aug 2017 12:04:38 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/08/170815120438.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/08/170815120438.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Viewing Martian moon orbiting the red planet</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/3cGINv16DfA/170720131921.htm</link>
+            <description>While photographing Mars, NASA's Hubble Space Telescope captured a cameo appearance of the tiny moon Phobos on its trek around the Red Planet. Hubble took 13 separate exposures over 22 minutes to create a time-lapse video showing the moon's orbital path.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/3cGINv16DfA" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/07/170720131921-large.jpg" height="169" width="300" />
+            <pubDate>Thu, 20 Jul 2017 13:19:21 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/07/170720131921.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/07/170720131921.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Ancient, massive asteroid impact could explain Martian geological mysteries</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/kRLnTq80fDY/170718113716.htm</link>
+            <description>A colossal impact with a large asteroid early in Mars' history may have ripped off a chunk of the northern hemisphere and left behind a legacy of metallic elements in the planet's interior. The crash also created a ring of rocky debris around Mars that may have later clumped together to form its moons, Phobos and Deimos.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/kRLnTq80fDY" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/07/170718113716-large.jpg" height="300" width="300" />
+            <pubDate>Tue, 18 Jul 2017 11:37:16 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/07/170718113716.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/07/170718113716.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Mars rover opportunity on walkabout near rim</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/UhHuq8ecs0Y/170629224237.htm</link>
+            <description>NASA's senior Mars rover, Opportunity, is examining rocks at the edge of Endeavour Crater for signs that they may have been either transported by a flood or eroded in place by wind.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/UhHuq8ecs0Y" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/06/170629224237-large.jpg" height="107" width="300" />
+            <pubDate>Thu, 29 Jun 2017 22:42:37 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/06/170629224237.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/06/170629224237.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>New virtual approach to science in space</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/qEee1X84_L4/170621145130.htm</link>
+            <description>A new approach to scientific exploration has been revealed by researchers, which they call exploration telepresence.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/qEee1X84_L4" height="1" width="1" alt=""/&gt;</description>
+            <pubDate>Wed, 21 Jun 2017 14:51:30 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/06/170621145130.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/06/170621145130.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>MAVEN's top 10 discoveries at Mars</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/9lc8W08N18o/170616134050.htm</link>
+            <description>Since its launch in November 2013 and its orbit insertion in September 2014, MAVEN has been exploring the upper atmosphere of Mars. MAVEN is bringing insight to how the sun stripped Mars of most of its atmosphere, turning a planet once possibly habitable to microbial life into a barren desert world.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/9lc8W08N18o" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/06/170616134050-large.jpg" height="195" width="300" />
+            <pubDate>Fri, 16 Jun 2017 13:40:50 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/06/170616134050.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/06/170616134050.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Hot rocks, not warm atmosphere, led to relatively recent water-carved valleys on Mars</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/XaOSBS0frjM/170613111655.htm</link>
+            <description>Some scientists have interpreted water-carved valleys on Mars formed within the last few billion years as a sign of either an active groundwater system or of transient warm periods in the atmosphere. But new research shows that snow and ice melted by hot impact ejecta could have produced enough water to carve those valleys with no groundwater or heat wave required.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/XaOSBS0frjM" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/06/170613111655-large.jpg" height="182" width="300" />
+            <pubDate>Tue, 13 Jun 2017 11:16:55 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/06/170613111655.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/06/170613111655.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Collateral damage from cosmic rays increases cancer risks for Mars astronauts</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/W7rMhq_F4tU/170605150246.htm</link>
+            <description>The cancer risk for a human mission to Mars has effectively doubled following a study predicting a dramatic increase in the disease for astronauts traveling to the red planet or on long-term missions outside the protection of Earth's magnetic field. The new predictive model shows radiation from cosmic rays extends from damaged to otherwise healthy 'bystander' cells.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/W7rMhq_F4tU" height="1" width="1" alt=""/&gt;</description>
+            <pubDate>Mon, 05 Jun 2017 15:02:46 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/06/170605150246.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/06/170605150246.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Study estimates amount of water needed to carve Martian valleys</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/cOXlWkZh1vo/170605085344.htm</link>
+            <description>A new study calculates the amount of water needed to carve the ancient network of valleys on Mars and concludes the planet's surface was once much more watery than previously thought. The study bolsters the idea that Mars had a warmer climate and active hydrologic cycle, with water evaporating from an ancient ocean, returning to the surface as rainfall and eroding the extensive network of valleys.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/cOXlWkZh1vo" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/06/170605085344-large.jpg" height="150" width="300" />
+            <pubDate>Mon, 05 Jun 2017 08:53:44 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/06/170605085344.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/06/170605085344.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Rover findings indicate stratified lake on ancient Mars</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/pREvlUw2q64/170601151831.htm</link>
+            <description>A long-lasting lake on ancient Mars provided stable environmental conditions that differed significantly from one part of the lake to another, according to a comprehensive look at findings from the first three-and-a-half years of NASA's Curiosity rover mission.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/pREvlUw2q64" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/06/170601151831-large.jpg" height="219" width="300" />
+            <pubDate>Thu, 01 Jun 2017 15:18:31 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/06/170601151831.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/06/170601151831.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>'Halos' discovered on Mars widen time frame for potential life</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/kb9yu83PbtM/170530121930.htm</link>
+            <description>Lighter-toned bedrock that surrounds fractures and comprises high concentrations of silica -- called "halos" -- has been found in Gale crater on Mars, indicating that the planet had liquid water much longer than previously believed.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/kb9yu83PbtM" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/05/170530121930-large.jpg" height="193" width="300" />
+            <pubDate>Tue, 30 May 2017 12:19:30 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/05/170530121930.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/05/170530121930.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>History of Titan's landscape resembles that of Mars, not Earth</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/TLYE-oPd8wY/170518143817.htm</link>
+            <description>In a paper published in Science, researchers report that Titan, like Mars but unlike Earth, has not undergone any active plate tectonics in its recent past. The upheaval of mountains by plate tectonics deflects the paths that rivers take. The team found that this telltale signature was missing from river networks on Mars and Titan.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/TLYE-oPd8wY" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/05/170518143817-large.jpg" height="200" width="300" />
+            <pubDate>Thu, 18 May 2017 14:38:17 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/05/170518143817.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/05/170518143817.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>How hard did it rain on Mars?</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/pXYojVxqJmk/170516104818.htm</link>
+            <description>Heavy rain on Mars reshaped the planet's impact craters and carved out river-like channels in its surface billions of years ago, according to a new study. Scientists show that changes in the atmosphere on Mars made it rain harder and harder, which had a similar effect on the planet's surface as we see on Earth.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/pXYojVxqJmk" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/05/170516104818-large.jpg" height="169" width="300" />
+            <pubDate>Tue, 16 May 2017 10:48:18 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/05/170516104818.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/05/170516104818.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Mars rover Opportunity begins study of Perseverance Valley's origin</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/50KYmJteEtM/170515141547.htm</link>
+            <description>NASA's Mars Exploration Rover Opportunity has reached the main destination of its current two-year extended mission -- an ancient fluid-carved valley incised on the inner slope of a vast crater's rim.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/50KYmJteEtM" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/05/170515141547-large.jpg" height="240" width="300" />
+            <pubDate>Mon, 15 May 2017 14:15:47 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/05/170515141547.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/05/170515141547.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Ancient Mars impacts created tornado-like winds that scoured surface</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/a5hLze4WdXU/170511211353.htm</link>
+            <description>Plumes of vapor generated by ancient impacts on Mars created tornado-like winds possibly swirling at more than 500 miles per hour, which explain mysterious streaks seen near large impact craters on the Martian surface.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/a5hLze4WdXU" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/05/170511211353-large.jpg" height="220" width="300" />
+            <pubDate>Thu, 11 May 2017 21:13:53 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/05/170511211353.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/05/170511211353.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Engineers investigate a simple, no-bake recipe to make bricks from Martian soil</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/yrd2leUEXTo/170427091723.htm</link>
+            <description>Explorers planning to settle on Mars might be able to turn the planet's soil into bricks without needing to use an oven or additional ingredients. Instead, they would need to apply pressure to compact the soil--the equivalent of a blow from a hammer.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/yrd2leUEXTo" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/04/170427091723-large.jpg" height="261" width="300" />
+            <pubDate>Thu, 27 Apr 2017 09:17:23 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/04/170427091723.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/04/170427091723.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Lull in Mars' giant impact history</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/XCQzeHe8OXs/170425102526.htm</link>
+            <description>From the earliest days of our solar system's history, collisions between astronomical objects have shaped the planets and changed the course of their evolution. Studying the early bombardment history of Mars, scientists have discovered a 400-million-year lull in large impacts early in Martian history.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/XCQzeHe8OXs" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/04/170425102526-large.jpg" height="300" width="300" />
+            <pubDate>Tue, 25 Apr 2017 10:25:26 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/04/170425102526.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/04/170425102526.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Detailed map of potential Mars rover landing site</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/0tSytoSMSq0/170420113741.htm</link>
+            <description>Mineral deposits in a region on Mars called Northeast Syrtis Major suggest a plethora of once-habitable environments. By mapping those deposits in the region's larger geological context, the research could help set the stage for a possible rover mission.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/0tSytoSMSq0" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/04/170420113741-large.jpg" height="248" width="300" />
+            <pubDate>Thu, 20 Apr 2017 11:37:41 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/04/170420113741.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/04/170420113741.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>NASA's MAVEN reveals Mars has metal in its atmosphere</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/gFvlh87tzeE/170410154724.htm</link>
+            <description>Mars has electrically charged metal atoms (ions) high in its atmosphere, according to new results. The metal ions can reveal previously invisible activity in the mysterious electrically charged upper atmosphere (ionosphere) of Mars.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/gFvlh87tzeE" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/04/170410154724-large.jpg" height="195" width="300" />
+            <pubDate>Mon, 10 Apr 2017 15:47:24 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/04/170410154724.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/04/170410154724.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Solar wind stripped Martian atmosphere away</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/bQYBOS9Dlhw/170330142211.htm</link>
+            <description>Solar wind and radiation are responsible for stripping the Martian atmosphere, transforming Mars from a planet that could have supported life billions of years ago into a frigid desert world, according to new results.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/bQYBOS9Dlhw" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/03/170330142211-large.jpg" height="195" width="300" />
+            <pubDate>Thu, 30 Mar 2017 14:22:11 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/03/170330142211.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/03/170330142211.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Mars volcano, Earth's dinosaurs went extinct about the same time</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/WaM_F3nR7Zo/170321092744.htm</link>
+            <description>Arsia Mons produced one new lava flow at its summit every 1 to 3 million years during the final peak of activity, about 50 million years ago. The last volcanic activity there ceased about 50 million years ago -- around the time of Earth's Cretaceous-Paleogene extinction, when large numbers of our planet's plant and animal species (including dinosaurs) went extinct.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/WaM_F3nR7Zo" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/03/170321092744-large.jpg" height="169" width="300" />
+            <pubDate>Tue, 21 Mar 2017 09:27:44 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/03/170321092744.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/03/170321092744.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>Does Mars have rings? Not right now, but maybe one day</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/gb9kNJaX0NQ/170321092734.htm</link>
+            <description>Researchers have developed a model that suggests that debris that was pushed into space from an asteroid or other body slamming into Mars around 4.3 billion years ago and alternates between becoming a planetary ring and clumping up to form a moon.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/gb9kNJaX0NQ" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/03/170321092734-large.jpg" height="169" width="300" />
+            <pubDate>Tue, 21 Mar 2017 09:27:34 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/03/170321092734.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/03/170321092734.htm</feedburner:origLink>
+        </item>
+        <item>
+            <title>NASA Mars Orbiter tracks back-to-back regional storms</title>
+            <link>http://feeds.sciencedaily.com/~r/sciencedaily/space_time/mars/~3/E6hGzDfYAZw/170312103637.htm</link>
+            <description>A regional dust storm currently swelling on Mars follows unusually closely on one that blossomed less than two weeks earlier and is now dissipating, as seen in daily global weather monitoring by NASA's Mars Reconnaissance Orbiter.&lt;img src="http://feeds.feedburner.com/~r/sciencedaily/space_time/mars/~4/E6hGzDfYAZw" height="1" width="1" alt=""/&gt;</description>
+            <media:thumbnail url="https://www.sciencedaily.com/images/2017/03/170312103637-large.jpg" height="169" width="300" />
+            <pubDate>Sun, 12 Mar 2017 10:36:37 EDT</pubDate>
+            <guid isPermaLink="false">https://www.sciencedaily.com/releases/2017/03/170312103637.htm</guid>
+            <feedburner:origLink>https://www.sciencedaily.com/releases/2017/03/170312103637.htm</feedburner:origLink>
+        </item>
+    </channel>
+</rss><!-- Page successfully written to cache. -->

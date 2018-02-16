@@ -28,7 +28,7 @@ public class RssItemRepository {
             = new XmlReader(feedFile);
 
         SyndFeed feed
-            = input.build(new XmlReader(feedFile));
+            = input.build(reader);
 
         return feed;
     }
@@ -39,6 +39,7 @@ public class RssItemRepository {
 
         SyndEntry entry
             = feed.getEntries().stream().findFirst().get();
+
 
         // Feed title
         Optional<String> feedTitle = Optional.ofNullable(feed.getTitle());
