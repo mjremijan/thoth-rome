@@ -63,5 +63,8 @@ public class ChristianFaithAtWorkTest {
 "<div class=\"getnoticed-rssad\"><a href=\"http://www.christianfaithatwork.com/17bps/\" target=\"_blank\"><img src=\"http://www.christianfaithatwork.com/wp-content/uploads/2016/04/17bps.png\" alt=\"17 Biblical Principles For Success\" style=\"max-width:100%;height:auto\"></a></div>"
             , item.getContents()
         );
+
+        // creator
+        Assert.assertEquals("Chris Patton", item.getCreator());
     }
 }

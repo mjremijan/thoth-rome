@@ -14,6 +14,7 @@ public class RssItem {
     protected String link;
     protected Date publicationDate;
     protected String contents;
+    protected String creator;
 
     public RssItem(String id, String feed, String author, String title, String link, Date publicationDate, String contents) {
         this.id = id;
@@ -23,6 +24,11 @@ public class RssItem {
         this.link = link;
         this.publicationDate = publicationDate;
         this.contents = contents;
+    }
+
+    public RssItem(String id, String feed, String author, String title, String link, Date publicationDate, String contents, String creator) {
+        this(id, feed, author, title, link, publicationDate, contents);
+        this.creator = creator;
     }
 
     public String getId() {
@@ -52,4 +58,9 @@ public class RssItem {
     public String getFeed() {
         return feed;
     }
+
+    public String getCreator() {
+        return creator;
+    }
+
 }

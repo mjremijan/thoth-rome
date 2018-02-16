@@ -1,6 +1,10 @@
 package org.thoth.rome;
 
 import java.io.File;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -14,13 +18,37 @@ public class TheAquariumTest {
     @Test
     public void testMe() throws Exception {
 
-        RssItem entry = new RssItemRepository(
-            new File("src/test/resources/the_aquarium.xml")
-        ).findFirst();
+        RssItemRepository repository
+            = new RssItemRepository(new File("src/test/resources/the_aquarium.xml"));
+
+        RssItem entry = repository.findFirst();
+
+        // link
+        Assert.assertEquals(
+            "https://blogs.oracle.com/theaquarium/compendium/rss", repository.getFeed().getLink());
 
         // publication date
         Assert.assertEquals(
             "Thu Sep 28 19:30:00 CDT 2017", String.valueOf(entry.getPublicationDate()));
+           //Fri, 29 Sep 2017 00:30:00 +0000
+
+        //UTC zone id
+        ZoneId utcZoneId = ZoneId.of("UTC");
+
+        //1. Convert Date -> Instant
+        Instant publicationInstant = entry.getPublicationDate().toInstant();
+        System.out.println(publicationInstant.toString());
+
+        //2. datetime
+        ZonedDateTime publicationZonedDateTime = publicationInstant.atZone(utcZoneId);
+        System.out.println(publicationZonedDateTime.toString());
+
+        //3. localdate
+        LocalDate publicationLocalDate = publicationInstant.atZone(utcZoneId).toLocalDate();
+        System.out.println(publicationLocalDate.toString());
+
+        Instant now = Instant.now();
+        System.out.printf("NOW: %s%n", now.toString());
 
         // guid
         Assert.assertEquals(

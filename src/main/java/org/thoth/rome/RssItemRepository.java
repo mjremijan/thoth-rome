@@ -24,6 +24,9 @@ public class RssItemRepository {
         SyndFeedInput input
             = new SyndFeedInput();
 
+        XmlReader reader
+            = new XmlReader(feedFile);
+
         SyndFeed feed
             = input.build(new XmlReader(feedFile));
 
@@ -43,7 +46,7 @@ public class RssItemRepository {
         // ID
         Optional<String> id = Optional.ofNullable(entry.getUri());
 
-        // ID
+        // Author
         Optional<String> author = Optional.ofNullable(entry.getAuthor());
 
         // Title
@@ -67,6 +70,9 @@ public class RssItemRepository {
         }
         Optional<String> contents = (sp.length() > 0) ? Optional.of(sp.toString()) : Optional.empty();
 
+        // Creator
+        Optional<String> creator = Optional.ofNullable(entry.getAuthor());
+
         return new RssItem(
               id.orElseThrow(() -> new RssException("No <guid> value"))
             , feedTitle.orElseThrow(() -> new RssException("No <channel><title> value"))
@@ -75,6 +81,7 @@ public class RssItemRepository {
             , link.orElseThrow(() -> new RssException("No <link> value"))
             , publicationDate.orElse(null)
             , contents.orElseThrow(() -> new RssException("No <content> or <description> values"))
+            , creator.orElse(null)
         );
     }
 }
