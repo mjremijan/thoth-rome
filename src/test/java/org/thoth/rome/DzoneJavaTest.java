@@ -1,7 +1,14 @@
 package org.thoth.rome;
 
 import com.rometools.rome.feed.synd.SyndFeed;
+import com.rometools.rome.io.SyndFeedInput;
+import com.rometools.rome.io.XmlReader;
+import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
 import java.io.File;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.util.stream.Collectors;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -20,6 +27,7 @@ public class DzoneJavaTest {
             "https://dzone.com/java-jdk-development-tutorials-tools-news"
             ,feed.getLink()
         );
+        Assert.assertEquals(20, feed.getEntries().size());
 
     }
     @Test
@@ -79,5 +87,26 @@ public class DzoneJavaTest {
 "</ul></p>"
             , entry.getContents()
         );
+    }
+
+
+    @Test
+    public void testHandlingAsString() throws Exception {
+
+        URL feedUrl = new File("src/test/resources/dzone_java.xml").toURI().toURL();
+
+        String result7
+            = new BufferedReader(new InputStreamReader(feedUrl.openStream(),"UTF-8")).lines().collect(Collectors.joining("\n"));
+
+        SyndFeed feed
+            = new SyndFeedInput().build(new XmlReader(new ByteArrayInputStream(result7.getBytes("UTF-8"))));
+
+        Assert.assertEquals(
+            "https://dzone.com/java-jdk-development-tutorials-tools-news"
+            ,feed.getLink()
+        );
+
+        Assert.assertEquals(20, feed.getEntries().size());
+
     }
 }
